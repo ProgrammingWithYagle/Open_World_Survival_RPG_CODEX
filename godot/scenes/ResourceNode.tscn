@@ -1,7 +1,9 @@
 [gd_scene format=3]
 
+[ext_resource type="Script" path="res://scripts/resource_node.gd" id="1"]
+
 [node name="ResourceNode" type="Area2D"]
-script = ExtResource("res://scripts/resource_node.gd")
+script = ExtResource("1")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 
