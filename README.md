@@ -96,7 +96,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 ---
 
 ## Tech Stack (Proposed)
-**Engine:** Godot 4 (in use for the prototype project)
+**Engine:** Godot 4.5 (in use for the prototype project)
 
 **Languages:**
 - GDScript for gameplay
@@ -202,7 +202,7 @@ This project is a living experiment. Feedback will shape the game’s direction,
 ## Getting Started
 Minimum steps:
 1. **Clone the repo**: `git clone <repo-url>` and `cd Open_World_Survival_RPG_CODEX`.
-2. **Install Godot 4** (standard build from godotengine.org).
+2. **Install Godot 4.5** (standard build from godotengine.org).
 3. **Open the project** in Godot by selecting the `/godot/` folder.
 4. **Run the scene** to move with WASD, harvest with E, craft with C.
 
