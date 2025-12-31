@@ -53,6 +53,7 @@ func _refresh_crafting() -> void:
     else:
         for recipe_id in recipe_ids:
             var recipe := crafting.get_recipe(recipe_id)
-            var result_id := recipe.get("result", {}).get("id", recipe_id)
+            var result: Dictionary = recipe.get("result", {})
+            var result_id: String = result.get("id", recipe_id)
             lines.append(item_db.get_display_name(result_id))
     crafting_label.text = "\n".join(lines)

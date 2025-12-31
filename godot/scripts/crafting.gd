@@ -16,16 +16,16 @@ func _load_json(path: String) -> Dictionary:
         push_error("Failed to open recipes: %s" % path)
         return {}
     var content := file.get_as_text()
-    var parsed := JSON.parse_string(content)
+    var parsed: Variant = JSON.parse_string(content)
     if typeof(parsed) != TYPE_DICTIONARY:
         push_error("Recipe data is not a dictionary: %s" % path)
         return {}
-    return parsed
+    return parsed as Dictionary
 
 func can_craft(inventory: Inventory, recipe_id: String) -> bool:
     if not recipes.has(recipe_id):
         return false
-    var recipe := recipes[recipe_id]
+    var recipe: Dictionary = recipes[recipe_id]
     for ingredient in recipe.get("ingredients", []):
         if not inventory.has_item(ingredient["id"], ingredient["count"]):
             return false
@@ -34,7 +34,7 @@ func can_craft(inventory: Inventory, recipe_id: String) -> bool:
 func craft(inventory: Inventory, recipe_id: String) -> bool:
     if not can_craft(inventory, recipe_id):
         return false
-    var recipe := recipes[recipe_id]
+    var recipe: Dictionary = recipes[recipe_id]
     for ingredient in recipe.get("ingredients", []):
         inventory.remove_item(ingredient["id"], ingredient["count"])
     inventory.add_item(recipe["result"]["id"], recipe["result"]["count"])
