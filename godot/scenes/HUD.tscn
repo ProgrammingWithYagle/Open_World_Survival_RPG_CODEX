@@ -10,8 +10,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 12.0
 offset_top = 12.0
-offset_right = 320.0
-offset_bottom = 210.0
+offset_right = 360.0
+offset_bottom = 260.0
 
 [node name="NeedsLabel" type="Label" parent="Panel"]
 anchor_left = 0.0
@@ -31,9 +31,20 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 12.0
 offset_top = 72.0
-offset_right = 280.0
+offset_right = 320.0
 offset_bottom = 140.0
 text = "Inventory"
+
+[node name="CraftingLabel" type="Label" parent="Panel"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 150.0
+offset_right = 320.0
+offset_bottom = 200.0
+text = "Craftable"
 
 [node name="HintLabel" type="Label" parent="Panel"]
 anchor_left = 0.0
@@ -41,7 +52,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 12.0
-offset_top = 150.0
-offset_right = 300.0
-offset_bottom = 195.0
-text = "[WASD] Move  [E] Harvest  [C] Craft"
+offset_top = 210.0
+offset_right = 340.0
+offset_bottom = 250.0
+text = "[WASD] Move  [E] Harvest  [C] Craft  [F] Consume"

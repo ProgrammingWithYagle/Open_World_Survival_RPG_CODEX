@@ -39,6 +39,10 @@ craft={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"device":-1,"physical_keycode":0,"keycode":67,"unicode":99,"echo":false,"pressed":false,"modifiers":0)]
 }
+consume={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"device":-1,"physical_keycode":0,"keycode":70,"unicode":102,"echo":false,"pressed":false,"modifiers":0)]
+}
 
 [physics]
 common/physics_ticks_per_second=60

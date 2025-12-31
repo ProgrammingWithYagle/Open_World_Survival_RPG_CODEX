@@ -25,6 +25,14 @@ func _load_json(path: String) -> Dictionary:
 func get_item(item_id: String) -> Dictionary:
     return items.get(item_id, {})
 
+func get_display_name(item_id: String) -> String:
+    var item := get_item(item_id)
+    return item.get("name", item_id)
+
+func get_effects(item_id: String) -> Dictionary:
+    var item := get_item(item_id)
+    return item.get("effects", {})
+
 func has_item(item_id: String) -> bool:
     return items.has(item_id)
 

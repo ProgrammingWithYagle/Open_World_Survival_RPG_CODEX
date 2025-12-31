@@ -44,5 +44,9 @@ func _color_for_resource(kind: String) -> Color:
             return Color(0.45, 0.45, 0.48)
         "berry":
             return Color(0.6, 0.1, 0.35)
+        "fiber":
+            return Color(0.2, 0.55, 0.25)
+        "water":
+            return Color(0.1, 0.35, 0.7)
         _:
             return Color(0.2, 0.4, 0.2)

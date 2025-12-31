@@ -35,8 +35,8 @@ The **north star**: a game you can play for hundreds of hours without running ou
 
 ## Current Status
 - **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
-- **Implemented**: top‑down movement, harvesting, inventory, simple crafting, survival needs, and a minimal HUD.
-- **Planned next**: expand world visuals, add more crafting stations, and build a dedicated UI for recipes and stats.
+- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health), and a HUD showing needs, inventory, and craftable recipes.
+- **Planned next**: expand world visuals, add crafting stations with placement, and build a dedicated UI for recipes and stats.
 
 ---
 
@@ -128,11 +128,11 @@ Each system should be **modular** and **data‑driven** so content expands witho
 - **World Controller** (`godot/scripts/game.gd`): spawns resources, owns system wiring.
 - **Player** (`godot/scripts/player.gd`): movement, interaction, crafting input.
 - **Inventory** (`godot/scripts/inventory.gd`): item storage with change signals.
-- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay.
+- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay, and health penalties.
 - **Crafting** (`godot/scripts/crafting.gd`): recipe validation and crafting actions.
 - **Item Database** (`godot/scripts/item_db.gd`): data loader for items/recipes.
 - **Resource Nodes** (`godot/scripts/resource_node.gd`): harvestable entities.
-- **HUD** (`godot/scripts/hud.gd`): simple UI readout for needs + inventory.
+- **HUD** (`godot/scripts/hud.gd`): needs, inventory, and craftable recipe readouts.
 
 ---
 
@@ -213,8 +213,8 @@ Optional tests:
 
 ## Next Steps
 1. Add placeholder tilesets and biome zones for clearer world navigation.
-2. Expand crafting with tools, workstations, and a basic crafting UI.
-3. Introduce simple enemies and combat feedback.
+2. Introduce placeable crafting stations and crafting UI panels.
+3. Add simple enemies, combat feedback, and health recovery sources.
 4. Add save/load support for player progress.
 5. Create a lightweight audio pass (footsteps, harvest, ambient).
 
