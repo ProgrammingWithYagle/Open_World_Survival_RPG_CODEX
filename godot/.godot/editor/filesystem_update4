@@ -5,3 +5,5 @@ res://scripts/item_db.gd
 res://scripts/player.gd
 res://scripts/game.gd
 res://scripts/resource_node.gd
+res://scripts/needs.gd
+res://scripts/world_generator.gd
