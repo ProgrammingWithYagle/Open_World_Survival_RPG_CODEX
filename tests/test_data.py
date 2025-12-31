@@ -36,3 +36,23 @@ def test_recipes_reference_items():
         for ingredient in recipe.get("ingredients", []):
             assert ingredient["id"] in items, f"{recipe_id} ingredient missing"
             assert ingredient["count"] > 0, f"{recipe_id} ingredient count must be positive"
+
+
+def test_mob_data_is_valid():
+    items = load_json(DATA_DIR / "items.json")
+    mobs = load_json(DATA_DIR / "mobs.json")
+    assert mobs, "mobs.json should not be empty"
+    valid_behaviors = {"passive", "aggressive", "ranged", "patrol"}
+    for mob_id, mob in mobs.items():
+        assert "name" in mob, f"{mob_id} missing name"
+        assert mob["behavior"] in valid_behaviors, f"{mob_id} behavior invalid"
+        assert mob["health"] > 0, f"{mob_id} health must be positive"
+        assert mob["speed"] > 0, f"{mob_id} speed must be positive"
+        assert mob["aggro_range"] >= 0, f"{mob_id} aggro range must be non-negative"
+        assert mob["attack_range"] >= 0, f"{mob_id} attack range must be non-negative"
+        assert mob["attack_cooldown"] > 0, f"{mob_id} cooldown must be positive"
+        assert mob["damage"] >= 0, f"{mob_id} damage must be non-negative"
+        assert mob["biomes"], f"{mob_id} biomes list must not be empty"
+        for drop in mob.get("drops", []):
+            assert drop["id"] in items, f"{mob_id} drop {drop['id']} missing in items"
+            assert drop["count"] > 0, f"{mob_id} drop count must be positive"
