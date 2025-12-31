@@ -19,11 +19,13 @@ const ITEM_COLORS := {
 var health_bar: ProgressBar
 var hunger_bar: ProgressBar
 var thirst_bar: ProgressBar
+var stamina_bar: ProgressBar
 var temp_bar: ProgressBar
 
 var health_value: Label
 var hunger_value: Label
 var thirst_value: Label
+var stamina_value: Label
 var temp_value: Label
 
 var inventory_list: VBoxContainer
@@ -41,11 +43,13 @@ func _ready() -> void:
 	health_bar = $Panel/Root/NeedsList/HealthRow/HealthBar
 	hunger_bar = $Panel/Root/NeedsList/HungerRow/HungerBar
 	thirst_bar = $Panel/Root/NeedsList/ThirstRow/ThirstBar
+	stamina_bar = $Panel/Root/NeedsList/StaminaRow/StaminaBar
 	temp_bar = $Panel/Root/NeedsList/TempRow/TempBar
 
 	health_value = $Panel/Root/NeedsList/HealthRow/HealthValue
 	hunger_value = $Panel/Root/NeedsList/HungerRow/HungerValue
 	thirst_value = $Panel/Root/NeedsList/ThirstRow/ThirstValue
+	stamina_value = $Panel/Root/NeedsList/StaminaRow/StaminaValue
 	temp_value = $Panel/Root/NeedsList/TempRow/TempValue
 
 	inventory_list = $Panel/Root/InventoryList
@@ -70,11 +74,13 @@ func _refresh_needs() -> void:
 	health_bar.value = needs.health
 	hunger_bar.value = needs.hunger
 	thirst_bar.value = needs.thirst
+	stamina_bar.value = needs.stamina
 	temp_bar.value = _temperature_to_percent(needs.temperature)
 
 	health_value.text = str(int(needs.health))
 	hunger_value.text = str(int(needs.hunger))
 	thirst_value.text = str(int(needs.thirst))
+	stamina_value.text = str(int(needs.stamina))
 	temp_value.text = "%d°C" % int(needs.temperature)
 
 func _refresh_inventory() -> void:
@@ -140,7 +146,7 @@ func _temperature_to_percent(value: float) -> float:
 func _get_icon(item_id: String) -> Texture2D:
 	if icon_cache.has(item_id):
 		return icon_cache[item_id]
-	var color := ITEM_COLORS.get(item_id, Color(0.4, 0.5, 0.45))
+	var color: Color = ITEM_COLORS.get(item_id, Color(0.4, 0.5, 0.45)) as Color
 	var texture := _make_icon_texture(color)
 	icon_cache[item_id] = texture
 	return texture

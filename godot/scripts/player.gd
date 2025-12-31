@@ -3,6 +3,8 @@ extends CharacterBody2D
 ## Player controller handling movement, interaction, and crafting input.
 
 @export var move_speed := 180.0
+@export var sprint_multiplier := 1.5
+@export var sprint_min_stamina := 10.0
 
 var inventory: Inventory
 var needs: Needs
@@ -26,7 +28,13 @@ func _physics_process(delta: float) -> void:
         Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
         Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
     )
-    velocity = direction.normalized() * move_speed
+    var is_moving := direction.length() > 0.0
+    var wants_sprint := Input.is_action_pressed("sprint")
+    var can_sprint := needs != null and needs.stamina >= sprint_min_stamina
+    var is_sprinting := is_moving and wants_sprint and can_sprint
+    var speed := move_speed * (sprint_multiplier if is_sprinting else 1.0)
+    velocity = direction.normalized() * speed
+    _update_stamina_from_movement(delta, is_moving, is_sprinting)
     move_and_slide()
 
 func _process(_delta: float) -> void:
@@ -53,6 +61,7 @@ func _try_harvest() -> void:
             if inventory.has_item("stone_knife", 1) and result["id"] in ["wood", "fiber"]:
                 count += 1
             inventory.add_item(result["id"], count)
+            _apply_action_stamina_cost()
 
 func _try_craft_first_recipe() -> void:
     if crafting == null:
@@ -64,6 +73,7 @@ func _try_craft_first_recipe() -> void:
     var recipe_id: String = String(recipe_ids[0])
     if crafting.craft(inventory, recipe_id):
         _apply_recipe_effects(recipe_id)
+        _apply_action_stamina_cost()
 
 func _apply_recipe_effects(recipe_id: String) -> void:
     if recipe_id == "campfire":
@@ -94,6 +104,7 @@ func _try_consume() -> void:
         return
     if inventory.remove_item(best_item, 1):
         needs.apply_item_effects(item_db.get_effects(best_item))
+        _apply_action_stamina_cost(0.5)
 
 func _on_area_entered(area: Area2D) -> void:
     current_target = area
@@ -132,3 +143,20 @@ func _configure_sprite() -> void:
     image.set_pixel(16, 8, highlight)
     image.set_pixel(11, 15, highlight)
     sprite.texture = ImageTexture.create_from_image(image)
+
+func _update_stamina_from_movement(delta: float, is_moving: bool, is_sprinting: bool) -> void:
+    if needs == null:
+        return
+    needs.is_resting = not is_moving
+    var extra_drain := 0.0
+    if is_moving:
+        extra_drain += needs.stamina_move_drain
+    if is_sprinting:
+        extra_drain += needs.stamina_sprint_drain
+    if extra_drain > 0.0:
+        needs.apply_stamina_drain(extra_drain * delta)
+
+func _apply_action_stamina_cost(multiplier: float = 1.0) -> void:
+    if needs == null:
+        return
+    needs.apply_action_stamina_cost(multiplier)
