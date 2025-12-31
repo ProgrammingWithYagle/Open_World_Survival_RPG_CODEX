@@ -35,7 +35,7 @@ func _ready() -> void:
     add_child(crafting)
 
     player.set_systems(inventory, needs, crafting, item_db)
-    hud.bind_systems(inventory, needs, item_db)
+    hud.bind_systems(inventory, needs, item_db, crafting)
 
     _spawn_resources()
     _seed_starting_items()
@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
     needs.tick(delta)
 
 func _spawn_resources() -> void:
-    var resource_types := ["wood", "stone", "berry"]
+    var resource_types := ["wood", "stone", "berry", "fiber", "water"]
     for i in range(resource_count):
         var node := RESOURCE_NODE_SCENE.instantiate()
         node.resource_id = resource_types[randi() % resource_types.size()]

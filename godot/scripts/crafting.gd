@@ -42,3 +42,14 @@ func craft(inventory: Inventory, recipe_id: String) -> bool:
 
 func get_recipe_ids() -> Array:
     return recipes.keys()
+
+func get_recipe(recipe_id: String) -> Dictionary:
+    return recipes.get(recipe_id, {})
+
+func get_craftable_recipe_ids(inventory: Inventory) -> Array:
+    var craftable: Array = []
+    for recipe_id in recipes.keys():
+        if can_craft(inventory, recipe_id):
+            craftable.append(recipe_id)
+    craftable.sort()
+    return craftable

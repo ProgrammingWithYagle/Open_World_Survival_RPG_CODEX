@@ -5,5 +5,31 @@
       {"id": "wood", "count": 4},
       {"id": "stone", "count": 2}
     ]
+  },
+  "stick": {
+    "result": {"id": "stick", "count": 2},
+    "ingredients": [
+      {"id": "wood", "count": 1}
+    ]
+  },
+  "stone_knife": {
+    "result": {"id": "stone_knife", "count": 1},
+    "ingredients": [
+      {"id": "stick", "count": 1},
+      {"id": "stone", "count": 1}
+    ]
+  },
+  "bandage": {
+    "result": {"id": "bandage", "count": 1},
+    "ingredients": [
+      {"id": "fiber", "count": 2}
+    ]
+  },
+  "cooked_berry": {
+    "result": {"id": "cooked_berry", "count": 1},
+    "ingredients": [
+      {"id": "berry", "count": 2},
+      {"id": "wood", "count": 1}
+    ]
   }
 }
