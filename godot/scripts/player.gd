@@ -116,6 +116,19 @@ func _configure_collision() -> void:
 
 func _configure_sprite() -> void:
     var sprite := $Sprite
-    var image := Image.create(20, 20, false, Image.FORMAT_RGBA8)
-    image.fill(Color(0.2, 0.6, 0.9))
+    var size := 24
+    var base := Color(0.2, 0.6, 0.9)
+    var shadow := base.darkened(0.3)
+    var highlight := base.lightened(0.2)
+    var image := Image.create(size, size, false, Image.FORMAT_RGBA8)
+    image.fill(base)
+    for x in range(size):
+        image.set_pixel(x, 0, shadow)
+        image.set_pixel(x, size - 1, shadow)
+    for y in range(size):
+        image.set_pixel(0, y, shadow)
+        image.set_pixel(size - 1, y, shadow)
+    image.set_pixel(7, 8, highlight)
+    image.set_pixel(16, 8, highlight)
+    image.set_pixel(11, 15, highlight)
     sprite.texture = ImageTexture.create_from_image(image)
