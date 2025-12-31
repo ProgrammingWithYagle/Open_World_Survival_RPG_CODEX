@@ -27,15 +27,15 @@ func _ready() -> void:
 	if auto_generate:
 		generate()
 
-func generate(seed: int = -1) -> void:
-	if seed == -1:
-		seed = randi()
-	last_seed = seed
-	rng.seed = seed
-	noise.seed = seed
+func generate(world_seed: int = -1) -> void:
+	if world_seed == -1:
+		world_seed = randi()
+	last_seed = world_seed
+	rng.seed = world_seed
+	noise.seed = world_seed
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
 	noise.frequency = noise_scale
-	moisture_noise.seed = seed + 1337
+	moisture_noise.seed = world_seed + 1337
 	moisture_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
 	moisture_noise.frequency = moisture_scale
 
@@ -123,9 +123,10 @@ func _make_tile_image(base_color: Color, detail_color: Color, biome: String) -> 
 		var py := rng.randi_range(1, tile_size - 2)
 		image.set_pixel(px, py, detail_color)
 	if biome == "water":
+		var wave_center := int(tile_size * 0.5)
 		for x in range(2, tile_size - 2, 6):
-			image.set_pixel(x, tile_size / 2, detail_color)
-			image.set_pixel(x + 2, tile_size / 2 + 2, detail_color)
+			image.set_pixel(x, wave_center, detail_color)
+			image.set_pixel(x + 2, wave_center + 2, detail_color)
 	if biome == "desert":
 		for x in range(0, tile_size, 4):
 			image.set_pixel(x, 2, detail_color)
