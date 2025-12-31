@@ -189,8 +189,13 @@ This project is a living experiment. Feedback will shape the game’s direction,
 
 ## Contributing
 - **Propose features:** Open an issue or start a discussion describing the problem, the player impact, and any gameplay references or inspirations.
-- **Coding conventions:** TBD. If you plan to submit code, open an issue first so we can align on structure, style, and Godot/GDScript conventions.
-- **Gameplay/system suggestions:** Please use a structured format: goal, affected systems, mechanics summary, progression impact, and any balance concerns.
+- **Coding conventions:** TBD. Before submitting code, open an issue so we can align on structure, style, and Godot/GDScript conventions.
+- **Gameplay/system suggestions:** Please use a structured format:
+  - Goal (what problem or experience this improves)
+  - Affected systems (e.g., crafting, combat, world gen)
+  - Mechanics summary (inputs → rules → outcomes)
+  - Progression impact (early/mid/late game)
+  - Balance concerns or risks
 
 ---
 
