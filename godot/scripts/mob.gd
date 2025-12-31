@@ -160,7 +160,7 @@ func _build_patrol_points() -> void:
         var offset := Vector2(cos(angle), sin(angle)) * patrol_radius
         patrol_points.append(global_position + offset)
 
-func _behavior_from_string(value: String) -> int:
+func _behavior_from_string(value: String) -> Behavior:
     match value:
         "aggressive":
             return Behavior.AGGRESSIVE

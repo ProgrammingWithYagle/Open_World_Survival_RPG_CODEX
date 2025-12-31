@@ -114,7 +114,7 @@ func _refresh_crafting() -> void:
 
 func _make_list_row(item_id: String, count: int) -> HBoxContainer:
 	var row := HBoxContainer.new()
-	row.theme_override_constants.separation = 8
+	row.add_theme_constant_override("separation", 8)
 
 	var icon := TextureRect.new()
 	icon.texture = _get_icon(item_id)
@@ -124,8 +124,8 @@ func _make_list_row(item_id: String, count: int) -> HBoxContainer:
 	row.add_child(icon)
 
 	var label := Label.new()
-	var name := item_db.get_display_name(item_id) if item_db != null else item_id
-	label.text = "%s x%d" % [name, count]
+	var item_name := item_db.get_display_name(item_id) if item_db != null else item_id
+	label.text = "%s x%d" % [item_name, count]
 	row.add_child(label)
 
 	return row
@@ -162,7 +162,7 @@ func _make_icon_texture(color: Color) -> Texture2D:
 	for y in range(ICON_SIZE):
 		image.set_pixel(0, y, shadow)
 		image.set_pixel(ICON_SIZE - 1, y, shadow)
-	for i in range(ICON_SIZE / 2):
+	for i in range(int(ICON_SIZE * 0.5)):
 		var px := 2 + i
 		var py := 2
 		if px < ICON_SIZE - 2:

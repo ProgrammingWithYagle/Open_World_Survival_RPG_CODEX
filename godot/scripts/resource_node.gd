@@ -61,7 +61,7 @@ func _add_detail_speckles(image: Image, color: Color) -> void:
         image.set_pixel(px, py, color)
 
 func _add_ripple(image: Image, color: Color) -> void:
-    var center := sprite_size / 2
+    var center := int(sprite_size * 0.5)
     for x in range(4, sprite_size - 4, 6):
         image.set_pixel(x, center - 3, color)
         image.set_pixel(x + 2, center + 2, color)
