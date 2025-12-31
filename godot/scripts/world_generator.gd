@@ -3,7 +3,7 @@ class_name WorldGenerator
 
 ## Builds a procedural tile map with biomes and exposes biome lookup helpers.
 
-const BIOMES := ["water", "grassland", "forest", "desert", "tundra"]
+const BIOMES: PackedStringArray = ["water", "grassland", "forest", "desert", "tundra"]
 
 @export var map_size := Vector2i(64, 64)
 @export var tile_size := 32
