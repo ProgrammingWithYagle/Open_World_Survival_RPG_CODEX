@@ -13,7 +13,7 @@ anchor_bottom = 0.0
 offset_left = 12.0
 offset_top = 12.0
 offset_right = 440.0
-offset_bottom = 560.0
+offset_bottom = 600.0
 
 [node name="Root" type="VBoxContainer" parent="Panel"]
 anchor_left = 0.0
@@ -83,6 +83,22 @@ size_flags_horizontal = 3
 [node name="ThirstValue" type="Label" parent="Panel/Root/NeedsList/ThirstRow"]
 text = "100"
 
+[node name="StaminaRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
+theme_override_constants/separation = 8
+
+[node name="StaminaLabel" type="Label" parent="Panel/Root/NeedsList/StaminaRow"]
+text = "Stamina"
+size_flags_horizontal = 2
+
+[node name="StaminaBar" type="ProgressBar" parent="Panel/Root/NeedsList/StaminaRow"]
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+size_flags_horizontal = 3
+
+[node name="StaminaValue" type="Label" parent="Panel/Root/NeedsList/StaminaRow"]
+text = "100"
+
 [node name="TempRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
 theme_override_constants/separation = 8
 
@@ -118,4 +134,4 @@ theme_override_constants/separation = 4
 [node name="CraftingSeparator" type="HSeparator" parent="Panel/Root"]
 
 [node name="HintLabel" type="Label" parent="Panel/Root"]
-text = "[WASD] Move  [E] Harvest  [C] Craft  [F] Consume"
+text = "[WASD] Move  [Shift] Sprint  [E] Harvest  [C] Craft  [F] Consume"

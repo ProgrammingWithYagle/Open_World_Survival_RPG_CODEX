@@ -35,7 +35,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 
 ## Current Status
 - **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
-- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
+- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health and stamina), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
 - **Recent improvements**: larger, stylized resource sprites; biome tile visuals (water, grassland, forest, desert, tundra); weighted resource placement per biome.
 - **New additions**: data-driven mob definitions with initial passive/aggressive/ranged/patrol examples, plus a main menu with options (master volume + fullscreen).
 - **Planned next**: expand world props (rocks/trees variants), add crafting stations with placement, and build a dedicated crafting/character stats panel.
@@ -60,7 +60,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 - **Dynamic events** (storms, migration, faction skirmishes, caravan raids).
 
 ### Survival & Needs
-- **Hunger, thirst, temperature, fatigue** as manageable, not punitive.
+- **Hunger, thirst, temperature, stamina, fatigue** as manageable, not punitive.
 - **Injuries & conditions** (bleeding, infections) that create new goals.
 - **Shelter & camp management** to reduce survival pressure.
 
@@ -130,7 +130,7 @@ Each system should be **modular** and **data‑driven** so content expands witho
 - **World Controller** (`godot/scripts/game.gd`): spawns resources, owns system wiring.
 - **Player** (`godot/scripts/player.gd`): movement, interaction, crafting input.
 - **Inventory** (`godot/scripts/inventory.gd`): item storage with change signals.
-- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay, and health penalties.
+- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay, stamina drain/regeneration, and health penalties.
 - **Crafting** (`godot/scripts/crafting.gd`): recipe validation and crafting actions.
 - **Item Database** (`godot/scripts/item_db.gd`): data loader for items/recipes.
 - **Mob Database** (`godot/scripts/mob_db.gd`): data loader for mob definitions.
