@@ -162,6 +162,7 @@ Each system should be **modular** and **data‑driven** so content expands witho
 ---
 
 ## Repository Structure (Planned)
+Currently, the repository only contains `README.md` and `LICENSE`; the directories below are planned and not present yet. An `AGENTS.md` file will be added later to document contributor guidance.
 ```
 /README.md
 /docs/               # design docs, milestones, balance notes
