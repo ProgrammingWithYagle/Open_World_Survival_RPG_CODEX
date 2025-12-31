@@ -47,7 +47,7 @@ func _try_harvest() -> void:
     if current_target == null:
         return
     if current_target.has_method("harvest"):
-        var result := current_target.harvest()
+        var result: Dictionary = current_target.harvest()
         if result.has("id"):
             var count := int(result["count"])
             if inventory.has_item("stone_knife", 1) and result["id"] in ["wood", "fiber"]:
@@ -61,7 +61,7 @@ func _try_craft_first_recipe() -> void:
     if recipe_ids.is_empty():
         return
     recipe_ids.sort()
-    var recipe_id := recipe_ids[0]
+    var recipe_id: String = String(recipe_ids[0])
     if crafting.craft(inventory, recipe_id):
         _apply_recipe_effects(recipe_id)
 

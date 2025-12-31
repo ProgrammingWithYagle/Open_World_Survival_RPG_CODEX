@@ -16,10 +16,10 @@ func add_item(item_id: String, amount: int) -> void:
 func remove_item(item_id: String, amount: int) -> bool:
     if amount <= 0:
         return false
-    var current := slots.get(item_id, 0)
+    var current: int = int(slots.get(item_id, 0))
     if current < amount:
         return false
-    var new_amount := current - amount
+    var new_amount: int = current - amount
     if new_amount == 0:
         slots.erase(item_id)
     else:
