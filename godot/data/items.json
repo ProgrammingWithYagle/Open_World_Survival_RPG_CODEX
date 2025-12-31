@@ -12,9 +12,10 @@
   "berry": {
     "name": "Berry",
     "stack": 20,
-    "description": "A quick snack that keeps hunger away.",
+    "description": "A quick snack that keeps hunger away and restores a little stamina.",
     "effects": {
-      "hunger": 8
+      "hunger": 8,
+      "stamina": 4
     }
   },
   "fiber": {
@@ -30,18 +31,20 @@
   "water": {
     "name": "Fresh Water",
     "stack": 20,
-    "description": "Clean water gathered from springs.",
+    "description": "Clean water gathered from springs that refreshes stamina.",
     "effects": {
-      "thirst": 14
+      "thirst": 14,
+      "stamina": 6
     }
   },
   "cooked_berry": {
     "name": "Cooked Berry",
     "stack": 20,
-    "description": "Warm berries that satisfy hunger and add a little heat.",
+    "description": "Warm berries that satisfy hunger, add a little heat, and steady stamina.",
     "effects": {
       "hunger": 14,
-      "temperature": 2
+      "temperature": 2,
+      "stamina": 6
     }
   },
   "bandage": {

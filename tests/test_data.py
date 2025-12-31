@@ -20,7 +20,7 @@ def test_item_data_is_valid():
         if "effects" in item:
             assert isinstance(item["effects"], dict), f"{item_id} effects must be a dict"
             for effect_key, value in item["effects"].items():
-                assert effect_key in {"hunger", "thirst", "temperature", "health"}, (
+                assert effect_key in {"hunger", "thirst", "temperature", "health", "stamina"}, (
                     f"{item_id} has unsupported effect {effect_key}"
                 )
                 assert isinstance(value, (int, float)), f"{item_id} effect {effect_key} must be numeric"
