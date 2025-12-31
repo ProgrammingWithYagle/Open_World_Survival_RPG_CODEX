@@ -18,7 +18,8 @@ A 2D top‑down open‑world survival RPG inspired by **devast.io** and **starve
 11. [Repository Structure (Planned)](#repository-structure-planned)
 12. [Design Principles](#design-principles)
 13. [Community & Feedback](#community--feedback)
-14. [Getting Started](#getting-started)
+14. [Contributing](#contributing)
+15. [Getting Started](#getting-started)
 
 ---
 
@@ -183,6 +184,13 @@ Each system should be **modular** and **data‑driven** so content expands witho
 
 ## Community & Feedback
 This project is a living experiment. Feedback will shape the game’s direction, balance, and content priorities. Share ideas, feature requests, and playtest notes as early as possible.
+
+---
+
+## Contributing
+- **Propose features:** Open an issue or start a discussion describing the problem, the player impact, and any gameplay references or inspirations.
+- **Coding conventions:** TBD. If you plan to submit code, open an issue first so we can align on structure, style, and Godot/GDScript conventions.
+- **Gameplay/system suggestions:** Please use a structured format: goal, affected systems, mechanics summary, progression impact, and any balance concerns.
 
 ---
 
