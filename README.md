@@ -5,8 +5,8 @@ A 2D top‑down open‑world survival RPG inspired by **devast.io** and **starve
 ---
 
 ## Table of Contents
-1. [Current Status](#current-status)
-2. [Vision](#vision)
+1. [Vision](#vision)
+2. [Current Status](#current-status)
 3. [Core Gameplay Loop](#core-gameplay-loop)
 4. [Key Systems](#key-systems)
 5. [Progression & Long‑Term Play](#progression--long-term-play)
@@ -19,13 +19,7 @@ A 2D top‑down open‑world survival RPG inspired by **devast.io** and **starve
 12. [Design Principles](#design-principles)
 13. [Community & Feedback](#community--feedback)
 14. [Getting Started](#getting-started)
-
----
-
-## Current Status
-- **Pre‑implementation**: no Godot project or gameplay code yet.
-- **This README is the source of truth** for the project’s vision, scope, and intended systems.
-- **Next step** is to create the Godot project skeleton and begin the first playable loop.
+15. [Next Steps](#next-steps)
 
 ---
 
@@ -36,6 +30,13 @@ Create a survival RPG that is **easy to start, hard to master**, where players:
 - Experience unique, emergent stories each run.
 
 The **north star**: a game you can play for hundreds of hours without running out of reasons to keep exploring and evolving.
+
+---
+
+## Current Status
+- **Pre‑implementation**: no Godot project or gameplay code yet.
+- **Implemented**: none yet (planning and documentation only).
+- **Planned next**: create the Godot project skeleton and start the first playable loop.
 
 ---
 
@@ -187,12 +188,19 @@ This project is a living experiment. Feedback will shape the game’s direction,
 ---
 
 ## Getting Started
-This repository is currently in planning mode. There is no runnable game project yet. When the Godot project is initialized, this section will include:
-- Setup steps for Godot 4.
-- How to open the project and run a test scene.
-- Any required tools or data sources.
+This repository is currently in **pre‑implementation / planning** mode. There is no runnable Godot project yet.
 
-For now, the recommended first action is to read this README to understand the intended scope and systems.
+Minimum steps (once the project skeleton exists):
+1. **Clone the repo**: `git clone <repo-url>` and `cd Open_World_Survival_RPG_CODEX`.
+2. **Install Godot 4** (standard build from godotengine.org).
+3. **Open the project** in Godot by selecting the `/godot/` folder.
+
+Expected folder layout (planned):
+- `/godot/` → Godot project root (will contain `project.godot`).
+- `/docs/` → design docs, milestones, balance notes.
+- `/tests/` → unit + simulation tests.
+
+Until the project is initialized, the recommended first action is to read this README to understand the intended scope and systems.
 
 ---
 
