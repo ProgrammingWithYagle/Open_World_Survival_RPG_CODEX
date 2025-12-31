@@ -161,8 +161,10 @@ Each system should be **modular** and **data‑driven** so content expands witho
 ---
 
 ## Repository Structure (Planned)
+Currently, the repository only contains `README.md` and `LICENSE`; there are no other directories yet. The structure below is planned and not present yet.
 ```
 /README.md
+/AGENTS.md           # contributor guidance (to be added later)
 /docs/               # design docs, milestones, balance notes
 /godot/              # game project (future)
 /godot/scenes/       # world, player, UI scenes
