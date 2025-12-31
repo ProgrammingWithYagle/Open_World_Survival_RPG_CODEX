@@ -34,9 +34,9 @@ The **north star**: a game you can play for hundreds of hours without running ou
 ---
 
 ## Current Status
-- **Pre‑implementation**: no Godot project or gameplay code yet.
-- **Implemented**: none yet (planning and documentation only).
-- **Planned next**: create the Godot project skeleton and start the first playable loop.
+- **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
+- **Implemented**: top‑down movement, harvesting, inventory, simple crafting, survival needs, and a minimal HUD.
+- **Planned next**: expand world visuals, add more crafting stations, and build a dedicated UI for recipes and stats.
 
 ---
 
@@ -96,7 +96,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 ---
 
 ## Tech Stack (Proposed)
-**Engine:** Godot 4 (best fit for 2D, open source, rapid iteration)
+**Engine:** Godot 4 (in use for the prototype project)
 
 **Languages:**
 - GDScript for gameplay
@@ -123,6 +123,16 @@ The **north star**: a game you can play for hundreds of hours without running ou
 - **UI System**: inventory, crafting, minimap, quests
 
 Each system should be **modular** and **data‑driven** so content expands without rewriting core code.
+
+### Implemented Core Modules (Prototype)
+- **World Controller** (`godot/scripts/game.gd`): spawns resources, owns system wiring.
+- **Player** (`godot/scripts/player.gd`): movement, interaction, crafting input.
+- **Inventory** (`godot/scripts/inventory.gd`): item storage with change signals.
+- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay.
+- **Crafting** (`godot/scripts/crafting.gd`): recipe validation and crafting actions.
+- **Item Database** (`godot/scripts/item_db.gd`): data loader for items/recipes.
+- **Resource Nodes** (`godot/scripts/resource_node.gd`): harvestable entities.
+- **HUD** (`godot/scripts/hud.gd`): simple UI readout for needs + inventory.
 
 ---
 
@@ -154,23 +164,24 @@ Each system should be **modular** and **data‑driven** so content expands witho
 ---
 
 ## Testing & Quality
-- **Unit tests** for systems (crafting recipes, stat calculations).
-- **Simulation tests** for AI and progression balance.
-- **Save/load tests** for persistence.
-- **Performance profiling** to keep 60 FPS target.
+- **Data validation tests** (Python/pytest) for items and recipes.
+- **Unit tests** for systems (crafting recipes, stat calculations) planned.
+- **Simulation tests** for AI and progression balance planned.
+- **Save/load tests** for persistence planned.
+- **Performance profiling** to keep 60 FPS target planned.
 
 ---
 
-## Repository Structure (Planned)
-Currently, the repository only contains `README.md` and `LICENSE`; the directories below are planned and not present yet. An `AGENTS.md` file will be added later to document contributor guidance.
+## Repository Structure
 ```
+/AGENTS.md           # contributor guidance
 /README.md
-/docs/               # design docs, milestones, balance notes
-/godot/              # game project (future)
-/godot/scenes/       # world, player, UI scenes
+/docs/               # design docs, milestones, balance notes (planned)
+/godot/              # Godot project root
+/godot/scenes/       # main, player, HUD, resource node scenes
 /godot/scripts/      # gameplay systems
-/godot/data/         # items, recipes, biomes
-/tests/              # unit + simulation tests
+/godot/data/         # items and crafting recipes
+/tests/              # data validation tests
 ```
 
 ---
@@ -189,26 +200,23 @@ This project is a living experiment. Feedback will shape the game’s direction,
 ---
 
 ## Getting Started
-This repository is currently in **pre‑implementation / planning** mode. There is no runnable Godot project yet.
-
-Minimum steps (once the project skeleton exists):
+Minimum steps:
 1. **Clone the repo**: `git clone <repo-url>` and `cd Open_World_Survival_RPG_CODEX`.
 2. **Install Godot 4** (standard build from godotengine.org).
 3. **Open the project** in Godot by selecting the `/godot/` folder.
+4. **Run the scene** to move with WASD, harvest with E, craft with C.
 
-Expected folder layout (planned):
-- `/godot/` → Godot project root (will contain `project.godot`).
-- `/docs/` → design docs, milestones, balance notes.
-- `/tests/` → unit + simulation tests.
-
-Until the project is initialized, the recommended first action is to read this README to understand the intended scope and systems.
+Optional tests:
+- `pytest` (validates JSON data in `godot/data/`).
 
 ---
 
 ## Next Steps
-1. Create the Godot project skeleton.
-2. Establish the first playable loop (gather → craft → survive).
-3. Begin iterative expansion based on feedback.
+1. Add placeholder tilesets and biome zones for clearer world navigation.
+2. Expand crafting with tools, workstations, and a basic crafting UI.
+3. Introduce simple enemies and combat feedback.
+4. Add save/load support for player progress.
+5. Create a lightweight audio pass (footsteps, harvest, ambient).
 
 ---
 

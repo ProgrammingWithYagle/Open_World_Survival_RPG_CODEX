@@ -1,0 +1,22 @@
+{
+  "wood": {
+    "name": "Wood",
+    "stack": 50,
+    "description": "Basic building material harvested from trees."
+  },
+  "stone": {
+    "name": "Stone",
+    "stack": 50,
+    "description": "Durable rock used for tools and structures."
+  },
+  "berry": {
+    "name": "Berry",
+    "stack": 20,
+    "description": "A quick snack that keeps hunger away."
+  },
+  "campfire": {
+    "name": "Campfire",
+    "stack": 5,
+    "description": "Keeps the player warm and allows simple cooking."
+  }
+}

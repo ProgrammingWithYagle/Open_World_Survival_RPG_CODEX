@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[node name="ResourceNode" type="Area2D"]
+script = ExtResource("res://scripts/resource_node.gd")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
