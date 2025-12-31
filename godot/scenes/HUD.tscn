@@ -12,49 +12,110 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 12.0
 offset_top = 12.0
-offset_right = 360.0
-offset_bottom = 260.0
+offset_right = 440.0
+offset_bottom = 560.0
 
-[node name="NeedsLabel" type="Label" parent="Panel"]
+[node name="Root" type="VBoxContainer" parent="Panel"]
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 12.0
 offset_top = 12.0
-offset_right = 280.0
-offset_bottom = 64.0
-text = "Needs"
+offset_right = -12.0
+offset_bottom = -12.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
 
-[node name="InventoryLabel" type="Label" parent="Panel"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 12.0
-offset_top = 72.0
-offset_right = 320.0
-offset_bottom = 140.0
+[node name="TitleLabel" type="Label" parent="Panel/Root"]
+text = "Survival Status"
+
+[node name="NeedsList" type="VBoxContainer" parent="Panel/Root"]
+theme_override_constants/separation = 4
+
+[node name="HealthRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
+theme_override_constants/separation = 8
+
+[node name="HealthLabel" type="Label" parent="Panel/Root/NeedsList/HealthRow"]
+text = "Health"
+size_flags_horizontal = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Panel/Root/NeedsList/HealthRow"]
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="HealthValue" type="Label" parent="Panel/Root/NeedsList/HealthRow"]
+text = "100"
+
+[node name="HungerRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
+theme_override_constants/separation = 8
+
+[node name="HungerLabel" type="Label" parent="Panel/Root/NeedsList/HungerRow"]
+text = "Hunger"
+size_flags_horizontal = 2
+
+[node name="HungerBar" type="ProgressBar" parent="Panel/Root/NeedsList/HungerRow"]
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+size_flags_horizontal = 3
+
+[node name="HungerValue" type="Label" parent="Panel/Root/NeedsList/HungerRow"]
+text = "100"
+
+[node name="ThirstRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
+theme_override_constants/separation = 8
+
+[node name="ThirstLabel" type="Label" parent="Panel/Root/NeedsList/ThirstRow"]
+text = "Thirst"
+size_flags_horizontal = 2
+
+[node name="ThirstBar" type="ProgressBar" parent="Panel/Root/NeedsList/ThirstRow"]
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+size_flags_horizontal = 3
+
+[node name="ThirstValue" type="Label" parent="Panel/Root/NeedsList/ThirstRow"]
+text = "100"
+
+[node name="TempRow" type="HBoxContainer" parent="Panel/Root/NeedsList"]
+theme_override_constants/separation = 8
+
+[node name="TempLabel" type="Label" parent="Panel/Root/NeedsList/TempRow"]
+text = "Temp"
+size_flags_horizontal = 2
+
+[node name="TempBar" type="ProgressBar" parent="Panel/Root/NeedsList/TempRow"]
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+size_flags_horizontal = 3
+
+[node name="TempValue" type="Label" parent="Panel/Root/NeedsList/TempRow"]
+text = "20°C"
+
+[node name="NeedsSeparator" type="HSeparator" parent="Panel/Root"]
+
+[node name="InventoryTitle" type="Label" parent="Panel/Root"]
 text = "Inventory"
 
-[node name="CraftingLabel" type="Label" parent="Panel"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 12.0
-offset_top = 150.0
-offset_right = 320.0
-offset_bottom = 200.0
+[node name="InventoryList" type="VBoxContainer" parent="Panel/Root"]
+theme_override_constants/separation = 4
+
+[node name="InventorySeparator" type="HSeparator" parent="Panel/Root"]
+
+[node name="CraftingTitle" type="Label" parent="Panel/Root"]
 text = "Craftable"
 
-[node name="HintLabel" type="Label" parent="Panel"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 12.0
-offset_top = 210.0
-offset_right = 340.0
-offset_bottom = 250.0
+[node name="CraftingList" type="VBoxContainer" parent="Panel/Root"]
+theme_override_constants/separation = 4
+
+[node name="CraftingSeparator" type="HSeparator" parent="Panel/Root"]
+
+[node name="HintLabel" type="Label" parent="Panel/Root"]
 text = "[WASD] Move  [E] Harvest  [C] Craft  [F] Consume"

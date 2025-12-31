@@ -35,8 +35,9 @@ The **north star**: a game you can play for hundreds of hours without running ou
 
 ## Current Status
 - **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
-- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health), and a HUD showing needs, inventory, and craftable recipes.
-- **Planned next**: expand world visuals, add crafting stations with placement, and build a dedicated UI for recipes and stats.
+- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
+- **Recent improvements**: larger, stylized resource sprites; biome tile visuals (water, grassland, forest, desert, tundra); weighted resource placement per biome.
+- **Planned next**: expand world props (rocks/trees variants), add crafting stations with placement, and build a dedicated crafting/character stats panel.
 
 ---
 
@@ -212,8 +213,8 @@ Optional tests:
 ---
 
 ## Next Steps
-1. Add placeholder tilesets and biome zones for clearer world navigation.
-2. Introduce placeable crafting stations and crafting UI panels.
+1. Expand biome visuals with additional prop variants and decorative clutter.
+2. Introduce placeable crafting stations and a crafting UI panel with recipe details.
 3. Add simple enemies, combat feedback, and health recovery sources.
 4. Add save/load support for player progress.
 5. Create a lightweight audio pass (footsteps, harvest, ambient).
