@@ -17,44 +17,44 @@ var hud: CanvasLayer
 var world: Node2D
 
 func _ready() -> void:
-    randomize()
-    world = $World
-    player = $Player
-    hud = $HUD
+	randomize()
+	world = $World
+	player = $Player
+	hud = $HUD
 
-    item_db = ItemDB.new()
-    add_child(item_db)
+	item_db = ItemDB.new()
+	add_child(item_db)
 
-    inventory = Inventory.new()
-    add_child(inventory)
+	inventory = Inventory.new()
+	add_child(inventory)
 
-    needs = Needs.new()
-    add_child(needs)
+	needs = Needs.new()
+	add_child(needs)
 
-    crafting = Crafting.new()
-    add_child(crafting)
+	crafting = Crafting.new()
+	add_child(crafting)
 
-    player.set_systems(inventory, needs, crafting, item_db)
-    hud.bind_systems(inventory, needs, item_db, crafting)
+	player.set_systems(inventory, needs, crafting, item_db)
+	hud.bind_systems(inventory, needs, item_db, crafting)
 
-    _spawn_resources()
-    _seed_starting_items()
+	_spawn_resources()
+	_seed_starting_items()
 
 func _process(delta: float) -> void:
-    needs.tick(delta)
+	needs.tick(delta)
 
 func _spawn_resources() -> void:
-    var resource_types := ["wood", "stone", "berry", "fiber", "water"]
-    for i in range(resource_count):
-        var node := RESOURCE_NODE_SCENE.instantiate()
-        node.resource_id = resource_types[randi() % resource_types.size()]
-        node.global_position = _random_spawn_position()
-        world.add_child(node)
+	var resource_types := ["wood", "stone", "berry", "fiber", "water"]
+	for i in range(resource_count):
+		var node := RESOURCE_NODE_SCENE.instantiate()
+		node.resource_id = resource_types[randi() % resource_types.size()]
+		node.global_position = _random_spawn_position()
+		world.add_child(node)
 
 func _random_spawn_position() -> Vector2:
-    var angle := randf() * TAU
-    var distance := randf_range(120.0, spawn_radius)
-    return Vector2(cos(angle), sin(angle)) * distance
+	var angle := randf() * TAU
+	var distance := randf_range(120.0, spawn_radius)
+	return Vector2(cos(angle), sin(angle)) * distance
 
 func _seed_starting_items() -> void:
-    inventory.add_item("berry", 2)
+	inventory.add_item("berry", 2)
