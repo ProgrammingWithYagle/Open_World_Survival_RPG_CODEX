@@ -5,18 +5,27 @@ A 2D top‑down open‑world survival RPG inspired by **devast.io** and **starve
 ---
 
 ## Table of Contents
-1. [Vision](#vision)
-2. [Core Gameplay Loop](#core-gameplay-loop)
-3. [Key Systems](#key-systems)
-4. [Progression & Long‑Term Play](#progression--long-term-play)
-5. [Art & UX Direction](#art--ux-direction)
-6. [Tech Stack (Proposed)](#tech-stack-proposed)
-7. [Architecture Overview](#architecture-overview)
-8. [Development Roadmap](#development-roadmap)
-9. [Testing & Quality](#testing--quality)
-10. [Repository Structure (Planned)](#repository-structure-planned)
-11. [Design Principles](#design-principles)
-12. [Community & Feedback](#community--feedback)
+1. [Current Status](#current-status)
+2. [Vision](#vision)
+3. [Core Gameplay Loop](#core-gameplay-loop)
+4. [Key Systems](#key-systems)
+5. [Progression & Long‑Term Play](#progression--long-term-play)
+6. [Art & UX Direction](#art--ux-direction)
+7. [Tech Stack (Proposed)](#tech-stack-proposed)
+8. [Architecture Overview](#architecture-overview)
+9. [Development Roadmap](#development-roadmap)
+10. [Testing & Quality](#testing--quality)
+11. [Repository Structure (Planned)](#repository-structure-planned)
+12. [Design Principles](#design-principles)
+13. [Community & Feedback](#community--feedback)
+14. [Getting Started](#getting-started)
+
+---
+
+## Current Status
+- **Pre‑implementation**: no Godot project or gameplay code yet.
+- **This README is the source of truth** for the project’s vision, scope, and intended systems.
+- **Next step** is to create the Godot project skeleton and begin the first playable loop.
 
 ---
 
@@ -154,7 +163,6 @@ Each system should be **modular** and **data‑driven** so content expands witho
 ## Repository Structure (Planned)
 ```
 /README.md
-/AGENTS.md
 /docs/               # design docs, milestones, balance notes
 /godot/              # game project (future)
 /godot/scenes/       # world, player, UI scenes
@@ -175,6 +183,16 @@ Each system should be **modular** and **data‑driven** so content expands witho
 
 ## Community & Feedback
 This project is a living experiment. Feedback will shape the game’s direction, balance, and content priorities. Share ideas, feature requests, and playtest notes as early as possible.
+
+---
+
+## Getting Started
+This repository is currently in planning mode. There is no runnable game project yet. When the Godot project is initialized, this section will include:
+- Setup steps for Godot 4.
+- How to open the project and run a test scene.
+- Any required tools or data sources.
+
+For now, the recommended first action is to read this README to understand the intended scope and systems.
 
 ---
 
