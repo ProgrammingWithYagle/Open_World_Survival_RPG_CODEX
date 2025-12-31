@@ -69,10 +69,10 @@ func _spawn_resources() -> void:
 		var biome := _pick_weighted_biome(biome_weights, rng)
 		var resource_id := _pick_resource_for_biome(biome, rng)
 		var cell := world_generator.get_random_cell_in_biome(biome)
-		var position := world_generator.get_world_position_for_cell(cell)
-		if player != null and position.distance_to(player.global_position) < 64.0:
+		var spawn_position := world_generator.get_world_position_for_cell(cell)
+		if player != null and spawn_position.distance_to(player.global_position) < 64.0:
 			continue
-		_spawn_resource_node(resource_id, position)
+		_spawn_resource_node(resource_id, spawn_position)
 	for i in range(resource_count):
 		var water_cell := world_generator.get_random_cell_in_biome("water")
 		if water_cell != Vector2i.ZERO:
@@ -102,22 +102,22 @@ func _spawn_radial_mobs() -> void:
 		return
 	for i in range(mob_count):
 		var mob_id: String = String(mob_ids[randi() % mob_ids.size()])
-		var position := _random_mob_spawn_position()
-		_spawn_mob(mob_id, position)
+		var spawn_position := _random_mob_spawn_position()
+		_spawn_mob(mob_id, spawn_position)
 
 func _generate_world() -> void:
 	if world_generator == null:
 		return
-	var seed := world_seed if world_seed != 0 else randi()
-	world_generator.generate(seed)
+	var generated_seed := world_seed if world_seed != 0 else randi()
+	world_generator.generate(generated_seed)
 
-func _spawn_resource_node(resource_id: String, position: Vector2) -> void:
+func _spawn_resource_node(resource_id: String, spawn_position: Vector2) -> void:
 	var node := RESOURCE_NODE_SCENE.instantiate()
 	node.resource_id = resource_id
-	node.global_position = position
+	node.global_position = spawn_position
 	world.add_child(node)
 
-func _spawn_mob(mob_id: String, position: Vector2) -> void:
+func _spawn_mob(mob_id: String, spawn_position: Vector2) -> void:
 	if mob_db == null:
 		return
 	var mob := MOB_SCENE.instantiate()
@@ -126,7 +126,7 @@ func _spawn_mob(mob_id: String, position: Vector2) -> void:
 		data["id"] = mob_id
 		mob.apply_definition(data)
 		mob.set_target(player, needs)
-	mob.global_position = position
+	mob.global_position = spawn_position
 	world.add_child(mob)
 
 func _build_biome_weights() -> Dictionary:
@@ -157,10 +157,10 @@ func _spawn_mobs() -> void:
 		if mob_id == "":
 			continue
 		var cell := world_generator.get_random_cell_in_biome(biome)
-		var position := world_generator.get_world_position_for_cell(cell)
-		if player != null and position.distance_to(player.global_position) < 120.0:
+		var spawn_position := world_generator.get_world_position_for_cell(cell)
+		if player != null and spawn_position.distance_to(player.global_position) < 120.0:
 			continue
-		_spawn_mob(mob_id, position)
+		_spawn_mob(mob_id, spawn_position)
 
 func _pick_mob_for_biome(biome: String, rng: RandomNumberGenerator) -> String:
 	if mob_db == null:
