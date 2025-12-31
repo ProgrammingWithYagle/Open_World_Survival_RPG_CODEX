@@ -188,7 +188,7 @@ This project is a living experiment. Feedback will shape the game’s direction,
 ---
 
 ## Contributing
-- **Propose features:** Open an issue or start a discussion describing the problem, the player impact, and any gameplay references or inspirations.
+- **Propose features:** Use discussions for early brainstorming and issues for concrete, actionable proposals. Include the problem, player impact, and any gameplay references or inspirations.
 - **Coding conventions:** TBD. Before submitting code, open an issue so we can align on structure, style, and Godot/GDScript conventions.
 - **Gameplay/system suggestions:** Please use a structured format:
   - Goal (what problem or experience this improves)
