@@ -16,11 +16,14 @@ func _load_json(path: String) -> Dictionary:
         push_error("Failed to open item data: %s" % path)
         return {}
     var content := file.get_as_text()
-    var parsed: Variant = JSON.parse_string(content)
-    if typeof(parsed) != TYPE_DICTIONARY:
+    var parsed_value: Variant = JSON.parse_string(content)
+    var parsed_dict: Dictionary = {}
+    if parsed_value is Dictionary:
+        parsed_dict = parsed_value
+    else:
         push_error("Item data is not a dictionary: %s" % path)
         return {}
-    return parsed as Dictionary
+    return parsed_dict
 
 func get_item(item_id: String) -> Dictionary:
     return items.get(item_id, {})

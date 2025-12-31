@@ -37,6 +37,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 - **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
 - **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
 - **Recent improvements**: larger, stylized resource sprites; biome tile visuals (water, grassland, forest, desert, tundra); weighted resource placement per biome.
+- **New additions**: data-driven mob definitions with initial passive/aggressive/ranged/patrol examples, plus a main menu with options (master volume + fullscreen).
 - **Planned next**: expand world props (rocks/trees variants), add crafting stations with placement, and build a dedicated crafting/character stats panel.
 
 ---
@@ -132,8 +133,11 @@ Each system should be **modular** and **data‑driven** so content expands witho
 - **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay, and health penalties.
 - **Crafting** (`godot/scripts/crafting.gd`): recipe validation and crafting actions.
 - **Item Database** (`godot/scripts/item_db.gd`): data loader for items/recipes.
+- **Mob Database** (`godot/scripts/mob_db.gd`): data loader for mob definitions.
+- **Mob Controller** (`godot/scripts/mob.gd`): lightweight AI behaviors (passive/aggressive/ranged/patrol).
 - **Resource Nodes** (`godot/scripts/resource_node.gd`): harvestable entities.
 - **HUD** (`godot/scripts/hud.gd`): needs, inventory, and craftable recipe readouts.
+- **Main Menu** (`godot/scenes/MainMenu.tscn` + `godot/scripts/main_menu.gd`): start/quit flow and settings panel.
 
 ---
 
@@ -181,7 +185,7 @@ Each system should be **modular** and **data‑driven** so content expands witho
 /godot/              # Godot project root
 /godot/scenes/       # main, player, HUD, resource node scenes
 /godot/scripts/      # gameplay systems
-/godot/data/         # items and crafting recipes
+/godot/data/         # items, crafting recipes, mob definitions
 /tests/              # data validation tests
 ```
 
