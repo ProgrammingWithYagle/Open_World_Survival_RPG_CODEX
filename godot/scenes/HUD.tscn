@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("res://scripts/hud.gd")
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 320.0
+offset_bottom = 210.0
+
+[node name="NeedsLabel" type="Label" parent="Panel"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 280.0
+offset_bottom = 64.0
+text = "Needs"
+
+[node name="InventoryLabel" type="Label" parent="Panel"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 72.0
+offset_right = 280.0
+offset_bottom = 140.0
+text = "Inventory"
+
+[node name="HintLabel" type="Label" parent="Panel"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 150.0
+offset_right = 300.0
+offset_bottom = 195.0
+text = "[WASD] Move  [E] Harvest  [C] Craft"

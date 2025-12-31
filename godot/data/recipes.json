@@ -1,0 +1,9 @@
+{
+  "campfire": {
+    "result": {"id": "campfire", "count": 1},
+    "ingredients": [
+      {"id": "wood", "count": 4},
+      {"id": "stone", "count": 2}
+    ]
+  }
+}
