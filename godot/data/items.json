@@ -52,6 +52,26 @@
       "health": 12
     }
   },
+  "raw_meat": {
+    "name": "Raw Meat",
+    "stack": 10,
+    "description": "Freshly harvested meat that should be cooked before eating."
+  },
+  "hide": {
+    "name": "Hide",
+    "stack": 20,
+    "description": "Tough animal hide used for leatherworking and armor."
+  },
+  "slime_gel": {
+    "name": "Slime Gel",
+    "stack": 15,
+    "description": "Sticky residue from slimes, useful in alchemy."
+  },
+  "venom_sac": {
+    "name": "Venom Sac",
+    "stack": 8,
+    "description": "A fragile sac containing toxins, prized by hunters."
+  },
   "stone_knife": {
     "name": "Stone Knife",
     "stack": 1,

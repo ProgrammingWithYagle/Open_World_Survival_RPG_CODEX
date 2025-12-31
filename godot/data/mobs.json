@@ -1,0 +1,68 @@
+{
+  "boar": {
+    "name": "Wild Boar",
+    "behavior": "aggressive",
+    "health": 48,
+    "speed": 95,
+    "aggro_range": 190,
+    "attack_range": 26,
+    "attack_cooldown": 1.1,
+    "damage": 7,
+    "patrol_radius": 0,
+    "biomes": ["grassland", "forest"],
+    "color": [0.55, 0.38, 0.25],
+    "drops": [
+      {"id": "raw_meat", "count": 2},
+      {"id": "hide", "count": 1}
+    ]
+  },
+  "slime": {
+    "name": "Slime",
+    "behavior": "passive",
+    "health": 24,
+    "speed": 60,
+    "aggro_range": 110,
+    "attack_range": 18,
+    "attack_cooldown": 1.6,
+    "damage": 3,
+    "patrol_radius": 0,
+    "biomes": ["forest", "tundra"],
+    "color": [0.25, 0.8, 0.45],
+    "drops": [
+      {"id": "slime_gel", "count": 1}
+    ]
+  },
+  "spitter": {
+    "name": "Spitter",
+    "behavior": "ranged",
+    "health": 30,
+    "speed": 80,
+    "aggro_range": 200,
+    "attack_range": 90,
+    "attack_cooldown": 1.4,
+    "damage": 5,
+    "patrol_radius": 0,
+    "biomes": ["desert", "tundra"],
+    "color": [0.82, 0.42, 0.2],
+    "drops": [
+      {"id": "venom_sac", "count": 1}
+    ]
+  },
+  "stone_guardian": {
+    "name": "Stone Guardian",
+    "behavior": "patrol",
+    "health": 65,
+    "speed": 70,
+    "aggro_range": 150,
+    "attack_range": 22,
+    "attack_cooldown": 1.8,
+    "damage": 8,
+    "patrol_radius": 140,
+    "biomes": ["grassland", "desert"],
+    "color": [0.55, 0.55, 0.6],
+    "drops": [
+      {"id": "stone", "count": 3},
+      {"id": "fiber", "count": 1}
+    ]
+  }
+}

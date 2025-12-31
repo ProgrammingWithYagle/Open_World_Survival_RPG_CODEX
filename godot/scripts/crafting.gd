@@ -16,11 +16,14 @@ func _load_json(path: String) -> Dictionary:
         push_error("Failed to open recipes: %s" % path)
         return {}
     var content := file.get_as_text()
-    var parsed: Variant = JSON.parse_string(content)
-    if typeof(parsed) != TYPE_DICTIONARY:
+    var parsed_value: Variant = JSON.parse_string(content)
+    var parsed_dict: Dictionary = {}
+    if parsed_value is Dictionary:
+        parsed_dict = parsed_value
+    else:
         push_error("Recipe data is not a dictionary: %s" % path)
         return {}
-    return parsed as Dictionary
+    return parsed_dict
 
 func can_craft(inventory: Inventory, recipe_id: String) -> bool:
     if not recipes.has(recipe_id):

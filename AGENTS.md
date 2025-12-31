@@ -1,7 +1,7 @@
 # Agent Notes
 
 ## Project Status
-The Godot 4 project skeleton now lives in `/godot`, with starter scenes, scripts, and data-driven items/recipes. Keep this file updated whenever the repo structure or workflows change.
+The Godot 4 project skeleton now lives in `/godot`, with starter scenes, scripts, data-driven items/recipes, mob definitions, and a main menu scene with options. Keep this file updated whenever the repo structure or workflows change.
 
 ## Conventions
 - Use `godot/scripts/` for gameplay logic and keep systems modular.
