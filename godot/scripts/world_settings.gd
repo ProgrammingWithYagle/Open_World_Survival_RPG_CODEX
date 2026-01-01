@@ -6,7 +6,8 @@ class_name WorldSettings
 
 enum Difficulty { PEACEFUL, EASY, NORMAL, HARDCORE }
 
-const PEACEFUL_BEHAVIORS := ["passive", "patrol"]
+## Peaceful mode only permits passive wildlife in spawn tables.
+const PEACEFUL_BEHAVIORS := ["passive"]
 
 @export var difficulty: Difficulty = Difficulty.NORMAL
 @export var enable_needs := true
