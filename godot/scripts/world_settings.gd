@@ -7,7 +7,7 @@ class_name WorldSettings
 enum Difficulty { PEACEFUL, EASY, NORMAL, HARDCORE }
 
 ## Peaceful mode only permits passive wildlife in spawn tables.
-const PEACEFUL_BEHAVIORS := ["passive"]
+const PEACEFUL_BEHAVIORS: Array[String] = ["passive"]
 
 @export var difficulty: Difficulty = Difficulty.NORMAL
 @export var enable_needs := true
@@ -89,4 +89,4 @@ func get_mob_damage_multiplier() -> float:
 func get_allowed_mob_behaviors() -> Array[String]:
 	if difficulty == Difficulty.PEACEFUL:
 		return PEACEFUL_BEHAVIORS
-	return []
+	return Array[String]()
