@@ -149,7 +149,7 @@ World creation now uses a `WorldSettings` Resource (`godot/scripts/world_setting
 ### Difficulty Presets
 World creation exposes four difficulty presets that apply recommended world flags and tuning:
 - **Peaceful**: spawns only passive wildlife from `godot/data/mobs.json` (aggressive, ranged, and patrol entries are skipped) and disables survival needs by default.
-- **Easy**: reduces hostile mob spawn density and mob damage, while slowing hunger/thirst decay.
+- **Easy**: reduces hostile mob spawn density and mob damage by ~30%, while slowing hunger/thirst decay by the same margin to lower overall survival pressure.
 - **Normal**: baseline tuning for mob spawns, damage, and survival decay.
 - **Hardcore**: disables respawning on death while keeping baseline spawn and decay tuning.
 

@@ -4,6 +4,9 @@ extends Node2D
 
 const RESOURCE_NODE_SCENE := preload("res://scenes/ResourceNode.tscn")
 const MOB_SCENE := preload("res://scenes/Mob.tscn")
+## Easy mode tuning values for survival decay and combat pressure.
+const EASY_NEEDS_DECAY_MULTIPLIER := 0.7
+const EASY_MOB_MULTIPLIER := 0.7
 
 @export var resource_count := 20
 @export var spawn_radius := 420.0
@@ -152,7 +155,10 @@ func _spawn_mob(mob_id: String, spawn_position: Vector2) -> void:
 		if world_settings != null:
 			mob.set_peaceful_mode(world_settings.difficulty == WorldSettings.Difficulty.PEACEFUL)
 		if world_settings != null:
-			mob.damage *= world_settings.get_mob_damage_multiplier()
+			var damage_multiplier := world_settings.get_mob_damage_multiplier()
+			if world_settings.difficulty == WorldSettings.Difficulty.EASY:
+				damage_multiplier = EASY_MOB_MULTIPLIER
+			mob.damage *= damage_multiplier
 		mob.set_target(player, needs)
 	mob.global_position = spawn_position
 	world.add_child(mob)
@@ -252,7 +258,11 @@ func get_world_settings() -> WorldSettings:
 func _apply_world_settings() -> void:
 	if world_settings == null:
 		world_settings = WorldSettings.new()
+	if world_settings.difficulty == WorldSettings.Difficulty.HARDCORE:
+		world_settings.allow_respawn = false
 	var mob_multiplier := world_settings.get_mob_spawn_multiplier()
+	if world_settings.difficulty == WorldSettings.Difficulty.EASY:
+		mob_multiplier = EASY_MOB_MULTIPLIER
 	var spawn_mobs := world_settings.enable_hostile_mobs or world_settings.difficulty == WorldSettings.Difficulty.PEACEFUL
 	if spawn_mobs:
 		mob_count = int(round(base_mob_count * mob_multiplier))
@@ -264,6 +274,9 @@ func _apply_world_settings() -> void:
 	needs.enabled = world_settings.enable_needs
 	if needs.enabled:
 		needs.apply_difficulty_settings(world_settings)
+		if world_settings.difficulty == WorldSettings.Difficulty.EASY:
+			needs.hunger_decay_multiplier = EASY_NEEDS_DECAY_MULTIPLIER
+			needs.thirst_decay_multiplier = EASY_NEEDS_DECAY_MULTIPLIER
 	else:
 		needs.reset_stats()
 
