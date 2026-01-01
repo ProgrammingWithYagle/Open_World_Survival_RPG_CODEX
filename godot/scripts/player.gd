@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var move_speed := 180.0
 @export var sprint_multiplier := 1.5
 @export var sprint_min_stamina := 10.0
+## Camera zoom for the player view (set on the Camera2D child in _ready()).
+@export var zoom_level := Vector2(2.0, 2.0)
 
 var inventory: Inventory
 var needs: Needs
@@ -20,6 +22,7 @@ func _ready() -> void:
 	interact_area.collision_mask = 1
 	_configure_collision()
 	_configure_sprite()
+	_configure_camera()
 	interact_area.area_entered.connect(_on_area_entered)
 	interact_area.area_exited.connect(_on_area_exited)
 
@@ -118,16 +121,16 @@ func _configure_collision() -> void:
 	if body_collision.shape == null:
 		body_collision.shape = CircleShape2D.new()
 	if body_collision.shape is CircleShape2D:
-		body_collision.shape.radius = 12.0
+		body_collision.shape.radius = 8.0
 	var interact_collision := $InteractArea/InteractCollision
 	if interact_collision.shape == null:
 		interact_collision.shape = CircleShape2D.new()
 	if interact_collision.shape is CircleShape2D:
-		interact_collision.shape.radius = 28.0
+		interact_collision.shape.radius = 18.0
 
 func _configure_sprite() -> void:
 	var sprite := $Sprite
-	var size := 24
+	var size := 32
 	var base := Color(0.2, 0.6, 0.9)
 	var shadow := base.darkened(0.3)
 	var highlight := base.lightened(0.2)
@@ -139,10 +142,16 @@ func _configure_sprite() -> void:
 	for y in range(size):
 		image.set_pixel(0, y, shadow)
 		image.set_pixel(size - 1, y, shadow)
-	image.set_pixel(7, 8, highlight)
-	image.set_pixel(16, 8, highlight)
-	image.set_pixel(11, 15, highlight)
+	image.set_pixel(10, 11, highlight)
+	image.set_pixel(21, 11, highlight)
+	image.set_pixel(16, 20, highlight)
 	sprite.texture = ImageTexture.create_from_image(image)
+
+func _configure_camera() -> void:
+	var camera := $Camera2D
+	if camera != null:
+		camera.current = true
+		camera.zoom = zoom_level
 
 func _update_stamina_from_movement(delta: float, is_moving: bool, is_sprinting: bool) -> void:
 	if needs == null:
