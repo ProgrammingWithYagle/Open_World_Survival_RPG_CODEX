@@ -87,10 +87,11 @@ func _setup_world_settings() -> void:
 	_apply_recommended_world_flags(WorldSettings.Difficulty.NORMAL)
 
 func _on_difficulty_selected(index: int) -> void:
-	_apply_recommended_world_flags(index)
+	_apply_recommended_world_flags(index as WorldSettings.Difficulty)
 
-func _apply_recommended_world_flags(difficulty: int) -> void:
+func _apply_recommended_world_flags(difficulty: WorldSettings.Difficulty) -> void:
 	var settings := WorldSettings.new()
+	# OptionButton indices map to the enum ids, so cast to keep GDScript happy.
 	settings.difficulty = difficulty
 	settings.apply_recommended_flags()
 	needs_toggle.button_pressed = settings.enable_needs
@@ -100,7 +101,7 @@ func _apply_recommended_world_flags(difficulty: int) -> void:
 
 func _build_world_settings() -> WorldSettings:
 	var settings := WorldSettings.new()
-	settings.difficulty = difficulty_option.get_selected_id()
+	settings.difficulty = difficulty_option.get_selected_id() as WorldSettings.Difficulty
 	settings.enable_needs = needs_toggle.button_pressed
 	settings.enable_hostile_mobs = mobs_toggle.button_pressed
 	settings.allow_respawn = respawn_toggle.button_pressed
