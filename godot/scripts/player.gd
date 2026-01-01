@@ -150,7 +150,8 @@ func _configure_sprite() -> void:
 func _configure_camera() -> void:
 	var camera := $Camera2D
 	if camera != null:
-		camera.current = true
+		# Godot 4 uses make_current() instead of a writable "current" property.
+		camera.make_current()
 		camera.zoom = zoom_level
 
 func _update_stamina_from_movement(delta: float, is_moving: bool, is_sprinting: bool) -> void:
