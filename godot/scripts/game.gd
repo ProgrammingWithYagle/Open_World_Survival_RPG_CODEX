@@ -148,6 +148,9 @@ func _spawn_mob(mob_id: String, spawn_position: Vector2) -> void:
 		var data := mob_db.get_mob(mob_id).duplicate(true)
 		data["id"] = mob_id
 		mob.apply_definition(data)
+		## Peaceful mode ensures mobs never run aggressive logic, even if data slips through.
+		if world_settings != null:
+			mob.set_peaceful_mode(world_settings.difficulty == WorldSettings.Difficulty.PEACEFUL)
 		if world_settings != null:
 			mob.damage *= world_settings.get_mob_damage_multiplier()
 		mob.set_target(player, needs)
@@ -168,7 +171,8 @@ func _build_biome_weights() -> Dictionary:
 func _spawn_mobs() -> void:
 	if mob_db == null:
 		return
-	if world_settings != null and not world_settings.enable_hostile_mobs and world_settings.difficulty != WorldSettings.Difficulty.PEACEFUL:
+	var peaceful := world_settings != null and world_settings.difficulty == WorldSettings.Difficulty.PEACEFUL
+	if world_settings != null and not world_settings.enable_hostile_mobs and not peaceful:
 		return
 	if world_generator == null:
 		_spawn_radial_mobs()

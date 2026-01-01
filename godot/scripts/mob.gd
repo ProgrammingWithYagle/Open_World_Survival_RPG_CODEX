@@ -26,6 +26,8 @@ var wander_target := Vector2.ZERO
 var patrol_points: Array = []
 var patrol_index := 0
 var attack_timer := 0.0
+## When true, hostile behaviors are suppressed (used for Peaceful difficulty).
+var peaceful_mode := false
 
 func _ready() -> void:
 	rng.randomize()
@@ -62,12 +64,21 @@ func set_target(new_target: Node2D, needs: Needs) -> void:
 	target = new_target
 	target_needs = needs
 
+func set_peaceful_mode(enabled: bool) -> void:
+	peaceful_mode = enabled
+	if peaceful_mode and behavior != Behavior.PASSIVE:
+		behavior = Behavior.PASSIVE
+		_build_patrol_points()
+
 func take_damage(amount: float) -> void:
 	current_health = clampf(current_health - amount, 0.0, max_health)
 	if current_health <= 0.0:
 		queue_free()
 
 func _update_behavior(delta: float) -> void:
+	if peaceful_mode and behavior != Behavior.PASSIVE:
+		_wander(delta)
+		return
 	match behavior:
 		Behavior.PASSIVE:
 			_wander(delta)
@@ -126,6 +137,8 @@ func _move_towards(target_point: Vector2) -> void:
 	velocity = direction * move_speed
 
 func _try_attack() -> void:
+	if peaceful_mode:
+		return
 	if attack_timer > 0.0:
 		return
 	attack_timer = attack_cooldown
