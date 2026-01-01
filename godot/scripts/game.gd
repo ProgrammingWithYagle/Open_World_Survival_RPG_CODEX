@@ -18,6 +18,13 @@ var inventory: Inventory
 var needs: Needs
 var crafting: Crafting
 var mob_db: MobDB
+## Exposed to gameplay systems (spawns, needs, death flow) for world-specific tuning.
+var world_settings: WorldSettings
+
+var base_resource_count := 0
+var base_resource_density := 0.0
+var base_mob_count := 0
+var base_mob_density := 0.0
 
 var player: CharacterBody2D
 var hud: CanvasLayer
@@ -45,6 +52,13 @@ func _ready() -> void:
 
 	mob_db = MobDB.new()
 	add_child(mob_db)
+
+	base_resource_count = resource_count
+	base_resource_density = resource_density
+	base_mob_count = mob_count
+	base_mob_density = mob_density
+
+	_apply_world_settings()
 
 	player.set_systems(inventory, needs, crafting, item_db)
 	hud.bind_systems(inventory, needs, item_db, crafting)
@@ -84,6 +98,8 @@ func _random_spawn_position() -> Vector2:
 	return Vector2(cos(angle), sin(angle)) * distance
 
 func _seed_starting_items() -> void:
+	if world_settings != null and not world_settings.grant_starter_kit:
+		return
 	inventory.add_item("berry", 2)
 
 func _spawn_radial_resources() -> void:
@@ -142,6 +158,8 @@ func _build_biome_weights() -> Dictionary:
 
 func _spawn_mobs() -> void:
 	if mob_db == null:
+		return
+	if world_settings != null and not world_settings.enable_hostile_mobs:
 		return
 	if world_generator == null:
 		_spawn_radial_mobs()
@@ -212,3 +230,30 @@ func _pick_resource_for_biome(biome: String, rng: RandomNumberGenerator) -> Stri
 		if roll <= running:
 			return resource_id
 	return "wood"
+
+func get_world_settings() -> WorldSettings:
+	return world_settings
+
+func _apply_world_settings() -> void:
+	if world_settings == null:
+		world_settings = WorldSettings.new()
+	var mob_multiplier := world_settings.get_mob_multiplier()
+	if world_settings.enable_hostile_mobs:
+		mob_count = int(round(base_mob_count * mob_multiplier))
+		mob_density = base_mob_density * mob_multiplier
+	else:
+		mob_count = 0
+		mob_density = 0.0
+
+	needs.enabled = world_settings.enable_needs
+	if needs.enabled:
+		var needs_multiplier := world_settings.get_needs_multiplier()
+		needs.hunger_decay *= needs_multiplier
+		needs.thirst_decay *= needs_multiplier
+		needs.temperature_drift *= needs_multiplier
+		needs.health_decay_rate *= needs_multiplier
+	else:
+		needs.hunger = 100.0
+		needs.thirst = 100.0
+		needs.health = needs.max_health
+		needs.stamina = needs.max_stamina

@@ -25,8 +25,11 @@ var stamina_move_drain := 0.8
 var stamina_sprint_drain := 1.6
 var stamina_action_cost := 6.0
 var is_resting := true
+var enabled := true
 
 func tick(delta: float) -> void:
+    if not enabled:
+        return
     hunger = clampf(hunger - hunger_decay * delta, 0.0, 100.0)
     thirst = clampf(thirst - thirst_decay * delta, 0.0, 100.0)
     temperature = clampf(temperature + temperature_drift * delta, -10.0, 45.0)
