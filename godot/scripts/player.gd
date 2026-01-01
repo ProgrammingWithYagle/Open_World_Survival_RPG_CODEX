@@ -8,6 +8,36 @@ extends CharacterBody2D
 ## Camera zoom for the player view (set on the Camera2D child in _ready()).
 @export var zoom_level := Vector2(2.0, 2.0)
 
+const ART_ROOT := "res://art"
+const FRAME_SIZE := Vector2i(32, 32)
+const ACTION_IDLE := "idle"
+const ACTION_WALK := "walk"
+const ACTION_ATTACK := "attack"
+const ACTION_DEATH := "death"
+const DIRECTION_NORTH := "north"
+const DIRECTION_SOUTH := "south"
+const DIRECTION_EAST := "east"
+const DIRECTION_WEST := "west"
+const ACTION_FRAME_COUNTS := {
+	ACTION_IDLE: 1,
+	ACTION_WALK: 4,
+	ACTION_ATTACK: 4,
+	ACTION_DEATH: 4
+}
+const ACTION_FPS := {
+	ACTION_IDLE: 1.0,
+	ACTION_WALK: 8.0,
+	ACTION_ATTACK: 10.0,
+	ACTION_DEATH: 6.0
+}
+const ACTION_LOOP := {
+	ACTION_IDLE: true,
+	ACTION_WALK: true,
+	ACTION_ATTACK: false,
+	ACTION_DEATH: false
+}
+const DIRECTIONS := [DIRECTION_NORTH, DIRECTION_SOUTH, DIRECTION_EAST, DIRECTION_WEST]
+
 var inventory: Inventory
 var needs: Needs
 var crafting: Crafting
@@ -15,6 +45,7 @@ var item_db: ItemDB
 
 var interact_area: Area2D
 var current_target: Area2D
+var last_direction := DIRECTION_SOUTH
 
 func _ready() -> void:
 	interact_area = $InteractArea
@@ -37,6 +68,7 @@ func _physics_process(delta: float) -> void:
 	var is_sprinting := is_moving and wants_sprint and can_sprint
 	var speed := move_speed * (sprint_multiplier if is_sprinting else 1.0)
 	velocity = direction.normalized() * speed
+	_update_animation(direction, is_moving)
 	_update_stamina_from_movement(delta, is_moving, is_sprinting)
 	move_and_slide()
 
@@ -129,23 +161,66 @@ func _configure_collision() -> void:
 		interact_collision.shape.radius = 18.0
 
 func _configure_sprite() -> void:
-	var sprite := $Sprite
-	var size := 32
-	var base := Color(0.2, 0.6, 0.9)
-	var shadow := base.darkened(0.3)
-	var highlight := base.lightened(0.2)
-	var image := Image.create(size, size, false, Image.FORMAT_RGBA8)
-	image.fill(base)
-	for x in range(size):
-		image.set_pixel(x, 0, shadow)
-		image.set_pixel(x, size - 1, shadow)
-	for y in range(size):
-		image.set_pixel(0, y, shadow)
-		image.set_pixel(size - 1, y, shadow)
-	image.set_pixel(10, 11, highlight)
-	image.set_pixel(21, 11, highlight)
-	image.set_pixel(16, 20, highlight)
-	sprite.texture = ImageTexture.create_from_image(image)
+	# Configure animation frames from sprite sheets in res://art without procedural textures.
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite == null:
+		return
+	sprite.sprite_frames = _build_sprite_frames()
+	_play_directional_animation(sprite, ACTION_IDLE)
+
+func _build_sprite_frames() -> SpriteFrames:
+	## Loads directional sprite sheets into a SpriteFrames resource for the player.
+	var frames := SpriteFrames.new()
+	for action in ACTION_FRAME_COUNTS.keys():
+		for direction in DIRECTIONS:
+			var animation_name := "%s_%s" % [action, direction]
+			var texture_path := "%s/player_%s_%s.png" % [ART_ROOT, action, direction]
+			if _add_strip_animation(frames, animation_name, texture_path, ACTION_FRAME_COUNTS[action]):
+				frames.set_animation_speed(animation_name, ACTION_FPS.get(action, 8.0))
+				frames.set_animation_loop(animation_name, ACTION_LOOP.get(action, true))
+	return frames
+
+func _add_strip_animation(frames: SpriteFrames, animation_name: String, texture_path: String, frame_count: int) -> bool:
+	if not ResourceLoader.exists(texture_path):
+		return false
+	var texture: Texture2D = load(texture_path)
+	if texture == null:
+		return false
+	if not frames.has_animation(animation_name):
+		frames.add_animation(animation_name)
+	for frame_index in range(frame_count):
+		var atlas := AtlasTexture.new()
+		atlas.atlas = texture
+		atlas.region = Rect2i(frame_index * FRAME_SIZE.x, 0, FRAME_SIZE.x, FRAME_SIZE.y)
+		frames.add_frame(animation_name, atlas)
+	return true
+
+func _update_animation(direction: Vector2, is_moving: bool) -> void:
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite == null:
+		return
+	if direction.length() > 0.0:
+		last_direction = _direction_label_from_vector(direction)
+	var action := ACTION_WALK if is_moving else ACTION_IDLE
+	_play_directional_animation(sprite, action)
+
+func _direction_label_from_vector(direction: Vector2) -> String:
+	if absf(direction.x) > absf(direction.y):
+		return DIRECTION_EAST if direction.x > 0.0 else DIRECTION_WEST
+	return DIRECTION_SOUTH if direction.y > 0.0 else DIRECTION_NORTH
+
+func _play_directional_animation(sprite: AnimatedSprite2D, action: String) -> void:
+	if sprite.sprite_frames == null:
+		return
+	var animation_name := "%s_%s" % [action, last_direction]
+	if sprite.sprite_frames.has_animation(animation_name):
+		if sprite.animation != animation_name or not sprite.is_playing():
+			sprite.play(animation_name)
+		return
+	var fallback := "%s_%s" % [ACTION_IDLE, DIRECTION_SOUTH]
+	if sprite.sprite_frames.has_animation(fallback):
+		if sprite.animation != fallback or not sprite.is_playing():
+			sprite.play(fallback)
 
 func _configure_camera() -> void:
 	var camera := $Camera2D
