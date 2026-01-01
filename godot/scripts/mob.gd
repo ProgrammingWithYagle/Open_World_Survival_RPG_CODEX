@@ -18,6 +18,38 @@ enum Behavior { PASSIVE, AGGRESSIVE, RANGED, PATROL }
 @export var patrol_radius := 120.0
 @export var body_color := Color(0.8, 0.8, 0.8)
 
+const ART_ROOT := "res://art"
+const FRAME_SIZE := Vector2i(32, 32)
+const ACTION_IDLE := "idle"
+const ACTION_WALK := "walk"
+const ACTION_ATTACK := "attack"
+const ACTION_DEATH := "death"
+const DIRECTION_NORTH := "north"
+const DIRECTION_SOUTH := "south"
+const DIRECTION_EAST := "east"
+const DIRECTION_WEST := "west"
+const ACTION_FRAME_COUNTS := {
+	ACTION_IDLE: 1,
+	ACTION_WALK: 4,
+	ACTION_ATTACK: 4,
+	ACTION_DEATH: 4
+}
+const ACTION_FPS := {
+	ACTION_IDLE: 1.0,
+	ACTION_WALK: 8.0,
+	ACTION_ATTACK: 10.0,
+	ACTION_DEATH: 6.0
+}
+const ACTION_LOOP := {
+	ACTION_IDLE: true,
+	ACTION_WALK: true,
+	ACTION_ATTACK: false,
+	ACTION_DEATH: false
+}
+const DIRECTIONS := [DIRECTION_NORTH, DIRECTION_SOUTH, DIRECTION_EAST, DIRECTION_WEST]
+const ATTACK_ANIM_DURATION := 0.35
+const DEATH_ANIM_DURATION := 0.7
+
 var current_health := 0.0
 var target: Node2D
 var target_needs: Needs
@@ -28,6 +60,10 @@ var patrol_index := 0
 var attack_timer := 0.0
 ## When true, hostile behaviors are suppressed (used for Peaceful difficulty).
 var peaceful_mode := false
+var last_direction := DIRECTION_SOUTH
+var attack_anim_timer := 0.0
+var is_dead := false
+var death_timer := 0.0
 
 func _ready() -> void:
 	rng.randomize()
@@ -38,8 +74,15 @@ func _ready() -> void:
 	_build_patrol_points()
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		death_timer = maxf(death_timer - delta, 0.0)
+		if death_timer <= 0.0:
+			queue_free()
+		return
 	attack_timer = maxf(attack_timer - delta, 0.0)
+	attack_anim_timer = maxf(attack_anim_timer - delta, 0.0)
 	_update_behavior(delta)
+	_update_animation()
 	move_and_slide()
 
 func apply_definition(data: Dictionary) -> void:
@@ -73,7 +116,7 @@ func set_peaceful_mode(enabled: bool) -> void:
 func take_damage(amount: float) -> void:
 	current_health = clampf(current_health - amount, 0.0, max_health)
 	if current_health <= 0.0:
-		queue_free()
+		_start_death()
 
 func _update_behavior(delta: float) -> void:
 	if peaceful_mode and behavior != Behavior.PASSIVE:
@@ -142,19 +185,98 @@ func _try_attack() -> void:
 	if attack_timer > 0.0:
 		return
 	attack_timer = attack_cooldown
+	if _has_directional_animation(ACTION_ATTACK):
+		attack_anim_timer = ATTACK_ANIM_DURATION
 	if target_needs != null:
 		target_needs.health = clampf(target_needs.health - damage, 0.0, target_needs.max_health)
 		target_needs.emit_signal("needs_changed")
 
 func _configure_sprite() -> void:
-	var sprite := $Sprite
-	var size := 28
-	var image := Image.create(size, size, false, Image.FORMAT_RGBA8)
-	image.fill(body_color)
-	image.set_pixel(9, 10, body_color.lightened(0.2))
-	image.set_pixel(18, 10, body_color.lightened(0.2))
-	image.set_pixel(14, 19, body_color.darkened(0.2))
-	sprite.texture = ImageTexture.create_from_image(image)
+	# Configure animation frames from sprite sheets in res://art without procedural textures.
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite == null:
+		return
+	sprite.sprite_frames = _build_sprite_frames()
+	_play_directional_animation(sprite, ACTION_IDLE)
+
+func _build_sprite_frames() -> SpriteFrames:
+	## Loads directional sprite sheets into a SpriteFrames resource for this mob.
+	var frames := SpriteFrames.new()
+	if mob_id == "":
+		return frames
+	for action in ACTION_FRAME_COUNTS.keys():
+		for direction in DIRECTIONS:
+			var animation_name := "%s_%s" % [action, direction]
+			var texture_path := "%s/mob_%s_%s_%s.png" % [ART_ROOT, mob_id, action, direction]
+			if _add_strip_animation(frames, animation_name, texture_path, ACTION_FRAME_COUNTS[action]):
+				frames.set_animation_speed(animation_name, ACTION_FPS.get(action, 8.0))
+				frames.set_animation_loop(animation_name, ACTION_LOOP.get(action, true))
+	return frames
+
+func _add_strip_animation(frames: SpriteFrames, animation_name: String, texture_path: String, frame_count: int) -> bool:
+	if not ResourceLoader.exists(texture_path):
+		return false
+	var texture: Texture2D = load(texture_path)
+	if texture == null:
+		return false
+	if not frames.has_animation(animation_name):
+		frames.add_animation(animation_name)
+	for frame_index in range(frame_count):
+		var atlas := AtlasTexture.new()
+		atlas.atlas = texture
+		atlas.region = Rect2i(frame_index * FRAME_SIZE.x, 0, FRAME_SIZE.x, FRAME_SIZE.y)
+		frames.add_frame(animation_name, atlas)
+	return true
+
+func _update_animation() -> void:
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite == null:
+		return
+	if velocity.length() > 0.0:
+		last_direction = _direction_label_from_vector(velocity)
+	var action := ACTION_WALK if velocity.length() > 0.1 else ACTION_IDLE
+	if attack_anim_timer > 0.0:
+		action = ACTION_ATTACK
+	_play_directional_animation(sprite, action)
+
+func _direction_label_from_vector(direction: Vector2) -> String:
+	if absf(direction.x) > absf(direction.y):
+		return DIRECTION_EAST if direction.x > 0.0 else DIRECTION_WEST
+	return DIRECTION_SOUTH if direction.y > 0.0 else DIRECTION_NORTH
+
+func _play_directional_animation(sprite: AnimatedSprite2D, action: String) -> void:
+	if sprite.sprite_frames == null:
+		return
+	var animation_name := "%s_%s" % [action, last_direction]
+	if sprite.sprite_frames.has_animation(animation_name):
+		if sprite.animation != animation_name or not sprite.is_playing():
+			sprite.play(animation_name)
+		return
+	var fallback := "%s_%s" % [ACTION_IDLE, DIRECTION_SOUTH]
+	if sprite.sprite_frames.has_animation(fallback):
+		if sprite.animation != fallback or not sprite.is_playing():
+			sprite.play(fallback)
+
+func _has_directional_animation(action: String) -> bool:
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite == null or sprite.sprite_frames == null:
+		return false
+	return sprite.sprite_frames.has_animation("%s_%s" % [action, last_direction])
+
+func _start_death() -> void:
+	var sprite := $Sprite as AnimatedSprite2D
+	if sprite != null and sprite.sprite_frames != null:
+		var animation_name := "%s_%s" % [ACTION_DEATH, last_direction]
+		if sprite.sprite_frames.has_animation(animation_name):
+			is_dead = true
+			death_timer = DEATH_ANIM_DURATION
+			velocity = Vector2.ZERO
+			sprite.play(animation_name)
+			var collision := $Collision
+			if collision != null:
+				collision.disabled = true
+			return
+	queue_free()
 
 func _configure_collision() -> void:
 	var body_collision := $Collision

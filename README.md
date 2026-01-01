@@ -95,6 +95,38 @@ The **north star**: a game you can play for hundreds of hours without running ou
 - **Hand‑painted, grounded survival aesthetic** (not overly cartoonish).
 - **UI clarity** (inventory, crafting, and stats always visible in 1–2 clicks).
 
+### Animation Assets (Godot)
+Sprite sheets now live in `godot/art/` and follow a strict naming convention so the
+runtime loader can register animations automatically.
+
+**Sprite sheet format**
+- Each sheet is a horizontal strip of frames (left → right).
+- Frame size is **32×32** for every action + direction.
+
+**Naming convention**
+```
+player_<action>_<direction>.png
+mob_<mob_id>_<action>_<direction>.png
+```
+
+Actions: `idle`, `walk`, `attack`, `death`  
+Directions: `north`, `south`, `east`, `west`
+
+Examples:
+- `player_walk_north.png`
+- `mob_boar_attack_west.png`
+- `mob_slime_idle_south.png`
+
+**Passive wildlife**
+If a mob has no self-defense, omit `attack` sprite sheets entirely. The loader
+skips missing files.
+
+**Adding a new mob (quick guide)**
+1. Add the mob definition to `godot/data/mobs.json` (ensure a unique `mob_id`).
+2. Export sprite sheets into `godot/art/` using the naming convention above.
+3. Run the game; the mob will load its `idle/walk/attack/death` animations
+   automatically when the files exist.
+
 ---
 
 ## Tech Stack (Proposed)
@@ -197,6 +229,7 @@ World creation exposes four difficulty presets that apply recommended world flag
 /README.md
 /docs/               # design docs, milestones, balance notes (planned)
 /godot/              # Godot project root
+/godot/art/          # sprite sheets for player + mobs
 /godot/scenes/       # main, player, HUD, resource node scenes
 /godot/scripts/      # gameplay systems
 /godot/data/         # items, crafting recipes, mob definitions
