@@ -37,7 +37,7 @@ The **north star**: a game you can play for hundreds of hours without running ou
 - **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
 - **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health and stamina), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
 - **Recent improvements**: larger, stylized resource sprites; biome tile visuals (water, grassland, forest, desert, tundra); weighted resource placement per biome.
-- **New additions**: data-driven mob definitions with initial passive/aggressive/ranged/patrol examples, plus a main menu with options (master volume + fullscreen).
+- **New additions**: data-driven mob definitions with initial passive/aggressive/ranged/patrol examples, plus a main menu with options (master volume + fullscreen) and world creation settings (difficulty + survival toggles).
 - **Planned next**: expand world props (rocks/trees variants), add crafting stations with placement, and build a dedicated crafting/character stats panel.
 
 ---
@@ -138,6 +138,13 @@ Each system should be **modular** and **data‑driven** so content expands witho
 - **Resource Nodes** (`godot/scripts/resource_node.gd`): harvestable entities.
 - **HUD** (`godot/scripts/hud.gd`): needs, inventory, and craftable recipe readouts.
 - **Main Menu** (`godot/scenes/MainMenu.tscn` + `godot/scripts/main_menu.gd`): start/quit flow and settings panel.
+- **World Settings** (`godot/scripts/world_settings.gd`): resource-based world configuration passed into the game scene.
+
+### World Settings & Persistence Plan
+World creation now uses a `WorldSettings` Resource (`godot/scripts/world_settings.gd`) that is instantiated in the main menu and handed to the game scene on start. The resource is intentionally data-only (difficulty + world flags) so it can be serialized into a save file later. Planned persistence path:
+1. Serialize `WorldSettings` fields into a save entry (JSON or Godot Resource).
+2. Load the saved settings when opening an existing world.
+3. Rehydrate `WorldSettings` and pass it into the game scene on load.
 
 ---
 
