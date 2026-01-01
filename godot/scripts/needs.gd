@@ -18,6 +18,9 @@ var thirst_decay := 0.9
 var temperature_drift := 0.15
 var health_decay_rate := 1.5
 var extreme_temperature_threshold := 12.0
+## Difficulty tuning: scale hunger/thirst drain without overwriting base decay rates.
+var hunger_decay_multiplier := 1.0
+var thirst_decay_multiplier := 1.0
 ## Stamina tuning: idle drain always applies, resting offsets drain, movement adds extra drain.
 var stamina_idle_drain := 0.25
 var stamina_rest_regen := 0.7
@@ -38,8 +41,8 @@ func _ready() -> void:
 func tick(delta: float) -> void:
 	if not enabled:
 		return
-	hunger = clampf(hunger - hunger_decay * delta, 0.0, 100.0)
-	thirst = clampf(thirst - thirst_decay * delta, 0.0, 100.0)
+	hunger = clampf(hunger - hunger_decay * hunger_decay_multiplier * delta, 0.0, 100.0)
+	thirst = clampf(thirst - thirst_decay * thirst_decay_multiplier * delta, 0.0, 100.0)
 	temperature = clampf(temperature + temperature_drift * delta, -10.0, 45.0)
 	_update_stamina(delta)
 	_apply_survival_penalties(delta)
@@ -80,8 +83,8 @@ func apply_difficulty_settings(settings: WorldSettings) -> void:
 	_reset_decay_rates()
 	if settings == null:
 		return
-	hunger_decay = base_hunger_decay * settings.get_hunger_decay_multiplier()
-	thirst_decay = base_thirst_decay * settings.get_thirst_decay_multiplier()
+	hunger_decay_multiplier = settings.get_hunger_decay_multiplier()
+	thirst_decay_multiplier = settings.get_thirst_decay_multiplier()
 
 func reset_stats() -> void:
 	hunger = 100.0
@@ -102,6 +105,8 @@ func _reset_decay_rates() -> void:
 	thirst_decay = base_thirst_decay
 	temperature_drift = base_temperature_drift
 	health_decay_rate = base_health_decay_rate
+	hunger_decay_multiplier = 1.0
+	thirst_decay_multiplier = 1.0
 
 func _update_stamina(delta: float) -> void:
 	var stamina_change := -stamina_idle_drain * delta
