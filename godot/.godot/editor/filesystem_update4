@@ -7,3 +7,4 @@ res://scripts/game.gd
 res://scripts/resource_node.gd
 res://scripts/needs.gd
 res://scripts/world_generator.gd
+res://scripts/mob.gd
