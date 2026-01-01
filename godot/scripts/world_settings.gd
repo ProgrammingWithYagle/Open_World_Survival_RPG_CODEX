@@ -89,4 +89,4 @@ func get_mob_damage_multiplier() -> float:
 func get_allowed_mob_behaviors() -> Array[String]:
 	if difficulty == Difficulty.PEACEFUL:
 		return PEACEFUL_BEHAVIORS
-	return Array[String]()
+	return []
