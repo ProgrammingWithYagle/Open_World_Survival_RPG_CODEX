@@ -6,6 +6,8 @@ class_name WorldSettings
 
 enum Difficulty { PEACEFUL, EASY, NORMAL, HARDCORE }
 
+const PEACEFUL_BEHAVIORS := ["passive", "patrol"]
+
 @export var difficulty: Difficulty = Difficulty.NORMAL
 @export var enable_needs := true
 @export var enable_hostile_mobs := true
@@ -35,26 +37,55 @@ func apply_recommended_flags() -> void:
 			allow_respawn = false
 			grant_starter_kit = false
 
-func get_needs_multiplier() -> float:
+func get_hunger_decay_multiplier() -> float:
 	match difficulty:
 		Difficulty.PEACEFUL:
 			return 0.0
 		Difficulty.EASY:
-			return 0.8
+			return 0.65
 		Difficulty.NORMAL:
 			return 1.0
 		Difficulty.HARDCORE:
-			return 1.35
+			return 1.0
 	return 1.0
 
-func get_mob_multiplier() -> float:
+func get_thirst_decay_multiplier() -> float:
 	match difficulty:
 		Difficulty.PEACEFUL:
 			return 0.0
 		Difficulty.EASY:
-			return 0.85
+			return 0.65
 		Difficulty.NORMAL:
 			return 1.0
 		Difficulty.HARDCORE:
-			return 1.4
+			return 1.0
 	return 1.0
+
+func get_mob_spawn_multiplier() -> float:
+	match difficulty:
+		Difficulty.PEACEFUL:
+			return 1.0
+		Difficulty.EASY:
+			return 0.75
+		Difficulty.NORMAL:
+			return 1.0
+		Difficulty.HARDCORE:
+			return 1.0
+	return 1.0
+
+func get_mob_damage_multiplier() -> float:
+	match difficulty:
+		Difficulty.PEACEFUL:
+			return 1.0
+		Difficulty.EASY:
+			return 0.75
+		Difficulty.NORMAL:
+			return 1.0
+		Difficulty.HARDCORE:
+			return 1.0
+	return 1.0
+
+func get_allowed_mob_behaviors() -> Array[String]:
+	if difficulty == Difficulty.PEACEFUL:
+		return PEACEFUL_BEHAVIORS
+	return []

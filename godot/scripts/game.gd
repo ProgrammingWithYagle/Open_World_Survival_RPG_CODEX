@@ -30,6 +30,8 @@ var player: CharacterBody2D
 var hud: CanvasLayer
 var world: Node2D
 var world_generator: WorldGenerator
+var player_spawn_position := Vector2.ZERO
+var player_dead := false
 
 func _ready() -> void:
 	randomize()
@@ -37,6 +39,7 @@ func _ready() -> void:
 	player = $Player
 	hud = $HUD
 	world_generator = $World/WorldGenerator
+	player_spawn_position = player.global_position
 
 	item_db = ItemDB.new()
 	add_child(item_db)
@@ -70,6 +73,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	needs.tick(delta)
+	_check_player_death()
 
 func _spawn_resources() -> void:
 	if world_generator == null:
@@ -118,6 +122,9 @@ func _spawn_radial_mobs() -> void:
 		return
 	for i in range(mob_count):
 		var mob_id: String = String(mob_ids[randi() % mob_ids.size()])
+		var data: Dictionary = mob_db.get_mob(mob_id)
+		if not _is_mob_behavior_allowed(data):
+			continue
 		var spawn_position := _random_mob_spawn_position()
 		_spawn_mob(mob_id, spawn_position)
 
@@ -141,6 +148,8 @@ func _spawn_mob(mob_id: String, spawn_position: Vector2) -> void:
 		var data := mob_db.get_mob(mob_id).duplicate(true)
 		data["id"] = mob_id
 		mob.apply_definition(data)
+		if world_settings != null:
+			mob.damage *= world_settings.get_mob_damage_multiplier()
 		mob.set_target(player, needs)
 	mob.global_position = spawn_position
 	world.add_child(mob)
@@ -159,7 +168,7 @@ func _build_biome_weights() -> Dictionary:
 func _spawn_mobs() -> void:
 	if mob_db == null:
 		return
-	if world_settings != null and not world_settings.enable_hostile_mobs:
+	if world_settings != null and not world_settings.enable_hostile_mobs and world_settings.difficulty != WorldSettings.Difficulty.PEACEFUL:
 		return
 	if world_generator == null:
 		_spawn_radial_mobs()
@@ -186,6 +195,8 @@ func _pick_mob_for_biome(biome: String, rng: RandomNumberGenerator) -> String:
 	var candidates: Array = []
 	for mob_id in mob_db.all_mobs():
 		var data: Dictionary = mob_db.get_mob(String(mob_id))
+		if not _is_mob_behavior_allowed(data):
+			continue
 		var biomes: Array = data.get("biomes", [])
 		if biomes.has(biome):
 			candidates.append(String(mob_id))
@@ -237,8 +248,9 @@ func get_world_settings() -> WorldSettings:
 func _apply_world_settings() -> void:
 	if world_settings == null:
 		world_settings = WorldSettings.new()
-	var mob_multiplier := world_settings.get_mob_multiplier()
-	if world_settings.enable_hostile_mobs:
+	var mob_multiplier := world_settings.get_mob_spawn_multiplier()
+	var spawn_mobs := world_settings.enable_hostile_mobs or world_settings.difficulty == WorldSettings.Difficulty.PEACEFUL
+	if spawn_mobs:
 		mob_count = int(round(base_mob_count * mob_multiplier))
 		mob_density = base_mob_density * mob_multiplier
 	else:
@@ -247,13 +259,41 @@ func _apply_world_settings() -> void:
 
 	needs.enabled = world_settings.enable_needs
 	if needs.enabled:
-		var needs_multiplier := world_settings.get_needs_multiplier()
-		needs.hunger_decay *= needs_multiplier
-		needs.thirst_decay *= needs_multiplier
-		needs.temperature_drift *= needs_multiplier
-		needs.health_decay_rate *= needs_multiplier
+		needs.apply_difficulty_settings(world_settings)
 	else:
-		needs.hunger = 100.0
-		needs.thirst = 100.0
-		needs.health = needs.max_health
-		needs.stamina = needs.max_stamina
+		needs.reset_stats()
+
+func _is_mob_behavior_allowed(data: Dictionary) -> bool:
+	if world_settings == null:
+		return true
+	var allowed := world_settings.get_allowed_mob_behaviors()
+	if allowed.is_empty():
+		return true
+	return allowed.has(String(data.get("behavior", "passive")))
+
+func _check_player_death() -> void:
+	## Minimal death handling: either respawn or lock controls based on world settings.
+	if player_dead or needs == null:
+		return
+	if needs.health > 0.0:
+		return
+	player_dead = true
+	if world_settings == null or world_settings.allow_respawn:
+		_respawn_player()
+	else:
+		_disable_player()
+
+func _respawn_player() -> void:
+	if player == null or needs == null:
+		return
+	player.global_position = player_spawn_position
+	needs.enabled = true
+	needs.reset_stats()
+	player_dead = false
+
+func _disable_player() -> void:
+	if player == null or needs == null:
+		return
+	needs.enabled = false
+	player.set_physics_process(false)
+	player.set_process(false)
