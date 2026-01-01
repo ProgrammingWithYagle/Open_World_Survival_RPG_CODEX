@@ -148,12 +148,12 @@ func _try_attack() -> void:
 
 func _configure_sprite() -> void:
 	var sprite := $Sprite
-	var size := 20
+	var size := 28
 	var image := Image.create(size, size, false, Image.FORMAT_RGBA8)
 	image.fill(body_color)
-	image.set_pixel(6, 7, body_color.lightened(0.2))
-	image.set_pixel(13, 7, body_color.lightened(0.2))
-	image.set_pixel(10, 14, body_color.darkened(0.2))
+	image.set_pixel(9, 10, body_color.lightened(0.2))
+	image.set_pixel(18, 10, body_color.lightened(0.2))
+	image.set_pixel(14, 19, body_color.darkened(0.2))
 	sprite.texture = ImageTexture.create_from_image(image)
 
 func _configure_collision() -> void:
@@ -161,7 +161,7 @@ func _configure_collision() -> void:
 	if body_collision.shape == null:
 		body_collision.shape = CircleShape2D.new()
 	if body_collision.shape is CircleShape2D:
-		body_collision.shape.radius = 10.0
+		body_collision.shape.radius = 7.0
 
 func _build_patrol_points() -> void:
 	patrol_points.clear()
