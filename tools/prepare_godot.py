@@ -7,14 +7,14 @@ from pathlib import Path
 import stat
 import urllib.request
 import zipfile
+from build_release_metadata import github_release
 
 ROOT=Path(__file__).resolve().parents[1]
 VERSION='4.5.1-stable'
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--platform',choices=['windows','linux'],default='windows' if os.name=='nt' else 'linux');args=parser.parse_args()
-    request=urllib.request.Request('https://api.github.com/repos/godotengine/godot-builds/releases/tags/'+VERSION,headers={'User-Agent':'Mossbound-build-tools'})
-    with urllib.request.urlopen(request,timeout=30) as response:release=json.load(response)
+    release=github_release('godotengine/godot-builds',VERSION)
     suffix='_win64.exe.zip' if args.platform=='windows' else '_linux.x86_64.zip'
     asset=next(entry for entry in release['assets'] if entry['name'].endswith(suffix) and 'mono' not in entry['name'])
     output=ROOT/'.tools/godot/editor';output.mkdir(parents=True,exist_ok=True)

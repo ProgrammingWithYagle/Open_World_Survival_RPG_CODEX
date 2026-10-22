@@ -6,6 +6,7 @@ from pathlib import Path
 import urllib.request
 import zipfile
 import zlib
+from build_release_metadata import github_release
 
 ROOT=Path(__file__).resolve().parents[1]
 VERSION='4.5.1-stable'
@@ -29,8 +30,7 @@ class RemoteFile(io.RawIOBase):
         return data
 
 def main():
-    request=urllib.request.Request('https://api.github.com/repos/godotengine/godot-builds/releases/tags/'+VERSION,headers={'User-Agent':'Mossbound-build-tools'})
-    with urllib.request.urlopen(request,timeout=30) as response:release=json.load(response)
+    release=github_release('godotengine/godot-builds',VERSION)
     asset=next(x for x in release['assets'] if x['name'].endswith('_export_templates.tpz'))
     output=ROOT/'.tools/godot/templates/4.5.1.stable';output.mkdir(parents=True,exist_ok=True)
     receipt=[]

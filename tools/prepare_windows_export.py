@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import urllib.request
 from PIL import Image
+from build_release_metadata import github_release
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -12,8 +13,7 @@ def main():
     icon.resize((256,256),Image.Resampling.NEAREST).save(ROOT/'godot/art/app_icon.png')
     icon.resize((256,256),Image.Resampling.NEAREST).save(ROOT/'godot/art/app_icon.ico',sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])
     output=ROOT/'.tools/rcedit';output.mkdir(parents=True,exist_ok=True)
-    request=urllib.request.Request('https://api.github.com/repos/electron/rcedit/releases/tags/v2.0.0',headers={'User-Agent':'Mossbound-build-tools'})
-    with urllib.request.urlopen(request,timeout=30) as response:release=json.load(response)
+    release=github_release('electron/rcedit','v2.0.0')
     asset=next(x for x in release['assets'] if x['name']=='rcedit-x64.exe')
     target=output/'rcedit.exe'
     if not target.exists():
