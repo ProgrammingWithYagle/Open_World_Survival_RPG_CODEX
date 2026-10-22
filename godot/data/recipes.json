@@ -1,35 +1,2033 @@
 {
-  "campfire": {
-    "result": {"id": "campfire", "count": 1},
+  "field_blade": {
+    "result": {
+      "id": "field_blade",
+      "count": 1
+    },
     "ingredients": [
-      {"id": "wood", "count": 4},
-      {"id": "stone", "count": 2}
-    ]
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
   },
-  "stick": {
-    "result": {"id": "stick", "count": 2},
+  "field_spear": {
+    "result": {
+      "id": "field_spear",
+      "count": 1
+    },
     "ingredients": [
-      {"id": "wood", "count": 1}
-    ]
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
   },
-  "stone_knife": {
-    "result": {"id": "stone_knife", "count": 1},
+  "field_bow": {
+    "result": {
+      "id": "field_bow",
+      "count": 1
+    },
     "ingredients": [
-      {"id": "stick", "count": 1},
-      {"id": "stone", "count": 1}
-    ]
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "field_focus": {
+    "result": {
+      "id": "field_focus",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "field_axe": {
+    "result": {
+      "id": "field_axe",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "field_pick": {
+    "result": {
+      "id": "field_pick",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 4
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "field_coat": {
+    "result": {
+      "id": "field_coat",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 5
+      },
+      {
+        "id": "hide",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "copper_blade": {
+    "result": {
+      "id": "copper_blade",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_spear": {
+    "result": {
+      "id": "copper_spear",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_bow": {
+    "result": {
+      "id": "copper_bow",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_focus": {
+    "result": {
+      "id": "copper_focus",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_axe": {
+    "result": {
+      "id": "copper_axe",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_pick": {
+    "result": {
+      "id": "copper_pick",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 5
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "copper_coat": {
+    "result": {
+      "id": "copper_coat",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 6
+      },
+      {
+        "id": "hide",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "tier": 2,
+    "station": "workbench"
+  },
+  "iron_blade": {
+    "result": {
+      "id": "iron_blade",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_spear": {
+    "result": {
+      "id": "iron_spear",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_bow": {
+    "result": {
+      "id": "iron_bow",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_focus": {
+    "result": {
+      "id": "iron_focus",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_axe": {
+    "result": {
+      "id": "iron_axe",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_pick": {
+    "result": {
+      "id": "iron_pick",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 6
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 3,
+    "station": "forge"
+  },
+  "iron_coat": {
+    "result": {
+      "id": "iron_coat",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 7
+      },
+      {
+        "id": "hide",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "tier": 3,
+    "station": "workbench"
+  },
+  "storm_blade": {
+    "result": {
+      "id": "storm_blade",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_spear": {
+    "result": {
+      "id": "storm_spear",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_bow": {
+    "result": {
+      "id": "storm_bow",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_focus": {
+    "result": {
+      "id": "storm_focus",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_axe": {
+    "result": {
+      "id": "storm_axe",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_pick": {
+    "result": {
+      "id": "storm_pick",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 7
+      },
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 2
+      }
+    ],
+    "tier": 4,
+    "station": "resonator"
+  },
+  "storm_coat": {
+    "result": {
+      "id": "storm_coat",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 8
+      },
+      {
+        "id": "hide",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "tier": 4,
+    "station": "workbench"
+  },
+  "floor": {
+    "result": {
+      "id": "floor",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "path": {
+    "result": {
+      "id": "path",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 1
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "wall": {
+    "result": {
+      "id": "wall",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 4
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "fence": {
+    "result": {
+      "id": "fence",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 2
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "gate": {
+    "result": {
+      "id": "gate",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 4
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "bridge": {
+    "result": {
+      "id": "bridge",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 5
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "tent": {
+    "result": {
+      "id": "tent",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 8
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "bed": {
+    "result": {
+      "id": "bed",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 5
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "hearth": {
+    "result": {
+      "id": "hearth",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 6
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "workbench": {
+    "result": {
+      "id": "workbench",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 8
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "cooking_pot": {
+    "result": {
+      "id": "cooking_pot",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 5
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "chest": {
+    "result": {
+      "id": "chest",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 6
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "garden": {
+    "result": {
+      "id": "garden",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "well": {
+    "result": {
+      "id": "well",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 12
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "lantern": {
+    "result": {
+      "id": "lantern",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "waypost": {
+    "result": {
+      "id": "waypost",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "kiln": {
+    "result": {
+      "id": "kiln",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "clay",
+        "count": 6
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "smelter": {
+    "result": {
+      "id": "smelter",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 10
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "forge": {
+    "result": {
+      "id": "forge",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 6
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "loom": {
+    "result": {
+      "id": "loom",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 8
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "courier_board": {
+    "result": {
+      "id": "courier_board",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 8
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "fish_trap": {
+    "result": {
+      "id": "fish_trap",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "reed",
+        "count": 6
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "drying_rack": {
+    "result": {
+      "id": "drying_rack",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 6
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "planter": {
+    "result": {
+      "id": "planter",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "reed",
+        "count": 4
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "banner": {
+    "result": {
+      "id": "banner",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 6
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "stool": {
+    "result": {
+      "id": "stool",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "table": {
+    "result": {
+      "id": "table",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 7
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "chair": {
+    "result": {
+      "id": "chair",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 4
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "rug": {
+    "result": {
+      "id": "rug",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 6
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "bookshelf": {
+    "result": {
+      "id": "bookshelf",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 10
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "sign": {
+    "result": {
+      "id": "sign",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "windmill": {
+    "result": {
+      "id": "windmill",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 8
+      }
+    ],
+    "tier": 3,
+    "station": ""
+  },
+  "mill": {
+    "result": {
+      "id": "mill",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 10
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "apiary": {
+    "result": {
+      "id": "apiary",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 8
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "scarecrow": {
+    "result": {
+      "id": "scarecrow",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 8
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "stone_wall": {
+    "result": {
+      "id": "stone_wall",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "brick",
+        "count": 4
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "stone_floor": {
+    "result": {
+      "id": "stone_floor",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 3
+      }
+    ],
+    "tier": 1,
+    "station": ""
+  },
+  "stone_hearth": {
+    "result": {
+      "id": "stone_hearth",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "brick",
+        "count": 8
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "glass_lamp": {
+    "result": {
+      "id": "glass_lamp",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "glass",
+        "count": 3
+      }
+    ],
+    "tier": 4,
+    "station": ""
+  },
+  "resonator": {
+    "result": {
+      "id": "resonator",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 6
+      }
+    ],
+    "tier": 4,
+    "station": ""
+  },
+  "fountain": {
+    "result": {
+      "id": "fountain",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "stone",
+        "count": 12
+      }
+    ],
+    "tier": 2,
+    "station": ""
+  },
+  "rope": {
+    "result": {
+      "id": "rope",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 3
+      }
+    ],
+    "station": "",
+    "tier": 1
+  },
+  "cloth": {
+    "result": {
+      "id": "cloth",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "station": "loom",
+    "tier": 2,
+    "production_seconds": 35
+  },
+  "charcoal": {
+    "result": {
+      "id": "charcoal",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      }
+    ],
+    "station": "kiln",
+    "tier": 2,
+    "production_seconds": 35
+  },
+  "brick": {
+    "result": {
+      "id": "brick",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "clay",
+        "count": 2
+      }
+    ],
+    "station": "kiln",
+    "tier": 2,
+    "production_seconds": 35
+  },
+  "copper": {
+    "result": {
+      "id": "copper",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper_ore",
+        "count": 2
+      },
+      {
+        "id": "wood",
+        "count": 1
+      }
+    ],
+    "station": "smelter",
+    "tier": 2,
+    "production_seconds": 35
+  },
+  "iron": {
+    "result": {
+      "id": "iron",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron_ore",
+        "count": 2
+      },
+      {
+        "id": "charcoal",
+        "count": 1
+      }
+    ],
+    "station": "smelter",
+    "tier": 3,
+    "production_seconds": 35
+  },
+  "glass": {
+    "result": {
+      "id": "glass",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 2
+      },
+      {
+        "id": "relic",
+        "count": 1
+      }
+    ],
+    "station": "resonator",
+    "tier": 4,
+    "production_seconds": 35
   },
   "bandage": {
-    "result": {"id": "bandage", "count": 1},
+    "result": {
+      "id": "bandage",
+      "count": 1
+    },
     "ingredients": [
-      {"id": "fiber", "count": 2}
-    ]
+      {
+        "id": "fiber",
+        "count": 3
+      }
+    ],
+    "station": "",
+    "tier": 1
   },
-  "cooked_berry": {
-    "result": {"id": "cooked_berry", "count": 1},
+  "roast": {
+    "result": {
+      "id": "roast",
+      "count": 1
+    },
     "ingredients": [
-      {"id": "berry", "count": 2},
-      {"id": "wood", "count": 1}
-    ]
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "wood",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1,
+    "production_seconds": 20
+  },
+  "stew": {
+    "result": {
+      "id": "stew",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "vegetable",
+        "count": 2
+      },
+      {
+        "id": "mushroom",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1,
+    "production_seconds": 35
+  },
+  "grilled_fish": {
+    "result": {
+      "id": "grilled_fish",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fish",
+        "count": 1
+      },
+      {
+        "id": "mushroom",
+        "count": 1
+      },
+      {
+        "id": "wood",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1,
+    "production_seconds": 20
+  },
+  "ration": {
+    "result": {
+      "id": "ration",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "roast",
+        "count": 1
+      },
+      {
+        "id": "berry",
+        "count": 3
+      }
+    ],
+    "station": "drying_rack",
+    "tier": 2,
+    "production_seconds": 35
+  },
+  "tea": {
+    "result": {
+      "id": "tea",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "reed",
+        "count": 2
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1,
+    "production_seconds": 20
+  },
+  "salve": {
+    "result": {
+      "id": "salve",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "mushroom",
+        "count": 2
+      },
+      {
+        "id": "gel",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "tonic": {
+    "result": {
+      "id": "tonic",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "venom_sac",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 3
+  },
+  "fishing_rod": {
+    "result": {
+      "id": "fishing_rod",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 3
+      },
+      {
+        "id": "fiber",
+        "count": 4
+      }
+    ],
+    "station": "",
+    "tier": 1
+  },
+  "clean_pond_perch": {
+    "name_key": "recipe.clean_pond_perch",
+    "result": {
+      "id": "fish",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "pond_perch",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1
+  },
+  "clean_reed_eel": {
+    "name_key": "recipe.clean_reed_eel",
+    "result": {
+      "id": "fish",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "reed_eel",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1
+  },
+  "clean_ash_char": {
+    "name_key": "recipe.clean_ash_char",
+    "result": {
+      "id": "fish",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "ash_char",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1
+  },
+  "clean_pine_trout": {
+    "name_key": "recipe.clean_pine_trout",
+    "result": {
+      "id": "fish",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "pine_trout",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1
+  },
+  "clean_glassfin": {
+    "name_key": "recipe.clean_glassfin",
+    "result": {
+      "id": "fish",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "glassfin",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 1
+  },
+  "berry_seed": {
+    "result": {
+      "id": "berry_seed",
+      "count": 3
+    },
+    "ingredients": [
+      {
+        "id": "berry",
+        "count": 2
+      },
+      {
+        "id": "fiber",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 1
+  },
+  "reed_seed": {
+    "result": {
+      "id": "reed_seed",
+      "count": 3
+    },
+    "ingredients": [
+      {
+        "id": "reed",
+        "count": 2
+      },
+      {
+        "id": "fiber",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "mushroom_spawn": {
+    "result": {
+      "id": "mushroom_spawn",
+      "count": 3
+    },
+    "ingredients": [
+      {
+        "id": "mushroom",
+        "count": 2
+      },
+      {
+        "id": "fiber",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "sunroot_seed": {
+    "result": {
+      "id": "sunroot_seed",
+      "count": 3
+    },
+    "ingredients": [
+      {
+        "id": "sunroot",
+        "count": 2
+      },
+      {
+        "id": "fiber",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 3
+  },
+  "honey_tea": {
+    "result": {
+      "id": "honey_tea",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "tea",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "mushroom_skewer": {
+    "result": {
+      "id": "mushroom_skewer",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "mushroom",
+        "count": 3
+      },
+      {
+        "id": "wood",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "berry_tart": {
+    "result": {
+      "id": "berry_tart",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "berry",
+        "count": 5
+      },
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "vegetable",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "fish_chowder": {
+    "result": {
+      "id": "fish_chowder",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fish",
+        "count": 2
+      },
+      {
+        "id": "vegetable",
+        "count": 2
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "root_roast": {
+    "result": {
+      "id": "root_roast",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "sunroot",
+        "count": 3
+      },
+      {
+        "id": "mushroom",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 3
+  },
+  "smoked_fish": {
+    "result": {
+      "id": "smoked_fish",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "fish",
+        "count": 2
+      },
+      {
+        "id": "wood",
+        "count": 2
+      }
+    ],
+    "station": "drying_rack",
+    "tier": 2
+  },
+  "syrup_ration": {
+    "result": {
+      "id": "syrup_ration",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "ration",
+        "count": 2
+      },
+      {
+        "id": "honey",
+        "count": 2
+      }
+    ],
+    "station": "drying_rack",
+    "tier": 2
+  },
+  "clear_tonic": {
+    "result": {
+      "id": "clear_tonic",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "water",
+        "count": 2
+      },
+      {
+        "id": "gel",
+        "count": 2
+      },
+      {
+        "id": "mint",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "trail_compass": {
+    "result": {
+      "id": "trail_compass",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "copper",
+        "count": 3
+      },
+      {
+        "id": "amber",
+        "count": 2
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "reed_charm": {
+    "result": {
+      "id": "reed_charm",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "reed",
+        "count": 6
+      },
+      {
+        "id": "amber",
+        "count": 3
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "cinder_token": {
+    "result": {
+      "id": "cinder_token",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "iron",
+        "count": 3
+      },
+      {
+        "id": "amber",
+        "count": 3
+      }
+    ],
+    "station": "workbench",
+    "tier": 3
+  },
+  "storm_pin": {
+    "result": {
+      "id": "storm_pin",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "storm_shard",
+        "count": 4
+      },
+      {
+        "id": "feather",
+        "count": 3
+      }
+    ],
+    "station": "resonator",
+    "tier": 4
+  },
+  "keeper_seal": {
+    "result": {
+      "id": "keeper_seal",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "glass",
+        "count": 4
+      },
+      {
+        "id": "relic",
+        "count": 6
+      }
+    ],
+    "station": "resonator",
+    "tier": 4
+  },
+  "root_locket": {
+    "result": {
+      "id": "root_locket",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "wood",
+        "count": 12
+      },
+      {
+        "id": "amber",
+        "count": 6
+      }
+    ],
+    "station": "workbench",
+    "tier": 2
+  },
+  "mint_cordial": {
+    "result": {
+      "id": "mint_cordial",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "mint",
+        "count": 2
+      },
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "sun_cordial": {
+    "result": {
+      "id": "sun_cordial",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "sunblossom",
+        "count": 2
+      },
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "sage_draught": {
+    "result": {
+      "id": "sage_draught",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "sage",
+        "count": 2
+      },
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "orchid_cordial": {
+    "result": {
+      "id": "orchid_cordial",
+      "count": 1
+    },
+    "ingredients": [
+      {
+        "id": "orchid",
+        "count": 2
+      },
+      {
+        "id": "honey",
+        "count": 1
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
+  },
+  "grain_seed": {
+    "result": {
+      "id": "grain_seed",
+      "count": 3
+    },
+    "ingredients": [
+      {
+        "id": "grain",
+        "count": 2
+      },
+      {
+        "id": "fiber",
+        "count": 1
+      }
+    ],
+    "station": "workbench",
+    "tier": 1
+  },
+  "flour": {
+    "result": {
+      "id": "flour",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "grain",
+        "count": 3
+      }
+    ],
+    "station": "mill",
+    "tier": 2,
+    "production_seconds": 25
+  },
+  "flatbread": {
+    "result": {
+      "id": "flatbread",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "id": "flour",
+        "count": 2
+      },
+      {
+        "id": "water",
+        "count": 1
+      }
+    ],
+    "station": "cooking_pot",
+    "tier": 2
   }
 }

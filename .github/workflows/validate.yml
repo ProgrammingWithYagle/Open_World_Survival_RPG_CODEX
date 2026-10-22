@@ -1,0 +1,83 @@
+name: Validate and package
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  data-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest tests/test_data.py tests/test_revamp_content.py -v
+
+  asset-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest tests/test_assets.py -v
+
+  godot-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Install official Godot 4.5.1
+        run: python tools/prepare_godot.py --platform linux
+      - name: Import and test gameplay, saves and live scenes
+        run: python tools/check_godot.py --godot .tools/godot/editor/Godot_v4.5.1-stable_linux.x86_64
+
+  windows-export:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==12.3.0
+      - run: python tools/prepare_godot.py --platform windows
+      - run: python tools/build_windows.py --godot .tools/godot/editor/Godot_v4.5.1-stable_win64_console.exe
+      - run: python tools/verify_download.py exports/The-Mossbound-Atlas-1.0.0-Windows-x64.zip
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: The-Mossbound-Atlas-Windows
+          path: |
+            exports/*.zip
+            exports/*.sha256
+          if-no-files-found: error
+          retention-days: 14
+
+  docs-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python tools/build_wiki.py --check
+      - run: python tools/check_docs.py

@@ -1,0 +1,155 @@
+{
+	"godot": "4.5.1-stable (official)",
+	"renderer": "Intel(R) Graphics",
+	"resolution": [
+		1280,
+		720
+	],
+	"results": [
+		{
+			"chunk_stream_ms": [
+				{
+					"initial_slice_ms": 6.377,
+					"peak_frame_interval_ms": 11.285,
+					"total_ms": 408.209
+				},
+				{
+					"initial_slice_ms": 6.4,
+					"peak_frame_interval_ms": 10.644,
+					"total_ms": 424.736
+				},
+				{
+					"initial_slice_ms": 9.33,
+					"peak_frame_interval_ms": 11.227,
+					"total_ms": 443.604
+				}
+			],
+			"cpu_frame_median_ms": 9.479,
+			"cpu_frame_p95_ms": 10.473,
+			"creatures": 24,
+			"draw_calls": 69.0,
+			"frame_interval_median_ms": 8.356,
+			"frame_interval_p95_ms": 10.519,
+			"initial_load_ms": 291.143,
+			"region": "bracken",
+			"visible_props": 101
+		},
+		{
+			"chunk_stream_ms": [
+				{
+					"initial_slice_ms": 7.489,
+					"peak_frame_interval_ms": 11.416,
+					"total_ms": 490.15
+				},
+				{
+					"initial_slice_ms": 6.04,
+					"peak_frame_interval_ms": 11.154,
+					"total_ms": 426.537
+				},
+				{
+					"initial_slice_ms": 7.123,
+					"peak_frame_interval_ms": 10.776,
+					"total_ms": 441.453
+				}
+			],
+			"cpu_frame_median_ms": 10.427,
+			"cpu_frame_p95_ms": 245.624,
+			"creatures": 24,
+			"draw_calls": 73.0,
+			"frame_interval_median_ms": 7.781,
+			"frame_interval_p95_ms": 11.29,
+			"initial_load_ms": 205.059,
+			"region": "fen",
+			"visible_props": 125
+		},
+		{
+			"chunk_stream_ms": [
+				{
+					"initial_slice_ms": 5.989,
+					"peak_frame_interval_ms": 12.264,
+					"total_ms": 508.527
+				},
+				{
+					"initial_slice_ms": 8.244,
+					"peak_frame_interval_ms": 12.02,
+					"total_ms": 459.12
+				},
+				{
+					"initial_slice_ms": 8.296,
+					"peak_frame_interval_ms": 11.055,
+					"total_ms": 439.231
+				}
+			],
+			"cpu_frame_median_ms": 9.799,
+			"cpu_frame_p95_ms": 351.87,
+			"creatures": 24,
+			"draw_calls": 109.0,
+			"frame_interval_median_ms": 8.467,
+			"frame_interval_p95_ms": 11.228,
+			"initial_load_ms": 311.173,
+			"region": "cinder",
+			"visible_props": 240
+		},
+		{
+			"chunk_stream_ms": [
+				{
+					"initial_slice_ms": 6.483,
+					"peak_frame_interval_ms": 11.337,
+					"total_ms": 485.719
+				},
+				{
+					"initial_slice_ms": 7.997,
+					"peak_frame_interval_ms": 12.091,
+					"total_ms": 448.605
+				},
+				{
+					"initial_slice_ms": 6.788,
+					"peak_frame_interval_ms": 11.969,
+					"total_ms": 423.303
+				}
+			],
+			"cpu_frame_median_ms": 348.269,
+			"cpu_frame_p95_ms": 348.269,
+			"creatures": 24,
+			"draw_calls": 118.0,
+			"frame_interval_median_ms": 8.401,
+			"frame_interval_p95_ms": 10.447,
+			"initial_load_ms": 308.364,
+			"region": "storm",
+			"visible_props": 206
+		},
+		{
+			"chunk_stream_ms": [
+				{
+					"initial_slice_ms": 8.318,
+					"peak_frame_interval_ms": 11.806,
+					"total_ms": 474.422
+				},
+				{
+					"initial_slice_ms": 11.505,
+					"peak_frame_interval_ms": 10.97,
+					"total_ms": 475.681
+				},
+				{
+					"initial_slice_ms": 6.564,
+					"peak_frame_interval_ms": 13.298,
+					"total_ms": 460.374
+				}
+			],
+			"cpu_frame_median_ms": 9.29,
+			"cpu_frame_p95_ms": 9.29,
+			"creatures": 24,
+			"draw_calls": 109.0,
+			"frame_interval_median_ms": 8.998,
+			"frame_interval_p95_ms": 10.997,
+			"initial_load_ms": 324.811,
+			"region": "hollow",
+			"visible_props": 234
+		}
+	],
+	"samples_per_region": 120,
+	"world_resolution": [
+		640,
+		360
+	]
+}

@@ -1,0 +1,26 @@
+{
+  "seed": {
+    "produce": "vegetable",
+    "seconds": 300
+  },
+  "grain_seed": {
+    "produce": "grain",
+    "seconds": 300
+  },
+  "berry_seed": {
+    "produce": "berry",
+    "seconds": 180
+  },
+  "reed_seed": {
+    "produce": "reed",
+    "seconds": 240
+  },
+  "mushroom_spawn": {
+    "produce": "mushroom",
+    "seconds": 270
+  },
+  "sunroot_seed": {
+    "produce": "sunroot",
+    "seconds": 330
+  }
+}

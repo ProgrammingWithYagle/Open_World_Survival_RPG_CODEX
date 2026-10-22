@@ -1,0 +1,164 @@
+{
+  "music_bracken": {
+    "seconds": 45.714,
+    "peak": 0.31792,
+    "rms": 0.06649,
+    "loop": true
+  },
+  "music_fen": {
+    "seconds": 50.526,
+    "peak": 0.34673,
+    "rms": 0.05235,
+    "loop": true
+  },
+  "music_cinder": {
+    "seconds": 41.739,
+    "peak": 0.35482,
+    "rms": 0.0556,
+    "loop": true
+  },
+  "music_storm": {
+    "seconds": 43.636,
+    "peak": 0.3124,
+    "rms": 0.06673,
+    "loop": true
+  },
+  "music_hollow": {
+    "seconds": 53.333,
+    "peak": 0.332,
+    "rms": 0.05283,
+    "loop": true
+  },
+  "music_combat": {
+    "seconds": 33.103,
+    "peak": 0.39738,
+    "rms": 0.06441,
+    "loop": true
+  },
+  "step_0": {
+    "seconds": 0.15,
+    "peak": 0.2215,
+    "rms": 0.02593,
+    "loop": false
+  },
+  "step_1": {
+    "seconds": 0.15,
+    "peak": 0.18463,
+    "rms": 0.02412,
+    "loop": false
+  },
+  "step_2": {
+    "seconds": 0.15,
+    "peak": 0.1586,
+    "rms": 0.02282,
+    "loop": false
+  },
+  "step_3": {
+    "seconds": 0.15,
+    "peak": 0.1594,
+    "rms": 0.02167,
+    "loop": false
+  },
+  "step_4": {
+    "seconds": 0.15,
+    "peak": 0.18237,
+    "rms": 0.02129,
+    "loop": false
+  },
+  "step_5": {
+    "seconds": 0.15,
+    "peak": 0.14857,
+    "rms": 0.02148,
+    "loop": false
+  },
+  "wood": {
+    "seconds": 0.32,
+    "peak": 0.32288,
+    "rms": 0.05002,
+    "loop": false
+  },
+  "stone": {
+    "seconds": 0.32,
+    "peak": 0.27737,
+    "rms": 0.03854,
+    "loop": false
+  },
+  "hit": {
+    "seconds": 0.32,
+    "peak": 0.33879,
+    "rms": 0.0551,
+    "loop": false
+  },
+  "hurt": {
+    "seconds": 0.32,
+    "peak": 0.33874,
+    "rms": 0.07406,
+    "loop": false
+  },
+  "build": {
+    "seconds": 0.32,
+    "peak": 0.34794,
+    "rms": 0.05342,
+    "loop": false
+  },
+  "pickup": {
+    "seconds": 1.14,
+    "peak": 0.33011,
+    "rms": 0.0617,
+    "loop": false
+  },
+  "craft": {
+    "seconds": 1.26,
+    "peak": 0.362,
+    "rms": 0.0716,
+    "loop": false
+  },
+  "eat": {
+    "seconds": 1.14,
+    "peak": 0.30999,
+    "rms": 0.06185,
+    "loop": false
+  },
+  "restore": {
+    "seconds": 1.5,
+    "peak": 0.43736,
+    "rms": 0.08692,
+    "loop": false
+  },
+  "victory": {
+    "seconds": 1.62,
+    "peak": 0.45765,
+    "rms": 0.08891,
+    "loop": false
+  },
+  "ui": {
+    "seconds": 1.02,
+    "peak": 0.21524,
+    "rms": 0.04589,
+    "loop": false
+  },
+  "spell": {
+    "seconds": 1.26,
+    "peak": 0.40045,
+    "rms": 0.07217,
+    "loop": false
+  },
+  "swing": {
+    "seconds": 0.24,
+    "peak": 0.3638,
+    "rms": 0.07367,
+    "loop": false
+  },
+  "bow": {
+    "seconds": 0.45,
+    "peak": 0.38234,
+    "rms": 0.11867,
+    "loop": false
+  },
+  "ambience_forest": {
+    "seconds": 24.0,
+    "peak": 0.04395,
+    "rms": 0.00472,
+    "loop": true
+  }
+}

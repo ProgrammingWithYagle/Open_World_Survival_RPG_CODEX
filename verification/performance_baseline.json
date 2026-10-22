@@ -1,0 +1,70 @@
+{
+	"godot": "4.5.1-stable (official)",
+	"renderer": "Intel(R) Graphics",
+	"resolution": [
+		1280,
+		720
+	],
+	"results": [
+		{
+			"cpu_frame_median_ms": 3.398,
+			"cpu_frame_p95_ms": 10.396,
+			"creatures": 24,
+			"draw_calls": 96.0,
+			"frame_interval_median_ms": 8.424,
+			"frame_interval_p95_ms": 11.136,
+			"initial_load_ms": 265.198,
+			"region": "bracken",
+			"visible_props": 130
+		},
+		{
+			"cpu_frame_median_ms": 335.049,
+			"cpu_frame_p95_ms": 335.049,
+			"creatures": 24,
+			"draw_calls": 94.0,
+			"frame_interval_median_ms": 9.177,
+			"frame_interval_p95_ms": 11.377,
+			"initial_load_ms": 291.457,
+			"region": "fen",
+			"visible_props": 101
+		},
+		{
+			"cpu_frame_median_ms": 337.264,
+			"cpu_frame_p95_ms": 337.264,
+			"creatures": 24,
+			"draw_calls": 120.0,
+			"frame_interval_median_ms": 8.845,
+			"frame_interval_p95_ms": 11.93,
+			"initial_load_ms": 299.087,
+			"region": "cinder",
+			"visible_props": 149
+		},
+		{
+			"cpu_frame_median_ms": 9.99,
+			"cpu_frame_p95_ms": 6074.136,
+			"creatures": 24,
+			"draw_calls": 124.0,
+			"frame_interval_median_ms": 8.185,
+			"frame_interval_p95_ms": 12.458,
+			"initial_load_ms": 6033.122,
+			"region": "storm",
+			"visible_props": 137
+		},
+		{
+			"cpu_frame_median_ms": 8.472,
+			"cpu_frame_p95_ms": 9.232,
+			"creatures": 24,
+			"draw_calls": 118.0,
+			"frame_interval_median_ms": 8.664,
+			"frame_interval_p95_ms": 11.889,
+			"initial_load_ms": 24138.977,
+			"region": "hollow",
+			"visible_props": 154
+		}
+	],
+	"samples_per_region": 120,
+	"world_resolution": [
+		640,
+		360
+	]
+}

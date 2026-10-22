@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mara",
+    "region": 0,
+    "art": 0,
+    "name_key": "npc.mara",
+    "dialogue_key": "npc.mara.dialogue"
+  },
+  {
+    "id": "ivo",
+    "region": 0,
+    "art": 1,
+    "name_key": "npc.ivo",
+    "dialogue_key": "npc.ivo.dialogue"
+  },
+  {
+    "id": "suri",
+    "region": 1,
+    "art": 2,
+    "name_key": "npc.suri",
+    "dialogue_key": "npc.suri.dialogue"
+  },
+  {
+    "id": "bo",
+    "region": 1,
+    "art": 3,
+    "name_key": "npc.bo",
+    "dialogue_key": "npc.bo.dialogue"
+  },
+  {
+    "id": "sela",
+    "region": 2,
+    "art": 4,
+    "name_key": "npc.sela",
+    "dialogue_key": "npc.sela.dialogue"
+  },
+  {
+    "id": "neri",
+    "region": 3,
+    "art": 5,
+    "name_key": "npc.neri",
+    "dialogue_key": "npc.neri.dialogue"
+  },
+  {
+    "id": "toma",
+    "region": 3,
+    "art": 6,
+    "name_key": "npc.toma",
+    "dialogue_key": "npc.toma.dialogue"
+  },
+  {
+    "id": "elin",
+    "region": 4,
+    "art": 7,
+    "name_key": "npc.elin",
+    "dialogue_key": "npc.elin.dialogue"
+  }
+]

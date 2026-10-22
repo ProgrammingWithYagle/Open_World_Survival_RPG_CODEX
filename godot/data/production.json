@@ -1,0 +1,62 @@
+[
+  {
+    "id": "charcoal",
+    "station": "kiln",
+    "seconds": 35
+  },
+  {
+    "id": "brick",
+    "station": "kiln",
+    "seconds": 35
+  },
+  {
+    "id": "copper",
+    "station": "smelter",
+    "seconds": 35
+  },
+  {
+    "id": "iron",
+    "station": "smelter",
+    "seconds": 35
+  },
+  {
+    "id": "cloth",
+    "station": "loom",
+    "seconds": 35
+  },
+  {
+    "id": "glass",
+    "station": "resonator",
+    "seconds": 35
+  },
+  {
+    "id": "ration",
+    "station": "drying_rack",
+    "seconds": 35
+  },
+  {
+    "id": "roast",
+    "station": "cooking_pot",
+    "seconds": 20
+  },
+  {
+    "id": "stew",
+    "station": "cooking_pot",
+    "seconds": 35
+  },
+  {
+    "id": "grilled_fish",
+    "station": "cooking_pot",
+    "seconds": 20
+  },
+  {
+    "id": "tea",
+    "station": "cooking_pot",
+    "seconds": 20
+  },
+  {
+    "id": "flour",
+    "station": "mill",
+    "seconds": 25
+  }
+]

@@ -1,68 +1,692 @@
 {
-  "boar": {
-    "name": "Wild Boar",
+  "bristleback": {
+    "name": "Bristleback",
+    "name_key": "mob.bristleback",
     "behavior": "aggressive",
-    "health": 48,
-    "speed": 95,
-    "aggro_range": 190,
-    "attack_range": 26,
-    "attack_cooldown": 1.1,
-    "damage": 7,
-    "patrol_radius": 0,
-    "biomes": ["grassland", "forest"],
-    "color": [0.55, 0.38, 0.25],
-    "drops": [
-      {"id": "raw_meat", "count": 2},
-      {"id": "hide", "count": 1}
-    ]
-  },
-  "slime": {
-    "name": "Slime",
-    "behavior": "passive",
-    "health": 24,
-    "speed": 60,
-    "aggro_range": 110,
-    "attack_range": 18,
-    "attack_cooldown": 1.6,
-    "damage": 3,
-    "patrol_radius": 0,
-    "biomes": ["forest", "tundra"],
-    "color": [0.25, 0.8, 0.45],
-    "drops": [
-      {"id": "slime_gel", "count": 1}
-    ]
-  },
-  "spitter": {
-    "name": "Spitter",
-    "behavior": "ranged",
+    "pattern": "charge",
+    "region": 0,
+    "tier": 1,
     "health": 30,
-    "speed": 80,
-    "aggro_range": 200,
-    "attack_range": 90,
-    "attack_cooldown": 1.4,
+    "speed": 40,
     "damage": 5,
-    "patrol_radius": 0,
-    "biomes": ["desert", "tundra"],
-    "color": [0.82, 0.42, 0.2],
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "bracken"
+    ],
     "drops": [
-      {"id": "venom_sac", "count": 1}
-    ]
+      {
+        "id": "raw_meat",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 0
   },
-  "stone_guardian": {
-    "name": "Stone Guardian",
-    "behavior": "patrol",
-    "health": 65,
-    "speed": 70,
-    "aggro_range": 150,
-    "attack_range": 22,
-    "attack_cooldown": 1.8,
-    "damage": 8,
-    "patrol_radius": 140,
-    "biomes": ["grassland", "desert"],
-    "color": [0.55, 0.55, 0.6],
+  "thornling": {
+    "name": "Thornling",
+    "name_key": "mob.thornling",
+    "behavior": "aggressive",
+    "pattern": "melee",
+    "region": 0,
+    "tier": 1,
+    "health": 30,
+    "speed": 40,
+    "damage": 5,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "bracken"
+    ],
     "drops": [
-      {"id": "stone", "count": 3},
-      {"id": "fiber", "count": 1}
-    ]
+      {
+        "id": "raw_meat",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 1
+  },
+  "brush_prowler": {
+    "name": "Brush prowler",
+    "name_key": "mob.brush_prowler",
+    "behavior": "aggressive",
+    "pattern": "leap",
+    "region": 0,
+    "tier": 1,
+    "health": 30,
+    "speed": 40,
+    "damage": 5,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "bracken"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 2
+  },
+  "reed_lurker": {
+    "name": "Reed lurker",
+    "name_key": "mob.reed_lurker",
+    "behavior": "aggressive",
+    "pattern": "leap",
+    "region": 1,
+    "tier": 2,
+    "health": 42,
+    "speed": 45,
+    "damage": 7,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "fen"
+    ],
+    "drops": [
+      {
+        "id": "gel",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 3
+  },
+  "tidejaw": {
+    "name": "Tidejaw",
+    "name_key": "mob.tidejaw",
+    "behavior": "aggressive",
+    "pattern": "shield",
+    "region": 1,
+    "tier": 2,
+    "health": 42,
+    "speed": 45,
+    "damage": 7,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "fen"
+    ],
+    "drops": [
+      {
+        "id": "gel",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 4
+  },
+  "lantern_moth": {
+    "name": "Lantern moth",
+    "name_key": "mob.lantern_moth",
+    "behavior": "ranged",
+    "pattern": "ranged",
+    "region": 1,
+    "tier": 2,
+    "health": 42,
+    "speed": 45,
+    "damage": 7,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "fen"
+    ],
+    "drops": [
+      {
+        "id": "gel",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 5
+  },
+  "ash_crawler": {
+    "name": "Ash crawler",
+    "name_key": "mob.ash_crawler",
+    "behavior": "aggressive",
+    "pattern": "melee",
+    "region": 2,
+    "tier": 3,
+    "health": 54,
+    "speed": 50,
+    "damage": 9,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "cinder"
+    ],
+    "drops": [
+      {
+        "id": "iron_ore",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 6
+  },
+  "slag_gnaw": {
+    "name": "Slag gnawer",
+    "name_key": "mob.slag_gnaw",
+    "behavior": "aggressive",
+    "pattern": "charge",
+    "region": 2,
+    "tier": 3,
+    "health": 54,
+    "speed": 50,
+    "damage": 9,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "cinder"
+    ],
+    "drops": [
+      {
+        "id": "iron_ore",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 7
+  },
+  "cinder_wasp": {
+    "name": "Cinder wasp",
+    "name_key": "mob.cinder_wasp",
+    "behavior": "ranged",
+    "pattern": "ranged",
+    "region": 2,
+    "tier": 3,
+    "health": 54,
+    "speed": 50,
+    "damage": 9,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "cinder"
+    ],
+    "drops": [
+      {
+        "id": "iron_ore",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 8
+  },
+  "gustwing": {
+    "name": "Gustwing",
+    "name_key": "mob.gustwing",
+    "behavior": "aggressive",
+    "pattern": "leap",
+    "region": 3,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "storm"
+    ],
+    "drops": [
+      {
+        "id": "feather",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 9
+  },
+  "pine_wraith": {
+    "name": "Pine wraith",
+    "name_key": "mob.pine_wraith",
+    "behavior": "ranged",
+    "pattern": "ranged",
+    "region": 3,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "storm"
+    ],
+    "drops": [
+      {
+        "id": "feather",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 10
+  },
+  "antlerbound": {
+    "name": "Antlerbound",
+    "name_key": "mob.antlerbound",
+    "behavior": "aggressive",
+    "pattern": "charge",
+    "region": 3,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "storm"
+    ],
+    "drops": [
+      {
+        "id": "feather",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 11
+  },
+  "brass_sentry": {
+    "name": "Brass sentry",
+    "name_key": "mob.brass_sentry",
+    "behavior": "aggressive",
+    "pattern": "shield",
+    "region": 4,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "hollow"
+    ],
+    "drops": [
+      {
+        "id": "relic",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 12
+  },
+  "glass_weaver": {
+    "name": "Glass weaver",
+    "name_key": "mob.glass_weaver",
+    "behavior": "ranged",
+    "pattern": "ranged",
+    "region": 4,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "hollow"
+    ],
+    "drops": [
+      {
+        "id": "relic",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 13
+  },
+  "echo_husk": {
+    "name": "Echo husk",
+    "name_key": "mob.echo_husk",
+    "behavior": "aggressive",
+    "pattern": "leap",
+    "region": 4,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "hollow"
+    ],
+    "drops": [
+      {
+        "id": "relic",
+        "count": 2
+      }
+    ],
+    "boss": false,
+    "passive": false,
+    "art": 14
+  },
+  "hare": {
+    "name": "Meadow hare",
+    "name_key": "mob.hare",
+    "behavior": "passive",
+    "pattern": "passive",
+    "region": 0,
+    "tier": 1,
+    "health": 30,
+    "speed": 40,
+    "damage": 5,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "bracken"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "hide",
+        "count": 1
+      }
+    ],
+    "boss": false,
+    "passive": true,
+    "art": 15
+  },
+  "deer": {
+    "name": "Fallow deer",
+    "name_key": "mob.deer",
+    "behavior": "passive",
+    "pattern": "passive",
+    "region": 3,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "storm"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "hide",
+        "count": 1
+      }
+    ],
+    "boss": false,
+    "passive": true,
+    "art": 16
+  },
+  "fox": {
+    "name": "Red fox",
+    "name_key": "mob.fox",
+    "behavior": "passive",
+    "pattern": "passive",
+    "region": 2,
+    "tier": 3,
+    "health": 54,
+    "speed": 50,
+    "damage": 9,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "cinder"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "hide",
+        "count": 1
+      }
+    ],
+    "boss": false,
+    "passive": true,
+    "art": 17
+  },
+  "crane": {
+    "name": "Marsh crane",
+    "name_key": "mob.crane",
+    "behavior": "passive",
+    "pattern": "passive",
+    "region": 1,
+    "tier": 2,
+    "health": 42,
+    "speed": 45,
+    "damage": 7,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "fen"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "hide",
+        "count": 1
+      }
+    ],
+    "boss": false,
+    "passive": true,
+    "art": 18
+  },
+  "tortoise": {
+    "name": "Moss tortoise",
+    "name_key": "mob.tortoise",
+    "behavior": "passive",
+    "pattern": "passive",
+    "region": 4,
+    "tier": 4,
+    "health": 66,
+    "speed": 55,
+    "damage": 11,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.5,
+    "biomes": [
+      "hollow"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 1
+      },
+      {
+        "id": "hide",
+        "count": 1
+      }
+    ],
+    "boss": false,
+    "passive": true,
+    "art": 19
+  },
+  "old_briar": {
+    "name": "Old Briar",
+    "name_key": "mob.old_briar",
+    "behavior": "aggressive",
+    "pattern": "boss_charge",
+    "region": 0,
+    "tier": 1,
+    "health": 180,
+    "speed": 38,
+    "damage": 9,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.8,
+    "biomes": [
+      "bracken"
+    ],
+    "drops": [
+      {
+        "id": "raw_meat",
+        "count": 8
+      },
+      {
+        "id": "amber",
+        "count": 8
+      }
+    ],
+    "boss": true,
+    "passive": false,
+    "art": 20
+  },
+  "reedmother": {
+    "name": "The Reedmother",
+    "name_key": "mob.reedmother",
+    "behavior": "ranged",
+    "pattern": "boss_ranged",
+    "region": 1,
+    "tier": 2,
+    "health": 310,
+    "speed": 38,
+    "damage": 13,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.8,
+    "biomes": [
+      "fen"
+    ],
+    "drops": [
+      {
+        "id": "gel",
+        "count": 8
+      },
+      {
+        "id": "amber",
+        "count": 8
+      }
+    ],
+    "boss": true,
+    "passive": false,
+    "art": 21
+  },
+  "cinder_heart": {
+    "name": "Cinder Heart",
+    "name_key": "mob.cinder_heart",
+    "behavior": "aggressive",
+    "pattern": "boss_charge",
+    "region": 2,
+    "tier": 3,
+    "health": 440,
+    "speed": 38,
+    "damage": 17,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.8,
+    "biomes": [
+      "cinder"
+    ],
+    "drops": [
+      {
+        "id": "iron_ore",
+        "count": 8
+      },
+      {
+        "id": "amber",
+        "count": 8
+      }
+    ],
+    "boss": true,
+    "passive": false,
+    "art": 22
+  },
+  "storm_stag": {
+    "name": "The Storm Stag",
+    "name_key": "mob.storm_stag",
+    "behavior": "aggressive",
+    "pattern": "boss_leap",
+    "region": 3,
+    "tier": 4,
+    "health": 570,
+    "speed": 38,
+    "damage": 21,
+    "aggro_range": 190,
+    "attack_range": 30,
+    "attack_cooldown": 1.8,
+    "biomes": [
+      "storm"
+    ],
+    "drops": [
+      {
+        "id": "feather",
+        "count": 8
+      },
+      {
+        "id": "amber",
+        "count": 8
+      }
+    ],
+    "boss": true,
+    "passive": false,
+    "art": 23
+  },
+  "atlas_keeper": {
+    "name": "The Atlas Keeper",
+    "name_key": "mob.atlas_keeper",
+    "behavior": "ranged",
+    "pattern": "boss_ranged",
+    "region": 4,
+    "tier": 4,
+    "health": 700,
+    "speed": 38,
+    "damage": 25,
+    "aggro_range": 190,
+    "attack_range": 160,
+    "attack_cooldown": 1.8,
+    "biomes": [
+      "hollow"
+    ],
+    "drops": [
+      {
+        "id": "relic",
+        "count": 8
+      },
+      {
+        "id": "amber",
+        "count": 8
+      }
+    ],
+    "boss": true,
+    "passive": false,
+    "art": 24
   }
 }

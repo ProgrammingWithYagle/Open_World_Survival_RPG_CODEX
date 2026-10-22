@@ -1,0 +1,332 @@
+[
+  {
+    "id": "bracken_cache",
+    "region": 0,
+    "kind": "cache",
+    "offset": [
+      -16,
+      -14
+    ],
+    "name_key": "poi.bracken_cache.name",
+    "description_key": "poi.bracken_cache.desc"
+  },
+  {
+    "id": "bracken_survey",
+    "region": 0,
+    "kind": "survey",
+    "offset": [
+      18,
+      -11
+    ],
+    "name_key": "poi.bracken_survey.name",
+    "description_key": "poi.bracken_survey.desc"
+  },
+  {
+    "id": "bracken_puzzle",
+    "region": 0,
+    "kind": "puzzle",
+    "offset": [
+      -20,
+      12
+    ],
+    "name_key": "poi.bracken_puzzle.name",
+    "description_key": "poi.bracken_puzzle.desc"
+  },
+  {
+    "id": "bracken_spring",
+    "region": 0,
+    "kind": "spring",
+    "offset": [
+      14,
+      18
+    ],
+    "name_key": "poi.bracken_spring.name",
+    "description_key": "poi.bracken_spring.desc"
+  },
+  {
+    "id": "bracken_grove",
+    "region": 0,
+    "kind": "grove",
+    "offset": [
+      -8,
+      22
+    ],
+    "name_key": "poi.bracken_grove.name",
+    "description_key": "poi.bracken_grove.desc"
+  },
+  {
+    "id": "bracken_expedition",
+    "region": 0,
+    "kind": "expedition",
+    "offset": [
+      23,
+      16
+    ],
+    "name_key": "poi.bracken_expedition.name",
+    "description_key": "poi.bracken_expedition.desc"
+  },
+  {
+    "id": "fen_cache",
+    "region": 1,
+    "kind": "cache",
+    "offset": [
+      -16,
+      -14
+    ],
+    "name_key": "poi.fen_cache.name",
+    "description_key": "poi.fen_cache.desc"
+  },
+  {
+    "id": "fen_survey",
+    "region": 1,
+    "kind": "survey",
+    "offset": [
+      18,
+      -11
+    ],
+    "name_key": "poi.fen_survey.name",
+    "description_key": "poi.fen_survey.desc"
+  },
+  {
+    "id": "fen_puzzle",
+    "region": 1,
+    "kind": "puzzle",
+    "offset": [
+      -20,
+      12
+    ],
+    "name_key": "poi.fen_puzzle.name",
+    "description_key": "poi.fen_puzzle.desc"
+  },
+  {
+    "id": "fen_spring",
+    "region": 1,
+    "kind": "spring",
+    "offset": [
+      14,
+      18
+    ],
+    "name_key": "poi.fen_spring.name",
+    "description_key": "poi.fen_spring.desc"
+  },
+  {
+    "id": "fen_grove",
+    "region": 1,
+    "kind": "grove",
+    "offset": [
+      -8,
+      22
+    ],
+    "name_key": "poi.fen_grove.name",
+    "description_key": "poi.fen_grove.desc"
+  },
+  {
+    "id": "fen_expedition",
+    "region": 1,
+    "kind": "expedition",
+    "offset": [
+      23,
+      16
+    ],
+    "name_key": "poi.fen_expedition.name",
+    "description_key": "poi.fen_expedition.desc"
+  },
+  {
+    "id": "cinder_cache",
+    "region": 2,
+    "kind": "cache",
+    "offset": [
+      -16,
+      -14
+    ],
+    "name_key": "poi.cinder_cache.name",
+    "description_key": "poi.cinder_cache.desc"
+  },
+  {
+    "id": "cinder_survey",
+    "region": 2,
+    "kind": "survey",
+    "offset": [
+      18,
+      -11
+    ],
+    "name_key": "poi.cinder_survey.name",
+    "description_key": "poi.cinder_survey.desc"
+  },
+  {
+    "id": "cinder_puzzle",
+    "region": 2,
+    "kind": "puzzle",
+    "offset": [
+      -20,
+      12
+    ],
+    "name_key": "poi.cinder_puzzle.name",
+    "description_key": "poi.cinder_puzzle.desc"
+  },
+  {
+    "id": "cinder_spring",
+    "region": 2,
+    "kind": "spring",
+    "offset": [
+      14,
+      18
+    ],
+    "name_key": "poi.cinder_spring.name",
+    "description_key": "poi.cinder_spring.desc"
+  },
+  {
+    "id": "cinder_grove",
+    "region": 2,
+    "kind": "grove",
+    "offset": [
+      -8,
+      22
+    ],
+    "name_key": "poi.cinder_grove.name",
+    "description_key": "poi.cinder_grove.desc"
+  },
+  {
+    "id": "cinder_expedition",
+    "region": 2,
+    "kind": "expedition",
+    "offset": [
+      23,
+      16
+    ],
+    "name_key": "poi.cinder_expedition.name",
+    "description_key": "poi.cinder_expedition.desc"
+  },
+  {
+    "id": "storm_cache",
+    "region": 3,
+    "kind": "cache",
+    "offset": [
+      -16,
+      -14
+    ],
+    "name_key": "poi.storm_cache.name",
+    "description_key": "poi.storm_cache.desc"
+  },
+  {
+    "id": "storm_survey",
+    "region": 3,
+    "kind": "survey",
+    "offset": [
+      18,
+      -11
+    ],
+    "name_key": "poi.storm_survey.name",
+    "description_key": "poi.storm_survey.desc"
+  },
+  {
+    "id": "storm_puzzle",
+    "region": 3,
+    "kind": "puzzle",
+    "offset": [
+      -20,
+      12
+    ],
+    "name_key": "poi.storm_puzzle.name",
+    "description_key": "poi.storm_puzzle.desc"
+  },
+  {
+    "id": "storm_spring",
+    "region": 3,
+    "kind": "spring",
+    "offset": [
+      14,
+      18
+    ],
+    "name_key": "poi.storm_spring.name",
+    "description_key": "poi.storm_spring.desc"
+  },
+  {
+    "id": "storm_grove",
+    "region": 3,
+    "kind": "grove",
+    "offset": [
+      -8,
+      22
+    ],
+    "name_key": "poi.storm_grove.name",
+    "description_key": "poi.storm_grove.desc"
+  },
+  {
+    "id": "storm_expedition",
+    "region": 3,
+    "kind": "expedition",
+    "offset": [
+      23,
+      16
+    ],
+    "name_key": "poi.storm_expedition.name",
+    "description_key": "poi.storm_expedition.desc"
+  },
+  {
+    "id": "hollow_cache",
+    "region": 4,
+    "kind": "cache",
+    "offset": [
+      -16,
+      -14
+    ],
+    "name_key": "poi.hollow_cache.name",
+    "description_key": "poi.hollow_cache.desc"
+  },
+  {
+    "id": "hollow_survey",
+    "region": 4,
+    "kind": "survey",
+    "offset": [
+      18,
+      -11
+    ],
+    "name_key": "poi.hollow_survey.name",
+    "description_key": "poi.hollow_survey.desc"
+  },
+  {
+    "id": "hollow_puzzle",
+    "region": 4,
+    "kind": "puzzle",
+    "offset": [
+      -20,
+      12
+    ],
+    "name_key": "poi.hollow_puzzle.name",
+    "description_key": "poi.hollow_puzzle.desc"
+  },
+  {
+    "id": "hollow_spring",
+    "region": 4,
+    "kind": "spring",
+    "offset": [
+      14,
+      18
+    ],
+    "name_key": "poi.hollow_spring.name",
+    "description_key": "poi.hollow_spring.desc"
+  },
+  {
+    "id": "hollow_grove",
+    "region": 4,
+    "kind": "grove",
+    "offset": [
+      -8,
+      22
+    ],
+    "name_key": "poi.hollow_grove.name",
+    "description_key": "poi.hollow_grove.desc"
+  },
+  {
+    "id": "hollow_expedition",
+    "region": 4,
+    "kind": "expedition",
+    "offset": [
+      23,
+      16
+    ],
+    "name_key": "poi.hollow_expedition.name",
+    "description_key": "poi.hollow_expedition.desc"
+  }
+]

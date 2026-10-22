@@ -1,0 +1,39 @@
+{
+	"captures": 130,
+	"issues": [],
+	"languages": [
+		"en",
+		"zh_CN",
+		"zh_TW",
+		"es",
+		"ja"
+	],
+	"screens": [
+		"title",
+		"new",
+		"hud",
+		"inventory",
+		"crafting",
+		"building",
+		"atlas",
+		"journal",
+		"perks",
+		"activities",
+		"bestiary",
+		"settings",
+		"changelog",
+		"dialogue",
+		"waystone",
+		"station",
+		"garden",
+		"courier",
+		"site",
+		"death",
+		"retired",
+		"night",
+		"region1",
+		"region2",
+		"region3",
+		"region4"
+	]
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "mara_0",
+    "npc": "mara",
+    "cost": {
+      "wood": 12,
+      "fiber": 8
+    },
+    "reward": {
+      "amber": 4,
+      "ration": 2
+    },
+    "xp": 65,
+    "goodwill": 10
+  },
+  {
+    "id": "mara_1",
+    "npc": "mara",
+    "cost": {
+      "wood": 16,
+      "fiber": 11
+    },
+    "reward": {
+      "amber": 5,
+      "ration": 2
+    },
+    "xp": 65,
+    "goodwill": 10
+  },
+  {
+    "id": "ivo_0",
+    "npc": "ivo",
+    "cost": {
+      "stone": 16,
+      "rope": 3
+    },
+    "reward": {
+      "amber": 5,
+      "bandage": 3
+    },
+    "xp": 80,
+    "goodwill": 10
+  },
+  {
+    "id": "ivo_1",
+    "npc": "ivo",
+    "cost": {
+      "stone": 22,
+      "rope": 4
+    },
+    "reward": {
+      "amber": 6,
+      "bandage": 3
+    },
+    "xp": 80,
+    "goodwill": 10
+  },
+  {
+    "id": "suri_0",
+    "npc": "suri",
+    "cost": {
+      "vegetable": 8,
+      "mushroom": 5
+    },
+    "reward": {
+      "amber": 6,
+      "stew": 3
+    },
+    "xp": 95,
+    "goodwill": 10
+  },
+  {
+    "id": "suri_1",
+    "npc": "suri",
+    "cost": {
+      "vegetable": 11,
+      "mushroom": 7
+    },
+    "reward": {
+      "amber": 7,
+      "stew": 3
+    },
+    "xp": 95,
+    "goodwill": 10
+  },
+  {
+    "id": "bo_0",
+    "npc": "bo",
+    "cost": {
+      "copper_ore": 12,
+      "charcoal": 4
+    },
+    "reward": {
+      "amber": 8,
+      "iron_ore": 4
+    },
+    "xp": 110,
+    "goodwill": 10
+  },
+  {
+    "id": "bo_1",
+    "npc": "bo",
+    "cost": {
+      "copper_ore": 16,
+      "charcoal": 5
+    },
+    "reward": {
+      "amber": 10,
+      "iron_ore": 5
+    },
+    "xp": 110,
+    "goodwill": 10
+  },
+  {
+    "id": "sela_0",
+    "npc": "sela",
+    "cost": {
+      "honey": 4,
+      "gel": 5
+    },
+    "reward": {
+      "amber": 8,
+      "tonic": 2
+    },
+    "xp": 125,
+    "goodwill": 10
+  },
+  {
+    "id": "sela_1",
+    "npc": "sela",
+    "cost": {
+      "honey": 5,
+      "gel": 7
+    },
+    "reward": {
+      "amber": 10,
+      "tonic": 2
+    },
+    "xp": 125,
+    "goodwill": 10
+  },
+  {
+    "id": "neri_0",
+    "npc": "neri",
+    "cost": {
+      "cloth": 4,
+      "ration": 4
+    },
+    "reward": {
+      "amber": 10,
+      "storm_shard": 4
+    },
+    "xp": 140,
+    "goodwill": 10
+  },
+  {
+    "id": "neri_1",
+    "npc": "neri",
+    "cost": {
+      "cloth": 5,
+      "ration": 5
+    },
+    "reward": {
+      "amber": 13,
+      "storm_shard": 5
+    },
+    "xp": 140,
+    "goodwill": 10
+  },
+  {
+    "id": "toma_0",
+    "npc": "toma",
+    "cost": {
+      "stone": 20,
+      "brick": 8
+    },
+    "reward": {
+      "amber": 10,
+      "glass": 3
+    },
+    "xp": 155,
+    "goodwill": 10
+  },
+  {
+    "id": "toma_1",
+    "npc": "toma",
+    "cost": {
+      "stone": 28,
+      "brick": 11
+    },
+    "reward": {
+      "amber": 13,
+      "glass": 3
+    },
+    "xp": 155,
+    "goodwill": 10
+  },
+  {
+    "id": "elin_0",
+    "npc": "elin",
+    "cost": {
+      "relic": 8,
+      "glass": 6
+    },
+    "reward": {
+      "amber": 14,
+      "tonic": 4
+    },
+    "xp": 170,
+    "goodwill": 10
+  },
+  {
+    "id": "elin_1",
+    "npc": "elin",
+    "cost": {
+      "relic": 11,
+      "glass": 8
+    },
+    "reward": {
+      "amber": 18,
+      "tonic": 5
+    },
+    "xp": 170,
+    "goodwill": 10
+  }
+]
