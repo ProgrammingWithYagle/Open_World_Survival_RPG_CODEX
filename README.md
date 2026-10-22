@@ -1,275 +1,43 @@
-# Open World Survival RPG (Codex)
+# The Mossbound Atlas
 
-A 2D top‑down open‑world survival RPG inspired by **devast.io** and **starve.io**. The long‑term goal is a highly replayable survival sandbox with deep progression (skills, tech tiers, factions), emergent exploration, and scalable multiplayer. The first milestone targets a polished **single‑player** experience, with a deliberate path to add multiplayer later.
+**Find a path. Make a home. Bring the world together.**
 
----
+An offline, single-player pixel art wilderness RPG. Follow forgotten roads through five regions, build camps and gardens, trade with travelers, and restore an ancient network of waystones. Shape each region through **Bloom**, **Ember** or **Gale**. Face its warden, or choose Peaceful and make a restoration offering.
 
-## Table of Contents
-1. [Vision](#vision)
-2. [Current Status](#current-status)
-3. [Core Gameplay Loop](#core-gameplay-loop)
-4. [Key Systems](#key-systems)
-5. [Progression & Long‑Term Play](#progression--long-term-play)
-6. [Art & UX Direction](#art--ux-direction)
-7. [Tech Stack (Proposed)](#tech-stack-proposed)
-8. [Architecture Overview](#architecture-overview)
-9. [Development Roadmap](#development-roadmap)
-10. [Testing & Quality](#testing--quality)
-11. [Repository Structure (Planned)](#repository-structure-planned)
-12. [Design Principles](#design-principles)
-13. [Community & Feedback](#community--feedback)
-14. [Getting Started](#getting-started)
-15. [Next Steps](#next-steps)
+[Download for Windows](https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/releases/latest) · [Player Wiki](docs/wiki/Home.md) · [Changelog](CHANGELOG.md) · [Controls and installation](docs/PLAYING.md)
 
----
+![The starting survey camp](verification/export_hud_en.png)
 
-## Vision
-Create a survival RPG that is **easy to start, hard to master**, where players:
-- Feel *constant forward momentum* through clear, meaningful upgrades.
-- Always have interesting, risky choices (where to explore, what to craft, who to ally with).
-- Experience unique, emergent stories each run.
+## What you can do
 
-The **north star**: a game you can play for hundreds of hours without running out of reasons to keep exploring and evolving.
+- Explore a seeded 1,024 × 1,024 tile world with five regional wardens and 30 discovery sites: caches, surveys, memory seals, springs, groves and repeatable expeditions.
+- Make equipment, food and settlements using **143 items, 115 recipes and 41 building pieces**. Foundations, furniture, gardens, processing stations, storage and courier routes work together.
+- Grow six crops, catch five regional fish, prepare meals and cordials, equip six charms, and learn nine perks. Build a grain-to-bread supply chain or supply a distant outpost.
+- Meet eight travelers, earn goodwill through 16 rotating requests, and record 25 creatures in your field guide. Three-wave expeditions increase in depth as you complete them.
+- Choose five game difficulties independently from Easycore, Mediumcore or Hardcore death rules. Multiple journey slots, automatic saves and three backup generations preserve progress. A retired Hardcore character's atlas remains readable.
 
----
+English, 简体中文, 繁體中文, Español and 日本語 are included. All 642 player text keys have separate catalogs, and Chinese and Japanese fonts ship with the game. Keyboard/mouse and controller bindings are available. The in-game changelog is generated from the same release data as the repository reference.
 
-## Current Status
-- **Prototype available**: Godot 4 project skeleton with starter scenes and scripts.
-- **Implemented**: top‑down movement, harvesting, inventory, expanded crafting, consumable items, survival needs (including health and stamina), procedural biome-based world generation, and a refreshed HUD with progress bars plus iconized inventory/crafting lists.
-- **Recent improvements**: larger, stylized resource sprites; biome tile visuals (water, grassland, forest, desert, tundra); weighted resource placement per biome; player camera zoom tuned to a 2× view with scaled sprites/collisions for readability.
-- **New additions**: data-driven mob definitions with initial passive/aggressive/ranged/patrol examples, plus a main menu with options (master volume + fullscreen) and world creation settings (difficulty + survival toggles).
-- **Planned next**: expand world props (rocks/trees variants), add crafting stations with placement, and build a dedicated crafting/character stats panel.
+## Play
 
----
+Download the Windows ZIP from Releases, **extract the entire folder**, then launch `The Mossbound Atlas.exe`. Keep the adjacent `.pck` file with it. An engine installation, account and network connection are unnecessary. Read [the quick start](docs/PLAYING.md) for controls, saves and the first objective.
 
-## Core Gameplay Loop
-1. **Explore** → find biomes, ruins, nodes, events.
-2. **Gather** → harvest resources from the environment.
-3. **Craft** → tools, weapons, structures, consumables.
-4. **Survive** → manage hunger, cold/heat, fatigue, injuries.
-5. **Fight / Flee** → tactical combat, wildlife threats, rival factions.
-6. **Progress** → unlock skills, tech tiers, and world advantages.
-7. **Build** → bases, outposts, automated production.
+From source, use **Godot 4.5.1**. Open `godot/project.godot`, let imports finish and run `scenes/Mossbound.tscn`. The Compatibility renderer draws the world at 640 × 360 beneath a separate readable interface.
 
----
+## Development
 
-## Key Systems
-### World & Exploration
-- **Procedural 2D world** with hand‑crafted POIs (ruins, caves, camps, temples).
-- **Biome diversity** (forest, desert, snow, swamp, coast) with unique resources.
-- **Dynamic events** (storms, migration, faction skirmishes, caravan raids).
+Gameplay lives in `godot/scripts/core`, `world`, `actors` and `ui`. JSON content is under `godot/data`; translations are under `godot/locale`. The authored builders in `tools` regenerate content, Wiki pages, audio and normalized sprites. Original source artwork, hashes and font licenses are retained.
 
-### Survival & Needs
-- **Hunger, thirst, temperature, stamina, fatigue** as manageable, not punitive.
-- **Injuries & conditions** (bleeding, infections) that create new goals.
-- **Shelter & camp management** to reduce survival pressure.
-
-### Crafting & Production
-- **Modular crafting** (component upgrades, material variants).
-- **Tech tiers** (primitive → iron → steel → advanced tech).
-- **Automation** (mills, kilns, farms, traps) to reduce grind.
-
-### Combat & AI
-- **Top‑down tactical combat** with stamina, hit windows, and positioning.
-- **AI behavior profiles** (predators, ambushers, pack hunters, sentries).
-- **Weapon variety** (melee, thrown, bows, late‑game firearms).
-
-### Factions & Reputation
-- Multiple factions with **reputation systems** and **unique rewards**.
-- **Dynamic faction conflicts** that reshape the world.
-- Player can **ally**, **raid**, or **infiltrate**.
-
----
-
-## Progression & Long‑Term Play
-- **Skill trees**: survival, combat, crafting, exploration.
-- **Base‑building tiers**: from basic camp to fortified settlement.
-- **World escalation**: stronger enemies, harsher climates, rarer resources.
-- **Meta‑progression** (optional): unlock starting perks or recipes after long runs.
-- **Endgame goals**: world bosses, faction control, rare tech relics.
-
----
-
-## Art & UX Direction
-- **2D top‑down** with readable silhouettes and strong color coding.
-- **Hand‑painted, grounded survival aesthetic** (not overly cartoonish).
-- **UI clarity** (inventory, crafting, and stats always visible in 1–2 clicks).
-
-### Animation Assets (Godot)
-Sprite sheets now live in `godot/art/` and follow a strict naming convention so the
-runtime loader can register animations automatically.
-
-**Sprite sheet format**
-- Each sheet is a horizontal strip of frames (left → right).
-- Frame size is **32×32** for every action + direction.
-
-**Naming convention**
-```
-player_<action>_<direction>.png
-mob_<mob_id>_<action>_<direction>.png
+```powershell
+python -m pip install -r requirements-dev.txt
+python -m pytest tests
+python tools/build_wiki.py --check
+python tools/check_docs.py
+python tools/check_godot.py --godot C:/path/to/Godot_console.exe
+python tools/build_windows.py --godot C:/path/to/Godot_console.exe
+python tools/verify_download.py exports/The-Mossbound-Atlas-1.0.0-Windows-x64.zip
 ```
 
-Actions: `idle`, `walk`, `attack`, `death`  
-Directions: `north`, `south`, `east`, `west`
+The five CI jobs validate data, assets, Godot gameplay, Windows packaging and documentation. Native visual suites cover five languages and normal/quarter-speed animation playback. See [verification and limitations](docs/IMPLEMENTATION_STATUS.md), [design research](docs/DESIGN_RESEARCH.md), [asset provenance](docs/ASSETS.md) and [the development board](docs/PROJECT.md).
 
-Examples:
-- `player_walk_north.png`
-- `mob_boar_attack_west.png`
-- `mob_slime_idle_south.png`
-
-**Passive wildlife**
-If a mob has no self-defense, omit `attack` sprite sheets entirely. The loader
-skips missing files.
-
-**Adding a new mob (quick guide)**
-1. Add the mob definition to `godot/data/mobs.json` (ensure a unique `mob_id`).
-2. Export sprite sheets into `godot/art/` using the naming convention above.
-3. Run the game; the mob will load its `idle/walk/attack/death` animations
-   automatically when the files exist.
-
----
-
-## Tech Stack (Proposed)
-**Engine:** Godot 4.5 (in use for the prototype project)
-
-**Languages:**
-- GDScript for gameplay
-- Optional C# for performance‑critical systems
-
-**Data & Tools:**
-- JSON or Godot Resources for item definitions and progression data
-- Tiled (optional) for POI layout
-
-**Multiplayer (Phase 2):**
-- Godot high‑level multiplayer API
-- Dedicated server with deterministic or authoritative simulation
-
----
-
-## Architecture Overview
-### Core Modules (Planned)
-- **World Generation**: seeds, biomes, spawn tables
-- **Entity System**: player, NPCs, wildlife
-- **Survival System**: needs, conditions, status effects
-- **Combat System**: weapons, damage types, AI behavior
-- **Crafting System**: recipes, tech tiers, workstations
-- **Progression System**: XP, skills, faction rep
-- **UI System**: inventory, crafting, minimap, quests
-
-Each system should be **modular** and **data‑driven** so content expands without rewriting core code.
-
-### Implemented Core Modules (Prototype)
-- **World Controller** (`godot/scripts/game.gd`): spawns resources, owns system wiring.
-- **Player** (`godot/scripts/player.gd`): movement, interaction, crafting input.
-- **Inventory** (`godot/scripts/inventory.gd`): item storage with change signals.
-- **Survival Needs** (`godot/scripts/needs.gd`): hunger, thirst, temperature decay, stamina drain/regeneration, and health penalties.
-- **Crafting** (`godot/scripts/crafting.gd`): recipe validation and crafting actions.
-- **Item Database** (`godot/scripts/item_db.gd`): data loader for items/recipes.
-- **Mob Database** (`godot/scripts/mob_db.gd`): data loader for mob definitions.
-- **Mob Controller** (`godot/scripts/mob.gd`): lightweight AI behaviors (passive/aggressive/ranged/patrol).
-- **Resource Nodes** (`godot/scripts/resource_node.gd`): harvestable entities.
-- **HUD** (`godot/scripts/hud.gd`): needs, inventory, and craftable recipe readouts.
-- **Main Menu** (`godot/scenes/MainMenu.tscn` + `godot/scripts/main_menu.gd`): start/quit flow and settings panel.
-- **World Settings** (`godot/scripts/world_settings.gd`): resource-based world configuration passed into the game scene.
-
-### World Settings & Persistence Plan
-World creation now uses a `WorldSettings` Resource (`godot/scripts/world_settings.gd`) that is instantiated in the main menu and handed to the game scene on start. The resource is intentionally data-only (difficulty + world flags) so it can be serialized into a save file later. Planned persistence path:
-1. Serialize `WorldSettings` fields into a save entry (JSON or Godot Resource).
-2. Load the saved settings when opening an existing world.
-3. Rehydrate `WorldSettings` and pass it into the game scene on load.
-
-### Difficulty Presets
-World creation exposes four difficulty presets that apply recommended world flags and tuning:
-- **Peaceful**: spawns only passive wildlife from `godot/data/mobs.json` (aggressive, ranged, and patrol entries are skipped) and disables survival needs by default.
-- **Easy**: reduces hostile mob spawn density and mob damage by ~30%, while slowing hunger/thirst decay by the same margin to lower overall survival pressure.
-- **Normal**: baseline tuning for mob spawns, damage, and survival decay.
-- **Hardcore**: disables respawning on death while keeping baseline spawn and decay tuning.
-
----
-
-## Development Roadmap
-### Phase 1 — Prototype (Single‑Player Core)
-- Top‑down movement + basic interaction
-- Simple world generation + 1–2 biomes
-- Crafting, tools, hunger/temperature loop
-- Basic combat with 2–3 enemy types
-
-### Phase 2 — Vertical Slice
-- Multi‑biome world
-- Skill tree + tech tiers
-- Base‑building tier 1–2
-- Faction system v1
-- Improved AI behaviors
-
-### Phase 3 — Content Expansion
-- New biomes & world events
-- More items, weapons, armor
-- Endgame encounters & bosses
-- Base automation systems
-
-### Phase 4 — Multiplayer (Optional)
-- Co‑op foundations + persistence
-- Dedicated server prototype
-- Sync & performance testing
-
----
-
-## Testing & Quality
-- **Data validation tests** (Python/pytest) for items and recipes.
-- **Unit tests** for systems (crafting recipes, stat calculations) planned.
-- **Simulation tests** for AI and progression balance planned.
-- **Save/load tests** for persistence planned.
-- **Performance profiling** to keep 60 FPS target planned.
-
----
-
-## Repository Structure
-```
-/AGENTS.md           # contributor guidance
-/README.md
-/docs/               # design docs, milestones, balance notes (planned)
-/godot/              # Godot project root
-/godot/art/          # sprite sheets for player + mobs
-/godot/scenes/       # main, player, HUD, resource node scenes
-/godot/scripts/      # gameplay systems
-/godot/data/         # items, crafting recipes, mob definitions
-/tests/              # data validation tests
-```
-
----
-
-## Design Principles
-- **Clarity before complexity**: depth comes from layered systems, not confusion.
-- **No grind without payoff**: every task unlocks new options.
-- **Player agency**: multiple viable playstyles.
-- **Replayability**: procedural variation + meta progression.
-
----
-
-## Community & Feedback
-This project is a living experiment. Feedback will shape the game’s direction, balance, and content priorities. Share ideas, feature requests, and playtest notes as early as possible.
-
----
-
-## Getting Started
-Minimum steps:
-1. **Clone the repo**: `git clone <repo-url>` and `cd Open_World_Survival_RPG_CODEX`.
-2. **Install Godot 4.5** (standard build from godotengine.org).
-3. **Open the project** in Godot by selecting the `/godot/` folder.
-4. **Run the scene** to move with WASD, harvest with E, craft with C.
-
-Optional tests:
-- `pytest` (validates JSON data in `godot/data/`).
-
----
-
-## Next Steps
-1. Expand biome visuals with additional prop variants and decorative clutter.
-2. Introduce placeable crafting stations and a crafting UI panel with recipe details.
-3. Add simple enemies, combat feedback, and health recovery sources.
-4. Add save/load support for player progress.
-5. Create a lightweight audio pass (footsteps, harvest, ambient).
-
----
-
-If you want anything expanded or adjusted, let me know and I’ll refine it further.
+This is an original revamp of the earlier repository prototype. The art uses image generation followed by deterministic preparation, inspection and revisions; it is not represented as hand-drawn. Music and effects use original note sequences and synthesis. No commercial game art or music is bundled. Source is MIT licensed; bundled fonts and engine notices retain their own licenses.

@@ -1,0 +1,224 @@
+{
+  "composer": "Original score authored for The Mossbound Atlas",
+  "sample_rate": 22050,
+  "themes": {
+    "bracken": {
+      "root": 50,
+      "bpm": 84,
+      "scale": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "chords": [
+        [
+          0,
+          3,
+          7
+        ],
+        [
+          5,
+          9,
+          12
+        ],
+        [
+          10,
+          14,
+          17
+        ],
+        [
+          7,
+          10,
+          14
+        ]
+      ],
+      "lead": "flute"
+    },
+    "fen": {
+      "root": 55,
+      "bpm": 76,
+      "scale": [
+        0,
+        2,
+        4,
+        6,
+        7,
+        9,
+        11
+      ],
+      "chords": [
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          2,
+          6,
+          9
+        ],
+        [
+          9,
+          12,
+          16
+        ],
+        [
+          7,
+          11,
+          14
+        ]
+      ],
+      "lead": "bell"
+    },
+    "cinder": {
+      "root": 45,
+      "bpm": 92,
+      "scale": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "chords": [
+        [
+          0,
+          3,
+          7
+        ],
+        [
+          8,
+          12,
+          15
+        ],
+        [
+          5,
+          8,
+          12
+        ],
+        [
+          7,
+          10,
+          14
+        ]
+      ],
+      "lead": "pluck"
+    },
+    "storm": {
+      "root": 52,
+      "bpm": 88,
+      "scale": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "chords": [
+        [
+          0,
+          3,
+          7
+        ],
+        [
+          9,
+          12,
+          16
+        ],
+        [
+          5,
+          9,
+          12
+        ],
+        [
+          7,
+          10,
+          14
+        ]
+      ],
+      "lead": "flute"
+    },
+    "hollow": {
+      "root": 53,
+      "bpm": 72,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "chords": [
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          9,
+          12,
+          16
+        ],
+        [
+          5,
+          9,
+          12
+        ],
+        [
+          7,
+          11,
+          14
+        ]
+      ],
+      "lead": "bell"
+    },
+    "combat": {
+      "root": 50,
+      "bpm": 116,
+      "scale": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "chords": [
+        [
+          0,
+          3,
+          7
+        ],
+        [
+          0,
+          5,
+          8
+        ],
+        [
+          8,
+          12,
+          15
+        ],
+        [
+          7,
+          10,
+          14
+        ]
+      ],
+      "lead": "pluck"
+    }
+  },
+  "motif": "See tools/compose_audio.py for note and rhythm notation.",
+  "samples": "Synthesized instruments and procedural foley; no third-party samples."
+}

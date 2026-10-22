@@ -1,0 +1,146 @@
+[
+  {
+    "file": "surveyor_concept.png",
+    "sha256": "b33ff4c6a90ca165ceb12547b834b57a4661fe5bffe879dc8aaaf41778b85bd5",
+    "tool": "image_gen",
+    "accepted_for": "costume reference only; soft glow rejected"
+  },
+  {
+    "file": "surveyor_walk.png",
+    "sha256": "a7839b222474fd49bc52db051a55afe0dc696dd43d37200d70ca0f1eb5f1a17b",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "surveyor_idle.png",
+    "sha256": "e0588d968097b2827d2995b7547191ac354dd8b1a5d2562d253e6b76cbfd7ab3",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "surveyor_attack.png",
+    "sha256": "9609006f7d434af952fbb16d9faec83b25486fa59fdf9c3323e76b38e1d1c687",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "surveyor_dodge.png",
+    "sha256": "28d9fa5c22482ee4f21ff9501366301c0739973ae8993e12e40f615adcf357c5",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "settlement_structures.png",
+    "sha256": "c8d9dd45005afbbf32895a291fa0b294f76f11bf04f300047bbf3fcb06f8bc7c",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "bracken_creatures.png",
+    "sha256": "b85af7736fe3a5f8ef34b540d2e191657b65bd980b1d65a83116b978e104fe4d",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "fen_creatures.png",
+    "sha256": "9c19effe4e1b44c7a0bfe66136beb605e05708cc0645b7042b398c18d48fe9f5",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "reedmother_revised.png",
+    "sha256": "129e91fe1af81ef05b2f2b01db4c43053e694015592098b96508240c5dcd3d04",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "cinder_creatures.png",
+    "sha256": "cde11a284483470d438c3a5a4b6d98ed184e836fbdb7aa87b84cf82388047657",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "storm_creatures.png",
+    "sha256": "6ca69765a51f0b047d604fb92e33973d33b630d4040e9072cc09d001b7ee6ae4",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "hollow_creatures.png",
+    "sha256": "5b4787fcd7d6e10620791d78cd28589b5790d8ba766e18e59c5a387ca9d480af",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "surveyor_death.png",
+    "sha256": "640934b142e9455751cde3259ad2ddcb5b9f5feb122a6a2e1bb8531e4fed3e59",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "equipment_icons.png",
+    "sha256": "a4ece9ae340f5a191825f98c22034ffe1d8f4400be8e3f6de08468b12ce9b3e9",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "supply_icons.png",
+    "sha256": "ed8fea90656db7c02f693e3fc85e659adafd2d66b9cf4ed954cff7f2b2c0703c",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "regional_landmarks.png",
+    "sha256": "4d893a800c81bb1550145a0ab1300fb42455b19183492643da7b32472488f70f",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "extended_provision_icons.png",
+    "sha256": "c42c45e517a2d56688d4c5fc9312ae5b1dda3f85de85000c60b220e48098b937",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "garden_growth.png",
+    "sha256": "6aa3e5ccdd2a4924c9dd20593c5cee9cb70915197b50b0333caee90015ce4213",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "floor_surfaces.png",
+    "sha256": "b3d721b5accd0fe4580511222083be106eeaa9a95856c435ea712db1a4a516ad",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "grain_provisions.png",
+    "sha256": "e69f321b47ac590b5e097d3836834b29b129b694923abb6720a34cc95b9ddd4c",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "camp_specialists.png",
+    "sha256": "428479c687d3b97b97b52af370765390752ecedc0b6bcb0135a26ef7bf28579a",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "woodland_props.png",
+    "sha256": "e3183a4d3a03075fc20f17b25be4a91b16c13f4f2f769df9bed5ad55ed7ca847",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "terrain_tiles.png",
+    "sha256": "0b4d3f1761e52eb58ecd3223c277f78a4496bea943e7ab6fd40ab026eac69195",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  },
+  {
+    "file": "terrain_tiles_quiet.png",
+    "sha256": "24176a5fe4e6feb8457bfcbd87898b1938f14733aa379c29fd4944799d4ca1b6",
+    "tool": "image_gen",
+    "accepted_for": "normalization and in-engine inspection"
+  }
+]

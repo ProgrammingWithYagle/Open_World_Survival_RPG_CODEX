@@ -1,0 +1,44 @@
+[
+  {
+    "file": "creature_normal.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 1
+  },
+  {
+    "file": "creature_slow.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 0.25
+  },
+  {
+    "file": "player_normal.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 1
+  },
+  {
+    "file": "player_slow.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 0.25
+  },
+  {
+    "file": "warden_normal.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 1
+  },
+  {
+    "file": "warden_slow.mp4",
+    "frames": 180,
+    "seconds": 6,
+    "source": "Godot 4.5.1 native Compatibility renderer",
+    "speed": 0.25
+  }
+]

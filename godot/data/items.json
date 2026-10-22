@@ -1,88 +1,1619 @@
 {
   "wood": {
     "name": "Wood",
-    "stack": 50,
-    "description": "Basic building material harvested from trees."
+    "name_key": "item.wood.name",
+    "description_key": "item.wood.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 0
   },
   "stone": {
     "name": "Stone",
-    "stack": 50,
-    "description": "Durable rock used for tools and structures."
-  },
-  "berry": {
-    "name": "Berry",
-    "stack": 20,
-    "description": "A quick snack that keeps hunger away and restores a little stamina.",
-    "effects": {
-      "hunger": 8,
-      "stamina": 4
-    }
+    "name_key": "item.stone.name",
+    "description_key": "item.stone.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 1
   },
   "fiber": {
-    "name": "Fiber",
-    "stack": 40,
-    "description": "Plant fibers used for bandages and ropes."
+    "name": "Plant fiber",
+    "name_key": "item.fiber.name",
+    "description_key": "item.fiber.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 2
   },
-  "stick": {
-    "name": "Stick",
-    "stack": 50,
-    "description": "Lightweight crafting component for tools."
-  },
-  "water": {
-    "name": "Fresh Water",
-    "stack": 20,
-    "description": "Clean water gathered from springs that refreshes stamina.",
-    "effects": {
-      "thirst": 14,
-      "stamina": 6
-    }
-  },
-  "cooked_berry": {
-    "name": "Cooked Berry",
-    "stack": 20,
-    "description": "Warm berries that satisfy hunger, add a little heat, and steady stamina.",
-    "effects": {
-      "hunger": 14,
-      "temperature": 2,
-      "stamina": 6
-    }
-  },
-  "bandage": {
-    "name": "Bandage",
-    "stack": 10,
-    "description": "Stops bleeding and restores a bit of health.",
-    "effects": {
-      "health": 12
-    }
+  "amber": {
+    "name": "Sun amber",
+    "name_key": "item.amber.name",
+    "description_key": "item.amber.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 3
   },
   "raw_meat": {
-    "name": "Raw Meat",
-    "stack": 10,
-    "description": "Freshly harvested meat that should be cooked before eating."
+    "name": "Raw meat",
+    "name_key": "item.raw_meat.name",
+    "description_key": "item.raw_meat.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 4
   },
   "hide": {
     "name": "Hide",
-    "stack": 20,
-    "description": "Tough animal hide used for leatherworking and armor."
+    "name_key": "item.hide.name",
+    "description_key": "item.hide.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 5
   },
-  "slime_gel": {
-    "name": "Slime Gel",
-    "stack": 15,
-    "description": "Sticky residue from slimes, useful in alchemy."
+  "reed": {
+    "name": "Glass reed",
+    "name_key": "item.reed.name",
+    "description_key": "item.reed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 6
+  },
+  "clay": {
+    "name": "River clay",
+    "name_key": "item.clay.name",
+    "description_key": "item.clay.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 7
+  },
+  "copper_ore": {
+    "name": "Copper ore",
+    "name_key": "item.copper_ore.name",
+    "description_key": "item.copper_ore.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 8
+  },
+  "copper": {
+    "name": "Copper ingot",
+    "name_key": "item.copper.name",
+    "description_key": "item.copper.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 9
+  },
+  "iron_ore": {
+    "name": "Iron ore",
+    "name_key": "item.iron_ore.name",
+    "description_key": "item.iron_ore.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 10
+  },
+  "iron": {
+    "name": "Iron ingot",
+    "name_key": "item.iron.name",
+    "description_key": "item.iron.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 11
+  },
+  "storm_shard": {
+    "name": "Storm shard",
+    "name_key": "item.storm_shard.name",
+    "description_key": "item.storm_shard.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 12
+  },
+  "glass": {
+    "name": "Meridian glass",
+    "name_key": "item.glass.name",
+    "description_key": "item.glass.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 13
+  },
+  "charcoal": {
+    "name": "Charcoal",
+    "name_key": "item.charcoal.name",
+    "description_key": "item.charcoal.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 14
+  },
+  "brick": {
+    "name": "Fired brick",
+    "name_key": "item.brick.name",
+    "description_key": "item.brick.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 15
+  },
+  "rope": {
+    "name": "Rope",
+    "name_key": "item.rope.name",
+    "description_key": "item.rope.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 16
+  },
+  "cloth": {
+    "name": "Woven cloth",
+    "name_key": "item.cloth.name",
+    "description_key": "item.cloth.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 17
+  },
+  "seed": {
+    "name": "Garden seed",
+    "name_key": "item.seed.name",
+    "description_key": "item.seed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 18
+  },
+  "gel": {
+    "name": "Dew gel",
+    "name_key": "item.gel.name",
+    "description_key": "item.gel.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 19
   },
   "venom_sac": {
-    "name": "Venom Sac",
-    "stack": 8,
-    "description": "A fragile sac containing toxins, prized by hunters."
+    "name": "Bitter sac",
+    "name_key": "item.venom_sac.name",
+    "description_key": "item.venom_sac.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 20
   },
-  "stone_knife": {
-    "name": "Stone Knife",
+  "feather": {
+    "name": "Wind feather",
+    "name_key": "item.feather.name",
+    "description_key": "item.feather.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 21
+  },
+  "relic": {
+    "name": "Survey relic",
+    "name_key": "item.relic.name",
+    "description_key": "item.relic.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 22
+  },
+  "berry": {
+    "name": "Wild berries",
+    "name_key": "item.berry.name",
+    "description_key": "item.berry.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 23,
+    "effects": {
+      "hunger": 12,
+      "thirst": 0,
+      "health": 0,
+      "stamina": 12
+    }
+  },
+  "water": {
+    "name": "Spring water",
+    "name_key": "item.water.name",
+    "description_key": "item.water.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 24,
+    "effects": {
+      "hunger": 0,
+      "thirst": 35,
+      "health": 0,
+      "stamina": 0
+    }
+  },
+  "mushroom": {
+    "name": "Field mushroom",
+    "name_key": "item.mushroom.name",
+    "description_key": "item.mushroom.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 25,
+    "effects": {
+      "hunger": 8,
+      "thirst": 0,
+      "health": 0,
+      "stamina": 8
+    }
+  },
+  "vegetable": {
+    "name": "Garden vegetables",
+    "name_key": "item.vegetable.name",
+    "description_key": "item.vegetable.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 26,
+    "effects": {
+      "hunger": 22,
+      "thirst": 8,
+      "health": 0,
+      "stamina": 22
+    }
+  },
+  "fish": {
+    "name": "Fresh fish",
+    "name_key": "item.fish.name",
+    "description_key": "item.fish.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 27,
+    "effects": {
+      "hunger": 10,
+      "thirst": 0,
+      "health": 0,
+      "stamina": 10
+    }
+  },
+  "honey": {
+    "name": "Wild honey",
+    "name_key": "item.honey.name",
+    "description_key": "item.honey.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 28,
+    "effects": {
+      "hunger": 16,
+      "thirst": 0,
+      "health": 6,
+      "stamina": 22
+    }
+  },
+  "roast": {
+    "name": "Campfire roast",
+    "name_key": "item.roast.name",
+    "description_key": "item.roast.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 29,
+    "effects": {
+      "hunger": 42,
+      "thirst": 0,
+      "health": 15,
+      "stamina": 30
+    }
+  },
+  "stew": {
+    "name": "Trail stew",
+    "name_key": "item.stew.name",
+    "description_key": "item.stew.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 30,
+    "effects": {
+      "hunger": 48,
+      "thirst": 20,
+      "health": 20,
+      "stamina": 30
+    }
+  },
+  "grilled_fish": {
+    "name": "Herb-grilled fish",
+    "name_key": "item.grilled_fish.name",
+    "description_key": "item.grilled_fish.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 31,
+    "effects": {
+      "hunger": 38,
+      "thirst": 0,
+      "health": 16,
+      "stamina": 30
+    }
+  },
+  "ration": {
+    "name": "Travel provisions",
+    "name_key": "item.ration.name",
+    "description_key": "item.ration.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 32,
+    "effects": {
+      "hunger": 55,
+      "thirst": 12,
+      "health": 10,
+      "stamina": 30
+    }
+  },
+  "tea": {
+    "name": "Reed tea",
+    "name_key": "item.tea.name",
+    "description_key": "item.tea.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 33,
+    "effects": {
+      "hunger": 0,
+      "thirst": 55,
+      "health": 8,
+      "stamina": 8
+    }
+  },
+  "salve": {
+    "name": "Healing salve",
+    "name_key": "item.salve.name",
+    "description_key": "item.salve.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 34,
+    "effects": {
+      "hunger": 0,
+      "thirst": 0,
+      "health": 38,
+      "stamina": 30
+    }
+  },
+  "bandage": {
+    "name": "Clean bandage",
+    "name_key": "item.bandage.name",
+    "description_key": "item.bandage.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 35,
+    "effects": {
+      "hunger": 0,
+      "thirst": 0,
+      "health": 20,
+      "stamina": 20
+    }
+  },
+  "tonic": {
+    "name": "Restoring tonic",
+    "name_key": "item.tonic.name",
+    "description_key": "item.tonic.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 36,
+    "effects": {
+      "hunger": 12,
+      "thirst": 15,
+      "health": 60,
+      "stamina": 30
+    }
+  },
+  "field_blade": {
+    "name": "Trail blade",
+    "name_key": "item.field_blade.name",
+    "description_key": "item.field_blade.desc",
     "stack": 1,
-    "description": "A basic tool that improves harvesting efficiency."
+    "kind": "weapon",
+    "tier": 1,
+    "icon": 37,
+    "style": "blade",
+    "damage": 8,
+    "reach": 45,
+    "cooldown": 0.65
   },
-  "campfire": {
-    "name": "Campfire",
-    "stack": 5,
-    "description": "Keeps the player warm and allows simple cooking."
+  "field_spear": {
+    "name": "Trail spear",
+    "name_key": "item.field_spear.name",
+    "description_key": "item.field_spear.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 1,
+    "icon": 38,
+    "style": "spear",
+    "damage": 8,
+    "reach": 72,
+    "cooldown": 0.65
+  },
+  "field_bow": {
+    "name": "Trail bow",
+    "name_key": "item.field_bow.name",
+    "description_key": "item.field_bow.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 1,
+    "icon": 39,
+    "style": "bow",
+    "damage": 8,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "field_focus": {
+    "name": "Trail resonance focus",
+    "name_key": "item.field_focus.name",
+    "description_key": "item.field_focus.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 1,
+    "icon": 40,
+    "style": "focus",
+    "damage": 8,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "field_axe": {
+    "name": "Trail axe",
+    "name_key": "item.field_axe.name",
+    "description_key": "item.field_axe.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 1,
+    "icon": 41,
+    "style": "axe",
+    "damage": 8,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "field_pick": {
+    "name": "Trail pickaxe",
+    "name_key": "item.field_pick.name",
+    "description_key": "item.field_pick.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 1,
+    "icon": 42,
+    "style": "pick",
+    "damage": 8,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "field_coat": {
+    "name": "Trail field coat",
+    "name_key": "item.field_coat.name",
+    "description_key": "item.field_coat.desc",
+    "stack": 1,
+    "kind": "armor",
+    "tier": 1,
+    "icon": 43,
+    "armor": 2
+  },
+  "copper_blade": {
+    "name": "Copper blade",
+    "name_key": "item.copper_blade.name",
+    "description_key": "item.copper_blade.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 2,
+    "icon": 44,
+    "style": "blade",
+    "damage": 14,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "copper_spear": {
+    "name": "Copper spear",
+    "name_key": "item.copper_spear.name",
+    "description_key": "item.copper_spear.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 2,
+    "icon": 45,
+    "style": "spear",
+    "damage": 14,
+    "reach": 72,
+    "cooldown": 0.65
+  },
+  "copper_bow": {
+    "name": "Copper bow",
+    "name_key": "item.copper_bow.name",
+    "description_key": "item.copper_bow.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 2,
+    "icon": 46,
+    "style": "bow",
+    "damage": 14,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "copper_focus": {
+    "name": "Copper resonance focus",
+    "name_key": "item.copper_focus.name",
+    "description_key": "item.copper_focus.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 2,
+    "icon": 47,
+    "style": "focus",
+    "damage": 14,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "copper_axe": {
+    "name": "Copper axe",
+    "name_key": "item.copper_axe.name",
+    "description_key": "item.copper_axe.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 2,
+    "icon": 48,
+    "style": "axe",
+    "damage": 14,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "copper_pick": {
+    "name": "Copper pickaxe",
+    "name_key": "item.copper_pick.name",
+    "description_key": "item.copper_pick.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 2,
+    "icon": 49,
+    "style": "pick",
+    "damage": 14,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "copper_coat": {
+    "name": "Copper field coat",
+    "name_key": "item.copper_coat.name",
+    "description_key": "item.copper_coat.desc",
+    "stack": 1,
+    "kind": "armor",
+    "tier": 2,
+    "icon": 50,
+    "armor": 4
+  },
+  "iron_blade": {
+    "name": "Iron blade",
+    "name_key": "item.iron_blade.name",
+    "description_key": "item.iron_blade.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 3,
+    "icon": 51,
+    "style": "blade",
+    "damage": 23,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "iron_spear": {
+    "name": "Iron spear",
+    "name_key": "item.iron_spear.name",
+    "description_key": "item.iron_spear.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 3,
+    "icon": 52,
+    "style": "spear",
+    "damage": 23,
+    "reach": 72,
+    "cooldown": 0.65
+  },
+  "iron_bow": {
+    "name": "Iron bow",
+    "name_key": "item.iron_bow.name",
+    "description_key": "item.iron_bow.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 3,
+    "icon": 53,
+    "style": "bow",
+    "damage": 23,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "iron_focus": {
+    "name": "Iron resonance focus",
+    "name_key": "item.iron_focus.name",
+    "description_key": "item.iron_focus.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 3,
+    "icon": 54,
+    "style": "focus",
+    "damage": 23,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "iron_axe": {
+    "name": "Iron axe",
+    "name_key": "item.iron_axe.name",
+    "description_key": "item.iron_axe.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 3,
+    "icon": 55,
+    "style": "axe",
+    "damage": 23,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "iron_pick": {
+    "name": "Iron pickaxe",
+    "name_key": "item.iron_pick.name",
+    "description_key": "item.iron_pick.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 3,
+    "icon": 56,
+    "style": "pick",
+    "damage": 23,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "iron_coat": {
+    "name": "Iron field coat",
+    "name_key": "item.iron_coat.name",
+    "description_key": "item.iron_coat.desc",
+    "stack": 1,
+    "kind": "armor",
+    "tier": 3,
+    "icon": 57,
+    "armor": 6
+  },
+  "storm_blade": {
+    "name": "Stormglass blade",
+    "name_key": "item.storm_blade.name",
+    "description_key": "item.storm_blade.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 4,
+    "icon": 58,
+    "style": "blade",
+    "damage": 35,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "storm_spear": {
+    "name": "Stormglass spear",
+    "name_key": "item.storm_spear.name",
+    "description_key": "item.storm_spear.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 4,
+    "icon": 59,
+    "style": "spear",
+    "damage": 35,
+    "reach": 72,
+    "cooldown": 0.65
+  },
+  "storm_bow": {
+    "name": "Stormglass bow",
+    "name_key": "item.storm_bow.name",
+    "description_key": "item.storm_bow.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 4,
+    "icon": 60,
+    "style": "bow",
+    "damage": 35,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "storm_focus": {
+    "name": "Stormglass resonance focus",
+    "name_key": "item.storm_focus.name",
+    "description_key": "item.storm_focus.desc",
+    "stack": 1,
+    "kind": "weapon",
+    "tier": 4,
+    "icon": 61,
+    "style": "focus",
+    "damage": 35,
+    "reach": 45,
+    "cooldown": 0.9
+  },
+  "storm_axe": {
+    "name": "Stormglass axe",
+    "name_key": "item.storm_axe.name",
+    "description_key": "item.storm_axe.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 4,
+    "icon": 62,
+    "style": "axe",
+    "damage": 35,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "storm_pick": {
+    "name": "Stormglass pickaxe",
+    "name_key": "item.storm_pick.name",
+    "description_key": "item.storm_pick.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 4,
+    "icon": 63,
+    "style": "pick",
+    "damage": 35,
+    "reach": 45,
+    "cooldown": 0.65
+  },
+  "storm_coat": {
+    "name": "Stormglass field coat",
+    "name_key": "item.storm_coat.name",
+    "description_key": "item.storm_coat.desc",
+    "stack": 1,
+    "kind": "armor",
+    "tier": 4,
+    "icon": 64,
+    "armor": 8
+  },
+  "floor": {
+    "name": "Timber floor",
+    "name_key": "item.floor.name",
+    "description_key": "item.floor.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 65
+  },
+  "path": {
+    "name": "Packed trail",
+    "name_key": "item.path.name",
+    "description_key": "item.path.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 66
+  },
+  "wall": {
+    "name": "Timber wall",
+    "name_key": "item.wall.name",
+    "description_key": "item.wall.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 67
+  },
+  "fence": {
+    "name": "Garden fence",
+    "name_key": "item.fence.name",
+    "description_key": "item.fence.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 68
+  },
+  "gate": {
+    "name": "Timber gate",
+    "name_key": "item.gate.name",
+    "description_key": "item.gate.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 69
+  },
+  "bridge": {
+    "name": "Footbridge",
+    "name_key": "item.bridge.name",
+    "description_key": "item.bridge.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 70
+  },
+  "tent": {
+    "name": "Canvas shelter",
+    "name_key": "item.tent.name",
+    "description_key": "item.tent.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 71
+  },
+  "bed": {
+    "name": "Bedroll",
+    "name_key": "item.bed.name",
+    "description_key": "item.bed.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 72
+  },
+  "hearth": {
+    "name": "Hearth",
+    "name_key": "item.hearth.name",
+    "description_key": "item.hearth.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 73
+  },
+  "workbench": {
+    "name": "Workbench",
+    "name_key": "item.workbench.name",
+    "description_key": "item.workbench.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 74
+  },
+  "cooking_pot": {
+    "name": "Cooking pot",
+    "name_key": "item.cooking_pot.name",
+    "description_key": "item.cooking_pot.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 75
+  },
+  "chest": {
+    "name": "Storage chest",
+    "name_key": "item.chest.name",
+    "description_key": "item.chest.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 76
+  },
+  "garden": {
+    "name": "Garden bed",
+    "name_key": "item.garden.name",
+    "description_key": "item.garden.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 77
+  },
+  "well": {
+    "name": "Stone well",
+    "name_key": "item.well.name",
+    "description_key": "item.well.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 78
+  },
+  "lantern": {
+    "name": "Trail lantern",
+    "name_key": "item.lantern.name",
+    "description_key": "item.lantern.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 79
+  },
+  "waypost": {
+    "name": "Waypost",
+    "name_key": "item.waypost.name",
+    "description_key": "item.waypost.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 80
+  },
+  "kiln": {
+    "name": "Clay kiln",
+    "name_key": "item.kiln.name",
+    "description_key": "item.kiln.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 81
+  },
+  "smelter": {
+    "name": "Smelter",
+    "name_key": "item.smelter.name",
+    "description_key": "item.smelter.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 82
+  },
+  "forge": {
+    "name": "Forge",
+    "name_key": "item.forge.name",
+    "description_key": "item.forge.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 83
+  },
+  "loom": {
+    "name": "Loom",
+    "name_key": "item.loom.name",
+    "description_key": "item.loom.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 84
+  },
+  "courier_board": {
+    "name": "Courier board",
+    "name_key": "item.courier_board.name",
+    "description_key": "item.courier_board.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 85
+  },
+  "fish_trap": {
+    "name": "Fish trap",
+    "name_key": "item.fish_trap.name",
+    "description_key": "item.fish_trap.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 86
+  },
+  "drying_rack": {
+    "name": "Drying rack",
+    "name_key": "item.drying_rack.name",
+    "description_key": "item.drying_rack.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 87
+  },
+  "planter": {
+    "name": "Reed planter",
+    "name_key": "item.planter.name",
+    "description_key": "item.planter.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 88
+  },
+  "banner": {
+    "name": "Survey banner",
+    "name_key": "item.banner.name",
+    "description_key": "item.banner.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 89
+  },
+  "stool": {
+    "name": "Camp stool",
+    "name_key": "item.stool.name",
+    "description_key": "item.stool.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 90
+  },
+  "table": {
+    "name": "Writing table",
+    "name_key": "item.table.name",
+    "description_key": "item.table.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 91
+  },
+  "chair": {
+    "name": "Wooden chair",
+    "name_key": "item.chair.name",
+    "description_key": "item.chair.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 92
+  },
+  "rug": {
+    "name": "Woven rug",
+    "name_key": "item.rug.name",
+    "description_key": "item.rug.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 93
+  },
+  "bookshelf": {
+    "name": "Map shelves",
+    "name_key": "item.bookshelf.name",
+    "description_key": "item.bookshelf.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 94
+  },
+  "sign": {
+    "name": "Trail sign",
+    "name_key": "item.sign.name",
+    "description_key": "item.sign.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 95
+  },
+  "windmill": {
+    "name": "Windmill",
+    "name_key": "item.windmill.name",
+    "description_key": "item.windmill.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 3,
+    "icon": 96
+  },
+  "mill": {
+    "name": "Grain mill",
+    "name_key": "item.mill.name",
+    "description_key": "item.mill.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 97
+  },
+  "apiary": {
+    "name": "Beehive",
+    "name_key": "item.apiary.name",
+    "description_key": "item.apiary.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 98
+  },
+  "scarecrow": {
+    "name": "Scarecrow",
+    "name_key": "item.scarecrow.name",
+    "description_key": "item.scarecrow.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 99
+  },
+  "stone_wall": {
+    "name": "Stone wall",
+    "name_key": "item.stone_wall.name",
+    "description_key": "item.stone_wall.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 100
+  },
+  "stone_floor": {
+    "name": "Stone paving",
+    "name_key": "item.stone_floor.name",
+    "description_key": "item.stone_floor.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 1,
+    "icon": 101
+  },
+  "stone_hearth": {
+    "name": "Brick hearth",
+    "name_key": "item.stone_hearth.name",
+    "description_key": "item.stone_hearth.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 102
+  },
+  "glass_lamp": {
+    "name": "Meridian lamp",
+    "name_key": "item.glass_lamp.name",
+    "description_key": "item.glass_lamp.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 4,
+    "icon": 103
+  },
+  "resonator": {
+    "name": "Resonance bench",
+    "name_key": "item.resonator.name",
+    "description_key": "item.resonator.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 4,
+    "icon": 104
+  },
+  "fountain": {
+    "name": "Courtyard spring",
+    "name_key": "item.fountain.name",
+    "description_key": "item.fountain.desc",
+    "stack": 99,
+    "kind": "building",
+    "tier": 2,
+    "icon": 105
+  },
+  "fishing_rod": {
+    "name": "Fishing rod",
+    "name_key": "item.fishing_rod.name",
+    "description_key": "item.fishing_rod.desc",
+    "stack": 1,
+    "kind": "tool",
+    "tier": 1,
+    "icon": 106,
+    "style": "fish",
+    "damage": 2
+  },
+  "pond_perch": {
+    "name": "Pond perch",
+    "name_key": "item.pond_perch.name",
+    "description_key": "item.pond_perch.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 107,
+    "effects": {
+      "hunger": 14,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "reed_eel": {
+    "name": "Reed eel",
+    "name_key": "item.reed_eel.name",
+    "description_key": "item.reed_eel.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 108,
+    "effects": {
+      "hunger": 14,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "ash_char": {
+    "name": "Ash char",
+    "name_key": "item.ash_char.name",
+    "description_key": "item.ash_char.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 109,
+    "effects": {
+      "hunger": 14,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "pine_trout": {
+    "name": "Pine trout",
+    "name_key": "item.pine_trout.name",
+    "description_key": "item.pine_trout.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 110,
+    "effects": {
+      "hunger": 14,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "glassfin": {
+    "name": "Glassfin",
+    "name_key": "item.glassfin.name",
+    "description_key": "item.glassfin.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 111,
+    "effects": {
+      "hunger": 14,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "berry_seed": {
+    "name": "Berry seed",
+    "name_key": "item.berry_seed.name",
+    "description_key": "item.berry_seed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 112
+  },
+  "reed_seed": {
+    "name": "Reed seed",
+    "name_key": "item.reed_seed.name",
+    "description_key": "item.reed_seed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 2,
+    "icon": 113
+  },
+  "mushroom_spawn": {
+    "name": "Mushroom spawn",
+    "name_key": "item.mushroom_spawn.name",
+    "description_key": "item.mushroom_spawn.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 2,
+    "icon": 114
+  },
+  "sunroot_seed": {
+    "name": "Sunroot seed",
+    "name_key": "item.sunroot_seed.name",
+    "description_key": "item.sunroot_seed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 3,
+    "icon": 115
+  },
+  "sunroot": {
+    "name": "Sunroot",
+    "name_key": "item.sunroot.name",
+    "description_key": "item.sunroot.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 116,
+    "effects": {
+      "hunger": 20,
+      "health": 0,
+      "thirst": 0,
+      "stamina": 10
+    }
+  },
+  "honey_tea": {
+    "name": "Honey tea",
+    "name_key": "item.honey_tea.name",
+    "description_key": "item.honey_tea.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 117,
+    "effects": {
+      "hunger": 0,
+      "thirst": 65,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "warmth",
+    "duration": 240
+  },
+  "mushroom_skewer": {
+    "name": "Woodland skewer",
+    "name_key": "item.mushroom_skewer.name",
+    "description_key": "item.mushroom_skewer.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 118,
+    "effects": {
+      "hunger": 38,
+      "thirst": 0,
+      "health": 12,
+      "stamina": 20
+    },
+    "buff": "stamina",
+    "duration": 180
+  },
+  "berry_tart": {
+    "name": "Hearth berry tart",
+    "name_key": "item.berry_tart.name",
+    "description_key": "item.berry_tart.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 119,
+    "effects": {
+      "hunger": 50,
+      "thirst": 0,
+      "health": 20,
+      "stamina": 20
+    },
+    "buff": "nourished",
+    "duration": 240
+  },
+  "fish_chowder": {
+    "name": "Reedglass chowder",
+    "name_key": "item.fish_chowder.name",
+    "description_key": "item.fish_chowder.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 120,
+    "effects": {
+      "hunger": 55,
+      "thirst": 20,
+      "health": 25,
+      "stamina": 20
+    },
+    "buff": "healing",
+    "duration": 180
+  },
+  "root_roast": {
+    "name": "Golden root roast",
+    "name_key": "item.root_roast.name",
+    "description_key": "item.root_roast.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 121,
+    "effects": {
+      "hunger": 65,
+      "thirst": 0,
+      "health": 20,
+      "stamina": 20
+    },
+    "buff": "armor",
+    "duration": 240
+  },
+  "smoked_fish": {
+    "name": "Trail-smoked fish",
+    "name_key": "item.smoked_fish.name",
+    "description_key": "item.smoked_fish.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 122,
+    "effects": {
+      "hunger": 50,
+      "thirst": 0,
+      "health": 5,
+      "stamina": 20
+    },
+    "buff": "endurance",
+    "duration": 240
+  },
+  "syrup_ration": {
+    "name": "Syrup trail pack",
+    "name_key": "item.syrup_ration.name",
+    "description_key": "item.syrup_ration.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 123,
+    "effects": {
+      "hunger": 80,
+      "thirst": 0,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "nourished",
+    "duration": 300
+  },
+  "clear_tonic": {
+    "name": "Clearwater tonic",
+    "name_key": "item.clear_tonic.name",
+    "description_key": "item.clear_tonic.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 124,
+    "effects": {
+      "hunger": 0,
+      "thirst": 30,
+      "health": 30,
+      "stamina": 20
+    },
+    "buff": "focus",
+    "duration": 180
+  },
+  "trail_compass": {
+    "name": "Trail compass",
+    "name_key": "item.trail_compass.name",
+    "description_key": "item.trail_compass.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 2,
+    "icon": 125,
+    "charm": "speed"
+  },
+  "reed_charm": {
+    "name": "Reed charm",
+    "name_key": "item.reed_charm.name",
+    "description_key": "item.reed_charm.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 2,
+    "icon": 126,
+    "charm": "garden"
+  },
+  "cinder_token": {
+    "name": "Cinder token",
+    "name_key": "item.cinder_token.name",
+    "description_key": "item.cinder_token.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 3,
+    "icon": 127,
+    "charm": "armor"
+  },
+  "storm_pin": {
+    "name": "Storm pin",
+    "name_key": "item.storm_pin.name",
+    "description_key": "item.storm_pin.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 4,
+    "icon": 128,
+    "charm": "stamina"
+  },
+  "keeper_seal": {
+    "name": "Keeper seal",
+    "name_key": "item.keeper_seal.name",
+    "description_key": "item.keeper_seal.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 4,
+    "icon": 129,
+    "charm": "damage"
+  },
+  "root_locket": {
+    "name": "Root locket",
+    "name_key": "item.root_locket.name",
+    "description_key": "item.root_locket.desc",
+    "stack": 1,
+    "kind": "trinket",
+    "tier": 2,
+    "icon": 130,
+    "charm": "healing"
+  },
+  "mint": {
+    "name": "Wild mint",
+    "name_key": "item.mint.name",
+    "description_key": "item.mint.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 131
+  },
+  "sunblossom": {
+    "name": "Sunblossom",
+    "name_key": "item.sunblossom.name",
+    "description_key": "item.sunblossom.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 132
+  },
+  "sage": {
+    "name": "Alpine sage",
+    "name_key": "item.sage.name",
+    "description_key": "item.sage.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 133
+  },
+  "orchid": {
+    "name": "Hollow orchid",
+    "name_key": "item.orchid.name",
+    "description_key": "item.orchid.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 134
+  },
+  "mint_cordial": {
+    "name": "Mint cordial",
+    "name_key": "item.mint_cordial.name",
+    "description_key": "item.mint_cordial.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 135,
+    "effects": {
+      "hunger": 0,
+      "thirst": 25,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "haste",
+    "duration": 240
+  },
+  "sun_cordial": {
+    "name": "Sun cordial",
+    "name_key": "item.sun_cordial.name",
+    "description_key": "item.sun_cordial.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 136,
+    "effects": {
+      "hunger": 0,
+      "thirst": 25,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "warmth",
+    "duration": 240
+  },
+  "sage_draught": {
+    "name": "Sage draught",
+    "name_key": "item.sage_draught.name",
+    "description_key": "item.sage_draught.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 137,
+    "effects": {
+      "hunger": 0,
+      "thirst": 25,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "stamina",
+    "duration": 240
+  },
+  "orchid_cordial": {
+    "name": "Orchid cordial",
+    "name_key": "item.orchid_cordial.name",
+    "description_key": "item.orchid_cordial.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 138,
+    "effects": {
+      "hunger": 0,
+      "thirst": 25,
+      "health": 10,
+      "stamina": 20
+    },
+    "buff": "focus",
+    "duration": 240
+  },
+  "grain": {
+    "name": "Golden grain",
+    "name_key": "item.grain.name",
+    "description_key": "item.grain.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 139
+  },
+  "grain_seed": {
+    "name": "Grain seed",
+    "name_key": "item.grain_seed.name",
+    "description_key": "item.grain_seed.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 140
+  },
+  "flour": {
+    "name": "Stoneground flour",
+    "name_key": "item.flour.name",
+    "description_key": "item.flour.desc",
+    "stack": 99,
+    "kind": "material",
+    "tier": 1,
+    "icon": 141
+  },
+  "flatbread": {
+    "name": "Hearth flatbread",
+    "name_key": "item.flatbread.name",
+    "description_key": "item.flatbread.desc",
+    "stack": 99,
+    "kind": "consumable",
+    "tier": 1,
+    "icon": 142,
+    "effects": {
+      "hunger": 45,
+      "thirst": 0,
+      "health": 8,
+      "stamina": 20
+    }
   }
 }

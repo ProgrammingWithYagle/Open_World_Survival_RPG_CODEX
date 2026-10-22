@@ -1,0 +1,412 @@
+{
+  "floor": {
+    "kind": "floor",
+    "solid": false,
+    "cost": {
+      "wood": 2
+    },
+    "tier": 1,
+    "art": 0,
+    "health": 120
+  },
+  "path": {
+    "kind": "path",
+    "solid": false,
+    "cost": {
+      "stone": 1
+    },
+    "tier": 1,
+    "art": 1,
+    "health": 120
+  },
+  "wall": {
+    "kind": "wall",
+    "solid": true,
+    "cost": {
+      "wood": 4
+    },
+    "tier": 1,
+    "art": 2,
+    "health": 120
+  },
+  "fence": {
+    "kind": "fence",
+    "solid": true,
+    "cost": {
+      "wood": 2
+    },
+    "tier": 1,
+    "art": 3,
+    "health": 120
+  },
+  "gate": {
+    "kind": "gate",
+    "solid": false,
+    "cost": {
+      "wood": 4
+    },
+    "tier": 1,
+    "art": 4,
+    "health": 120
+  },
+  "bridge": {
+    "kind": "bridge",
+    "solid": false,
+    "cost": {
+      "wood": 5
+    },
+    "tier": 1,
+    "art": 5,
+    "health": 120
+  },
+  "tent": {
+    "kind": "shelter",
+    "solid": true,
+    "cost": {
+      "fiber": 8
+    },
+    "tier": 1,
+    "art": 6,
+    "health": 120
+  },
+  "bed": {
+    "kind": "bed",
+    "solid": false,
+    "cost": {
+      "fiber": 5
+    },
+    "tier": 1,
+    "art": 7,
+    "health": 120
+  },
+  "hearth": {
+    "kind": "hearth",
+    "solid": false,
+    "cost": {
+      "stone": 6
+    },
+    "tier": 1,
+    "art": 8,
+    "health": 120
+  },
+  "workbench": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "wood": 8
+    },
+    "tier": 1,
+    "art": 9,
+    "health": 120
+  },
+  "cooking_pot": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "stone": 5
+    },
+    "tier": 1,
+    "art": 10,
+    "health": 120
+  },
+  "chest": {
+    "kind": "chest",
+    "solid": true,
+    "cost": {
+      "wood": 6
+    },
+    "tier": 1,
+    "art": 11,
+    "health": 120
+  },
+  "garden": {
+    "kind": "garden",
+    "solid": false,
+    "cost": {
+      "wood": 3
+    },
+    "tier": 1,
+    "art": 12,
+    "health": 120
+  },
+  "well": {
+    "kind": "well",
+    "solid": true,
+    "cost": {
+      "stone": 12
+    },
+    "tier": 1,
+    "art": 13,
+    "health": 120
+  },
+  "lantern": {
+    "kind": "light",
+    "solid": false,
+    "cost": {
+      "wood": 3
+    },
+    "tier": 1,
+    "art": 14,
+    "health": 120
+  },
+  "waypost": {
+    "kind": "route",
+    "solid": false,
+    "cost": {
+      "wood": 3
+    },
+    "tier": 1,
+    "art": 15,
+    "health": 120
+  },
+  "kiln": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "clay": 6
+    },
+    "tier": 2,
+    "art": 16,
+    "health": 160
+  },
+  "smelter": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "stone": 10
+    },
+    "tier": 2,
+    "art": 17,
+    "health": 160
+  },
+  "forge": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "copper": 6
+    },
+    "tier": 2,
+    "art": 18,
+    "health": 160
+  },
+  "loom": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "wood": 8
+    },
+    "tier": 2,
+    "art": 19,
+    "health": 160
+  },
+  "courier_board": {
+    "kind": "courier",
+    "solid": false,
+    "cost": {
+      "wood": 8
+    },
+    "tier": 2,
+    "art": 20,
+    "health": 160
+  },
+  "fish_trap": {
+    "kind": "trap",
+    "solid": false,
+    "cost": {
+      "reed": 6
+    },
+    "tier": 2,
+    "art": 21,
+    "health": 160
+  },
+  "drying_rack": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "wood": 6
+    },
+    "tier": 2,
+    "art": 22,
+    "health": 160
+  },
+  "planter": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "reed": 4
+    },
+    "tier": 1,
+    "art": 23,
+    "health": 120
+  },
+  "banner": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "fiber": 6
+    },
+    "tier": 1,
+    "art": 24,
+    "health": 120
+  },
+  "stool": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "wood": 3
+    },
+    "tier": 1,
+    "art": 25,
+    "health": 120
+  },
+  "table": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "wood": 7
+    },
+    "tier": 1,
+    "art": 26,
+    "health": 120
+  },
+  "chair": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "wood": 4
+    },
+    "tier": 1,
+    "art": 27,
+    "health": 120
+  },
+  "rug": {
+    "kind": "floor",
+    "solid": false,
+    "cost": {
+      "fiber": 6
+    },
+    "tier": 1,
+    "art": 28,
+    "health": 120
+  },
+  "bookshelf": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "wood": 10
+    },
+    "tier": 2,
+    "art": 29,
+    "health": 160
+  },
+  "sign": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "wood": 3
+    },
+    "tier": 1,
+    "art": 30,
+    "health": 120
+  },
+  "windmill": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "iron": 8
+    },
+    "tier": 3,
+    "art": 31,
+    "health": 200
+  },
+  "mill": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "stone": 10
+    },
+    "tier": 2,
+    "art": 32,
+    "health": 160
+  },
+  "apiary": {
+    "kind": "apiary",
+    "solid": true,
+    "cost": {
+      "wood": 8
+    },
+    "tier": 2,
+    "art": 33,
+    "health": 160
+  },
+  "scarecrow": {
+    "kind": "decor",
+    "solid": true,
+    "cost": {
+      "fiber": 8
+    },
+    "tier": 1,
+    "art": 34,
+    "health": 120
+  },
+  "stone_wall": {
+    "kind": "wall",
+    "solid": true,
+    "cost": {
+      "brick": 4
+    },
+    "tier": 2,
+    "art": 35,
+    "health": 160
+  },
+  "stone_floor": {
+    "kind": "floor",
+    "solid": false,
+    "cost": {
+      "stone": 3
+    },
+    "tier": 1,
+    "art": 36,
+    "health": 120
+  },
+  "stone_hearth": {
+    "kind": "hearth",
+    "solid": false,
+    "cost": {
+      "brick": 8
+    },
+    "tier": 2,
+    "art": 37,
+    "health": 160
+  },
+  "glass_lamp": {
+    "kind": "light",
+    "solid": false,
+    "cost": {
+      "glass": 3
+    },
+    "tier": 4,
+    "art": 38,
+    "health": 240
+  },
+  "resonator": {
+    "kind": "station",
+    "solid": true,
+    "cost": {
+      "storm_shard": 6
+    },
+    "tier": 4,
+    "art": 39,
+    "health": 240
+  },
+  "fountain": {
+    "kind": "well",
+    "solid": true,
+    "cost": {
+      "stone": 12
+    },
+    "tier": 2,
+    "art": 40,
+    "health": 160
+  }
+}

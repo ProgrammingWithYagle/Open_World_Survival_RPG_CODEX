@@ -1,0 +1,83 @@
+{
+  "url": "https://github.com/users/ProgrammingWithYagle/projects/2",
+  "id": "PVT_kwHOBj0wr84BoQ7P",
+  "status_field": "PVTSSF_lAHOBj0wr84BoQ7Pzhmx0W0",
+  "status_options": {
+    "todo": "f75ad846",
+    "in progress": "47fc9ee4",
+    "done": "98236657"
+  },
+  "public": true,
+  "cards": [
+    {
+      "title": "Playable world and restoration",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJRg",
+      "status": "done"
+    },
+    {
+      "title": "Camp economy and exploration activities",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJVM",
+      "status": "done"
+    },
+    {
+      "title": "Combat and original sprite animation",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJX4",
+      "status": "done"
+    },
+    {
+      "title": "Saving and independent difficulty choices",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJcA",
+      "status": "done"
+    },
+    {
+      "title": "Five-language interface and player Wiki",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJfc",
+      "status": "done"
+    },
+    {
+      "title": "Original score and sound effects",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJiI",
+      "status": "done"
+    },
+    {
+      "title": "Automated validation and Windows packaging",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJl0",
+      "status": "in progress"
+    },
+    {
+      "title": "Publish the release and protect main",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJog",
+      "status": "in progress"
+    },
+    {
+      "title": "Long-duration play sessions and balance",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJtk",
+      "status": "todo"
+    },
+    {
+      "title": "Native-speaker translation review",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJwk",
+      "status": "todo"
+    },
+    {
+      "title": "Controller and audio hardware matrix",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJz0",
+      "status": "todo"
+    },
+    {
+      "title": "Input remapping and additional accessibility settings",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ3s",
+      "status": "todo"
+    },
+    {
+      "title": "More regional discovery arrangements",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ60",
+      "status": "todo"
+    },
+    {
+      "title": "Native Linux and macOS download validation",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ9k",
+      "status": "todo"
+    }
+  ]
+}

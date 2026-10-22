@@ -1,0 +1,14 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2026-10-22",
+    "text_key": "release.100",
+    "entries": [
+      "release.100.world",
+      "release.100.camp",
+      "release.100.combat",
+      "release.100.saves",
+      "release.100.presentation"
+    ]
+  }
+]
