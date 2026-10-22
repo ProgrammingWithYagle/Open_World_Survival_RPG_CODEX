@@ -23,3 +23,4 @@ The Mossbound Atlas is an offline Godot 4.5.1 wilderness RPG in `godot/`. Open `
 - PowerShell wrappers accept `-Godot PATH` or the `GODOT` environment variable. `tools/prepare_godot.py` installs a pinned official editor into ignored `.tools`.
 - CI jobs are `data-validation`, `asset-validation`, `godot-tests`, `windows-export` and `docs-validation`. Main protection must require those checks and pull requests. Preserve no-force-push/no-deletion protection and do not bypass failing checks.
 - CI dependency metadata uses the read-only GITHUB_TOKEN through tools/build_release_metadata.py to avoid shared anonymous API limits. Asset downloads remain separate unauthenticated requests; never log or forward the token.
+- Project synchronization must verify saved item IDs directly before creating cards: GitHub can return an empty aggregate item list immediately after successful writes. Preserve those IDs in the publication receipt.
