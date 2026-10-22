@@ -42,6 +42,18 @@ Completed cards describe verified implemented work. The publication card changes
     status=next(field for field in board['fields']['nodes'] if field.get('name')=='Status')
     options={option['name'].lower():option['id'] for option in status['options']}
     existing={node['content']['title']:node['id'] for node in board['items']['nodes'] if node.get('content') and node['content'].get('title')}
+    # The aggregate item list can be empty immediately after successful writes.
+    # Verify the saved item IDs directly before considering new draft cards.
+    receipt_path=ROOT/'verification/project_publication.json'
+    if receipt_path.exists():
+        prior=json.loads(receipt_path.read_text(encoding='utf-8'))
+        if prior.get('id')==project_id:
+            ids=[card['id'] for card in prior.get('cards',[])]
+            if ids:
+                recorded=graphql('query($ids:[ID!]!){nodes(ids:$ids){... on ProjectV2Item{id isArchived project{id} content{... on DraftIssue{title}}}}}',{'ids':ids})['nodes']
+                for node in recorded:
+                    if node and node['project']['id']==project_id and not node['isArchived'] and node.get('content') and node['content'].get('title'):
+                        existing[node['content']['title']]=node['id']
     cards=[
       ('Playable world and restoration','done','Five seeded regions, five wardens, eight travelers, three regional currents and a persistent main ending. See the World and Progression Wiki page.'),
       ('Camp economy and exploration activities','done','143 items, 115 recipes, 41 building pieces, six crops, five regional fish, 30 discovery sites, 16 rotating requests, courier shipments and repeatable expeditions.'),
