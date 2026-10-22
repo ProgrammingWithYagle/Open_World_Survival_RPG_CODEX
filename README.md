@@ -38,6 +38,6 @@ python tools/build_windows.py --godot C:/path/to/Godot_console.exe
 python tools/verify_download.py exports/The-Mossbound-Atlas-1.0.0-Windows-x64.zip
 ```
 
-The five CI jobs validate data, assets, Godot gameplay, Windows packaging and documentation. Native visual suites cover five languages and normal/quarter-speed animation playback. See [verification and limitations](docs/IMPLEMENTATION_STATUS.md), [design research](docs/DESIGN_RESEARCH.md), [asset provenance](docs/ASSETS.md) and [the development board](docs/PROJECT.md).
+The five CI jobs validate data, assets, Godot gameplay, Windows packaging and documentation. Native visual suites cover five languages and normal/quarter-speed animation playback. See [verification and limitations](docs/IMPLEMENTATION_STATUS.md), [main branch protection](docs/BRANCH_PROTECTION.md), [design research](docs/DESIGN_RESEARCH.md), [asset provenance](docs/ASSETS.md) and [the development board](docs/PROJECT.md).
 
 This is an original revamp of the earlier repository prototype. The art uses image generation followed by deterministic preparation, inspection and revisions; it is not represented as hand-drawn. Music and effects use original note sequences and synthesis. No commercial game art or music is bundled. Source is MIT licensed; bundled fonts and engine notices retain their own licenses.

@@ -11,72 +11,72 @@
   "cards": [
     {
       "title": "Playable world and restoration",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJRg",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzgpM",
       "status": "done"
     },
     {
       "title": "Camp economy and exploration activities",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJVM",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzgss",
       "status": "done"
     },
     {
       "title": "Combat and original sprite animation",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJX4",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzguY",
       "status": "done"
     },
     {
       "title": "Saving and independent difficulty choices",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJcA",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzgwQ",
       "status": "done"
     },
     {
       "title": "Five-language interface and player Wiki",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJfc",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzgyY",
       "status": "done"
     },
     {
       "title": "Original score and sound effects",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJiI",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzgzw",
       "status": "done"
     },
     {
       "title": "Automated validation and Windows packaging",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJl0",
-      "status": "in progress"
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzg2Y",
+      "status": "done"
     },
     {
       "title": "Publish the release and protect main",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJog",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzg4w",
       "status": "in progress"
     },
     {
       "title": "Long-duration play sessions and balance",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJtk",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzg7U",
       "status": "todo"
     },
     {
       "title": "Native-speaker translation review",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJwk",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzg94",
       "status": "todo"
     },
     {
       "title": "Controller and audio hardware matrix",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJz0",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzhA8",
       "status": "todo"
     },
     {
       "title": "Input remapping and additional accessibility settings",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ3s",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzhC8",
       "status": "todo"
     },
     {
       "title": "More regional discovery arrangements",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ60",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzhFI",
       "status": "todo"
     },
     {
       "title": "Native Linux and macOS download validation",
-      "id": "PVTI_lAHOBj0wr84BoQ7PzhCxJ9k",
+      "id": "PVTI_lAHOBj0wr84BoQ7PzhCzhGk",
       "status": "todo"
     }
   ]

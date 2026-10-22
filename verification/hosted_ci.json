@@ -1,0 +1,38 @@
+{
+  "url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418",
+  "head_sha": "36a5ecef238d77e9b8b8f844240547fd8f67f0d1",
+  "event": "push",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "data-validation",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418/job/120022445270"
+    },
+    {
+      "name": "asset-validation",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418/job/120022445457"
+    },
+    {
+      "name": "windows-export",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418/job/120022445534"
+    },
+    {
+      "name": "docs-validation",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418/job/120022445662"
+    },
+    {
+      "name": "godot-tests",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/actions/runs/39835453418/job/120022445676"
+    }
+  ]
+}

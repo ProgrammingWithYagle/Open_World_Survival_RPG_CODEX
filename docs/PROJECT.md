@@ -13,7 +13,9 @@ The [public GitHub Project](https://github.com/users/ProgrammingWithYagle/projec
 - [x] Five-language catalogs, bundled regional fonts and an in-game changelog.
 - [x] Original art, animation preparation/playback checks, original synthesized score and effects.
 - [x] Repository Wiki, build tooling and five required CI job definitions.
-- [ ] Complete publication and verify the active main ruleset and downloadable release. See the live release/PR for publication state.
+- [x] Require pull requests and five passing checks through the active [main ruleset](BRANCH_PROTECTION.md); provide Windows packaging and fresh-extraction verification.
+
+The [release page](https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/releases/tag/v1.0.0) records published downloads and checksums. The live Project publication card changes to Done only after those assets are uploaded and the release is public.
 
 ## Next priorities after player feedback
 

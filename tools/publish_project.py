@@ -12,6 +12,15 @@ def graphql(query,variables=None):
     return result['data']
 
 def main():
+    releases,_=api('/repos/'+REPO+'/releases?per_page=30')
+    release=next((entry for entry in releases if entry['tag_name']=='v1.0.0' and not entry['draft']),None)
+    required_assets={'The-Mossbound-Atlas-1.0.0-Windows-x64.zip','The-Mossbound-Atlas-1.0.0-Windows-x64.zip.sha256'}
+    published=bool(release and required_assets.issubset({asset['name'] for asset in release['assets'] if asset['state']=='uploaded' and asset['size']>0}))
+    ci_receipt=ROOT/'verification/hosted_ci.json'
+    ci=json.loads(ci_receipt.read_text(encoding='utf-8')) if ci_receipt.exists() else {}
+    validated=ci.get('conclusion')=='success' and len(ci.get('jobs',[]))==5 and all(job['conclusion']=='success' for job in ci['jobs'])
+    rules,_=api('/repos/'+REPO+'/rulesets/11494557')
+    protected=rules['enforcement']=='active' and not rules.get('bypass_actors') and {'pull_request','required_status_checks','required_linear_history','deletion','non_fast_forward'}.issubset({rule['type'] for rule in rules['rules']})
     data=graphql('query { viewer { id projectsV2(first: 50) { nodes { id title url } } } repository(owner:"ProgrammingWithYagle",name:"Open_World_Survival_RPG_CODEX") { id } }')
     project=next((node for node in data['viewer']['projectsV2']['nodes'] if node['title']=='The Mossbound Atlas'),None)
     if project is None:
@@ -25,7 +34,7 @@ The release includes five regions, 143 items, 115 recipes, 41 building pieces, 2
 
 [Source]({BASE}) · [Wiki]({BASE}/wiki) · [Downloads]({BASE}/releases) · [Verification]({BASE}/blob/main/docs/IMPLEMENTATION_STATUS.md)
 
-Completed cards describe implemented work. Publication and CI stay in progress until their live checks finish. Follow-up cards cover player testing and improvements; they are not claims of features already shipped.
+Completed cards describe verified implemented work. The publication card changes to Done only when the Windows download and checksum are public and main protection is active. Follow-up cards cover player testing and improvements; they are not claims of features already shipped.
 '''
     graphql('mutation($id:ID!,$readme:String!){updateProjectV2(input:{projectId:$id,public:true,shortDescription:"Development and player feedback for The Mossbound Atlas, an offline pixel art wilderness RPG.",readme:$readme}){projectV2{id}}}',{'id':project_id,'readme':readme})
     graphql('mutation($project:ID!,$repo:ID!){linkProjectV2ToRepository(input:{projectId:$project,repositoryId:$repo}){repository{id}}}',{'project':project_id,'repo':data['repository']['id']})
@@ -40,8 +49,8 @@ Completed cards describe implemented work. Publication and CI stay in progress u
       ('Saving and independent difficulty choices','done','Multiple journeys, automatic saving, three recoverable backup generations and Hardcore retirement markers. Five difficulties and three independent death rules.'),
       ('Five-language interface and player Wiki','done','642 keys per language: English, Simplified Chinese, Traditional Chinese, Spanish and Japanese. Regional fonts, native language-layout captures and an 11-page player Wiki.'),
       ('Original score and sound effects','done','Six original musical themes and 21 effects/ambience files, authored through note sequences and local synthesis. No commercial samples.'),
-      ('Automated validation and Windows packaging','in progress','Run the five hosted CI checks, validate the freshly extracted package, and verify native exported screens in all five languages.'),
-      ('Publish the release and protect main','in progress','Publish the complete Windows download and checksums, merge passing changes through a pull request, then verify the active ruleset with required checks, PRs, linear history and resolved discussions.'),
+      ('Automated validation and Windows packaging','done' if validated else 'in progress','Run the five hosted CI checks, validate the freshly extracted package, and verify native exported screens in all five languages.'),
+      ('Publish the release and protect main','done' if published and protected else 'in progress','Publish the complete Windows download and checksums, merge passing changes through a pull request, then verify the active ruleset with required checks, PRs, linear history and resolved discussions.'),
       ('Long-duration play sessions and balance','todo','Collect complete human session notes across difficulties and death rules. Measure progression pace, resource bottlenecks, combat recovery and meaningful choices before adding more catalog entries.'),
       ('Native-speaker translation review','todo','Review terminology, dialogue and every new item description in the four translated languages. Check the actual game layout after editorial changes.'),
       ('Controller and audio hardware matrix','todo','Record device models and exercise all menu flows, movement, aim, actions and hardware sound playback. Include speaker and headphone listening.'),

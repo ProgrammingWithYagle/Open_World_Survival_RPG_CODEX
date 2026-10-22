@@ -24,7 +24,9 @@ The runtime and integration suites use automated scenarios and controlled state.
 
 ## Publication checks
 
-The [GitHub Wiki](https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/wiki) and [public development Project](https://github.com/users/ProgrammingWithYagle/projects/2) are published. Local Windows package and native export checks have passed. Hosted CI, release upload and strengthened main rules are being finalized. Publication is verified separately from local files.
+The [GitHub Wiki](https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/wiki) and [public development Project](https://github.com/users/ProgrammingWithYagle/projects/2) are published. All five hosted checks passed for the game implementation; the retained [CI receipt](../verification/hosted_ci.json) identifies that revision. Subsequent pull-request revisions must pass the same checks before merging.
+
+The active [main ruleset](BRANCH_PROTECTION.md) requires pull requests, five passing checks, an up-to-date branch, resolved discussions and squash merges, and blocks deletion and force pushes without bypass actors. [Release 1.0](https://github.com/ProgrammingWithYagle/Open_World_Survival_RPG_CODEX/releases/tag/v1.0.0) is the publication record for the Windows ZIP and its checksum. Package manifests record the exact source revision; local validation alone is not proof that a download is published.
 
 ## Limits and next work
 
